@@ -1,0 +1,207 @@
+body {
+  position: absolute;
+  width: 480px;
+  height: 1024px;
+  left: 0px;
+  top: 0px;
+}
+
+h2 {
+  position:absolute;
+  left: 167px;
+  right: 78.82%;
+  top: 24px;
+  bottom: 95%;
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 85%;
+  /* or 20px */
+
+  color: #5EC784;
+}
+
+h1 {
+  position: absolute;
+  width: 380px;
+  height: 88px;
+  left: 46px;
+  top: 112px;
+
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 140%;
+  /* or 50px */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  /* grey */
+
+  color: #4E4B55;
+}
+
+button {
+  position: absolute;
+  width: 380px;
+  height: 40px;
+  left: 46px;
+  border-radius: 40px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130%;
+  color: #FFFEFA;
+}
+
+.login-google-button {
+  top: 256px;
+  background: #4286F5;
+}
+
+.login-facebook-button {
+  top: 320px;
+  background: #3B5999;
+}
+
+.or {
+  position: absolute;
+  width: 13.33px;
+  height: 16px;
+  left: 229.33px;
+  top: 392px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130%;
+  /* or 18px */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: rgba(44, 43, 47, 0.56);
+}
+
+.login-input {
+  position: absolute;
+  width: 380px;
+  height: 40px;
+  left: 46px;
+  top: 440px;
+  padding-left: 16px;
+
+  /* grey stroke */
+
+  border: 1px solid #DDDDDD;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.login-password {
+  position: absolute;
+  width: 380px;
+  height: 40px;
+  left: 46px;
+  top: 504px;
+  padding-left: 16px;
+
+  /* grey stroke */
+
+  border: 1px solid #DDDDDD;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.remember-me-checkbox {
+  position: absolute;
+  width: 134px;
+  height: 24px;
+  left: 46px;
+  top: 568px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130%;
+  color: #2C2B2F;
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background,.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+  background-color: #5EC784;
+}
+
+.login-button {
+  position: absolute;
+width: 380px;
+height: 40px;
+left: 46px;
+top: 624px;
+background-color: #5EC784;
+}
+
+.forgot-password-link {
+  position: absolute;
+  width: 112px;
+  height: 24px;
+  left: 180px;
+  top: 680px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130%;
+  /* or 18px */
+
+  /* Blue 2 */
+
+  color: #2D9CDB;
+}
+
+.new-in-triptrap {
+  position: absolute;
+  width: 106px;
+  height: 18px;
+  left: 123px;
+  top: 955px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130%;
+  /* or 18px */
+
+  /* icon/grey */
+
+  color: rgba(44, 43, 47, 0.37);
+}
+
+.create-account-link {
+  position: absolute;
+  width: 114px;
+  height: 18px;
+  left: 229px;
+  top: 955px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130%;
+  /* or 18px */
+
+  /* Blue 2 */
+
+  color: #2D9CDB;
+
+  margin-bottom: 56px;
+}
