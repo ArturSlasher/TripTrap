@@ -1,3 +1,5 @@
+$primary: #5EC784;
+
 body {
   position: absolute;
   width: 480px;
@@ -6,20 +8,31 @@ body {
   top: 0px;
 }
 
-h2 {
-  position:absolute;
-  left: 167px;
-  right: 78.82%;
+.logo {
+  position: absolute;
+  bottom: 93.75%;
+  height: 40px;
+  width: 40px;
+  left: 161px;
   top: 24px;
-  bottom: 95%;
+  border-radius: 0px;
+}
+
+h2 {
+  position: absolute;
+  height: 24px;
+  width: 102px;
+  left: 203px;
+  top: 36px;
+  border-radius: 0px;
   font-family: Comfortaa;
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 24px;
   line-height: 85%;
   /* or 20px */
 
-  color: #5EC784;
+  color: $primary;
 }
 
 h1 {
@@ -57,16 +70,16 @@ button {
   font-size: 14px;
   line-height: 130%;
   color: #FFFEFA;
-}
 
-.login-google-button {
-  top: 256px;
-  background: #4286F5;
-}
+  &.login-google-button {
+    top: 256px;
+    background: #4286F5;
+  }
 
-.login-facebook-button {
-  top: 320px;
-  background: #3B5999;
+  &.login-facebook-button {
+    top: 320px;
+    background: #3B5999;
+  }
 }
 
 .or {
@@ -135,25 +148,19 @@ button {
 }
 
 ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background,.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
-  background-color: #5EC784;
+  background-color: $primary;
 }
 
 .login-button {
   position: absolute;
-width: 380px;
-height: 40px;
-left: 46px;
-top: 624px;
-background-color: #5EC784;
+  width: 380px;
+  height: 40px;
+  left: 46px;
+  top: 624px;
+  background-color: $primary;
 }
 
-.forgot-password-link {
-  position: absolute;
-  width: 112px;
-  height: 24px;
-  left: 180px;
-  top: 680px;
-
+a {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -164,6 +171,26 @@ background-color: #5EC784;
   /* Blue 2 */
 
   color: #2D9CDB;
+
+  &.forgot-password-link {
+    position: absolute;
+    width: 112px;
+    height: 24px;
+    left: 180px;
+    top: 680px;
+
+
+  }
+
+  &.create-account-link {
+    position: absolute;
+    width: 114px;
+    height: 18px;
+    left: 229px;
+    top: 955px;
+
+    margin-bottom: 56px;
+  }
 }
 
 .new-in-triptrap {
@@ -185,23 +212,37 @@ background-color: #5EC784;
   color: rgba(44, 43, 47, 0.37);
 }
 
-.create-account-link {
+.illustration1 {
   position: absolute;
-  width: 114px;
-  height: 18px;
-  left: 229px;
-  top: 955px;
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 130%;
-  /* or 18px */
-
-  /* Blue 2 */
-
-  color: #2D9CDB;
-
-  margin-bottom: 56px;
+  top: 15.04%;
+  bottom: 34.18%;
+  height: 519.999755859375px;
+  width: 544px;
+  left: 688px;
+  top: 154px;
+  margin-right: 208px;
 }
+
+.explore-text {
+  position: absolute;
+  width: 424px;
+  height: 86px;
+  left: 748px;
+  top: 754px;
+
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: 1;
+  font-size: 36px;
+  line-height: 140%;
+  /* or 50px */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  /* grey */
+
+  color: #4E4B55;
+  }
+
