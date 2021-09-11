@@ -103,12 +103,11 @@ button {
   color: rgba(44, 43, 47, 0.56);
 }
 
-.login-input {
+input {
   position: absolute;
   width: 380px;
   height: 40px;
   left: 46px;
-  top: 440px;
   padding-left: 16px;
 
   /* grey stroke */
@@ -116,51 +115,39 @@ button {
   border: 1px solid #DDDDDD;
   box-sizing: border-box;
   border-radius: 4px;
+
+  &.email-input{
+
+    top: 440px;
+  }
+
+  &.username-input{
+    top: 504px;
+  }
+
+  &.password-input{
+    top: 568px;
+  }
+
+  &.confirm-password-input{
+    top: 632px;
+  }
+
+  &.city-input{
+    top: 696px;
+  }
 }
 
-.login-password {
+.signup-button {
   position: absolute;
   width: 380px;
   height: 40px;
   left: 46px;
-  top: 504px;
-  padding-left: 16px;
-
-  /* grey stroke */
-
-  border: 1px solid #DDDDDD;
-  box-sizing: border-box;
-  border-radius: 4px;
-}
-
-.remember-me-checkbox {
-  position: absolute;
-  width: 134px;
-  height: 24px;
-  left: 46px;
-  top: 568px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 130%;
-  color: #2C2B2F;
-}
-
-::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background,.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+  top: 760px;
   background-color: $primary;
 }
 
-.login-button {
-  position: absolute;
-  width: 380px;
-  height: 40px;
-  left: 46px;
-  top: 624px;
-  background-color: $primary;
-}
-
-a {
+.login-link {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -169,35 +156,21 @@ a {
   /* or 18px */
 
   /* Blue 2 */
-
+  position: absolute;
   color: #2D9CDB;
+  width: 114px;
+  height: 18px;
+  left: 275px;
+  top: 955px;
 
-  &.forgot-password-link {
-    position: absolute;
-    width: 112px;
-    height: 24px;
-    left: 180px;
-    top: 680px;
-
-
-  }
-
-  &.create-account-link {
-    position: absolute;
-    width: 114px;
-    height: 18px;
-    left: 229px;
-    top: 955px;
-
-    margin-bottom: 56px;
-  }
+  margin-bottom: 56px;
 }
 
-.new-in-triptrap {
+.already-in-triptrap {
   position: absolute;
-  width: 106px;
+  width: 123px;
   height: 18px;
-  left: 123px;
+  left: 148px;
   top: 955px;
 
   font-family: Roboto;
@@ -211,6 +184,3 @@ a {
 
   color: rgba(44, 43, 47, 0.37);
 }
-
-
-

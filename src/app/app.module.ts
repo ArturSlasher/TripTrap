@@ -7,13 +7,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MaterialModule} from './material.module';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { LoginFormComponent } from './login-page/login-form/login-form.component';
+import { IllustrationsComponent } from './login-page/illustrations/illustrations.component';
+import { SignupPageComponent } from './signup-page/signup-page.component';
+import { SignupFormComponent } from './signup-page/signup-form/signup-form.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    IllustrationsComponent,
+    SignupPageComponent,
+    SignupFormComponent
   ],
   imports: [
     BrowserModule,
