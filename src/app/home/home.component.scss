@@ -1,8 +1,7 @@
 @import '/src/styles.scss';
 
-.header-container {
-  width: 100vw;
-  // min-width: 960px;
-  height: 100vh;
-  overflow-x: hidden;
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #A2DDFD;
 }

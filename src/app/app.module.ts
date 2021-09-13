@@ -10,6 +10,8 @@ import { LoginFormComponent } from './login-page/login-form/login-form.component
 import { IllustrationsComponent } from './login-page/illustrations/illustrations.component';
 import { SignupPageComponent } from './signup-page/signup-page.component';
 import { SignupFormComponent } from './signup-page/signup-form/signup-form.component';
+import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './home/header/header.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { SignupFormComponent } from './signup-page/signup-form/signup-form.compo
     LoginFormComponent,
     IllustrationsComponent,
     SignupPageComponent,
-    SignupFormComponent
+    SignupFormComponent,
+    HomeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

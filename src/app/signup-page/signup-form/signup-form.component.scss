@@ -1,4 +1,4 @@
-$primary: #5EC784;
+@import '/src/styles.scss';
 
 body {
   position: absolute;
@@ -69,7 +69,7 @@ button {
   font-weight: normal;
   font-size: 14px;
   line-height: 130%;
-  color: #FFFEFA;
+  color: $white;
 
   &.login-google-button {
     top: 256px;
