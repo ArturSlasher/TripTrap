@@ -95,3 +95,69 @@ nav {
     border-bottom: 4px solid $primary;
   }
 }
+
+.search-button {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  left: 1220px;
+  top: 18px;
+
+  background-color: $white !important;
+
+  & mat-icon {
+    color: $gray;
+  }
+}
+
+.filter-button {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  left: 1272px;
+  top: 18px;
+
+  background-color: $white !important;
+
+  & mat-icon {
+    color: $gray;
+  }
+}
+
+.notifications-button {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  left: 1324px;
+  top: 18px;
+
+  background-color: $white !important;
+
+  & mat-icon {
+    color: $gray;
+  }
+}
+
+.mat-badge-content {
+  background: $primary !important;
+  color: $white !important;
+}
+
+#fuck-badge {
+  left:1400px;
+}
+
+.account-button {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 1376px;
+  top: 12px;
+
+  background-color: $white !important;
+
+  & mat-icon {
+    font-size: 32px;
+    color: $primary;
+  }
+}
