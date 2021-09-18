@@ -3,42 +3,110 @@
 // For more information: https://material.angular.io/guide/theming
 @use '~@angular/material' as mat;
 // Plus imports for other components in your app.
+@import '~@angular/material/theming';
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
+$tripttrap-website-primary: (
+  50 : #ecf8f0,
+    100 : #cfeeda,
+    200 : #afe3c2,
+    300 : #8ed8a9,
+    400 : #76cf96,
+    500 : #5ec784,
+    600 : #56c17c,
+    700 : #4cba71,
+    800 : #42b367,
+    900 : #31a654,
+    A100 : #edfff2,
+    A200 : #baffcd,
+    A400 : #87ffa9,
+    A700 : #6eff96,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$tripttrap-website-accent: (
+  50 : #ffedf0,
+  100 : #ffd1db,
+  200 : #ffb3c3,
+  300 : #ff94aa,
+  400 : #ff7d98,
+  500 : #ff6686,
+  600 : #ff5e7e,
+  700 : #ff5373,
+  800 : #ff4969,
+  900 : #ff3856,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #ffe1e5,
+  A700 : #ffc8cf,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #000000,
+      600 : #000000,
+      700 : #000000,
+      800 : #000000,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+);
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$triptrap-website-primary: mat.define-palette(mat.$indigo-palette);
-$triptrap-website-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$primary: mat-palette($tripttrap-website-primary);
+$accent:  mat-palette($tripttrap-website-accent);
 
 // The warn palette is optional (defaults to red).
-$triptrap-website-warn: mat.define-palette(mat.$red-palette);
+$warn:  mat-palette($mat-orange, 800);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$triptrap-website-theme: mat.define-light-theme((
+$triptrap-website-theme: mat-light-theme((
   color: (
-    primary: $triptrap-website-primary,
-    accent: $triptrap-website-accent,
-    warn: $triptrap-website-warn,
+    primary: $primary,
+    accent: $accent,
+    warn: $warn,
   )
 ));
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat.all-component-themes($triptrap-website-theme);
+@include angular-material-theme($triptrap-website-theme);
 
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-$primary: #5EC784;
+//$hard_primary: #063317;
 $white: #FFFEFA;
 $black: #3D3D3D;
 $gray: #8D8D8D;
+

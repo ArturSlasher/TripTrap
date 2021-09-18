@@ -32,7 +32,7 @@ h2 {
   line-height: 85%;
   /* or 20px */
 
-  color: $primary;
+  color: mat-color($primary);
 }
 
 h1 {
@@ -148,7 +148,7 @@ button {
 }
 
 ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background,.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
-  background-color: $primary;
+  background-color: mat-color($primary);
 }
 
 .login-button {
@@ -157,7 +157,7 @@ button {
   height: 40px;
   left: 46px;
   top: 624px;
-  background-color: $primary;
+  background-color: mat-color($primary);
 }
 
 a {

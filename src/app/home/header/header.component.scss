@@ -1,5 +1,6 @@
 @import '/src/styles.scss';
 
+
 header {
   position: absolute;
   width: 1440px;
@@ -36,7 +37,7 @@ h2 {
   line-height: 85%;
   /* or 20px */
 
-  color: $primary;
+  color: mat-color($primary);
 }
 
 nav {
@@ -92,7 +93,7 @@ nav {
   &.active {
     //color: $primary;
     height: 68px;
-    border-bottom: 4px solid $primary;
+    border-bottom: 4px solid mat-color($primary);
   }
 }
 
@@ -139,7 +140,7 @@ nav {
 }
 
 .mat-badge-content {
-  background: $primary !important;
+  background: mat-color($primary);
   color: $white !important;
 }
 
@@ -158,6 +159,6 @@ nav {
 
   & mat-icon {
     font-size: 32px;
-    color: $primary;
+    color: mat-color($primary);
   }
 }

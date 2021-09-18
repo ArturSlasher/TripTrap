@@ -32,7 +32,7 @@ h2 {
   line-height: 85%;
   /* or 20px */
 
-  color: $primary;
+  color: mat-color($primary);
 }
 
 h1 {
@@ -144,7 +144,7 @@ input {
   height: 40px;
   left: 46px;
   top: 760px;
-  background-color: $primary;
+  background-color: mat-color($primary);
 }
 
 .login-link {

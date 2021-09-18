@@ -4,6 +4,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatIconModule} from '@angular/material/icon';
 import {MatBadgeModule} from '@angular/material/badge';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -12,14 +13,16 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatFormFieldModule,
     MatCheckboxModule,
     MatIconModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatCardModule
   ],
   exports: [
     MatButtonModule,
     MatFormFieldModule,
     MatCheckboxModule,
     MatIconModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatCardModule
   ]
 })
 

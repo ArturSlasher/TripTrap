@@ -12,6 +12,7 @@ import { SignupPageComponent } from './signup-page/signup-page.component';
 import { SignupFormComponent } from './signup-page/signup-form/signup-form.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './home/header/header.component';
+import { HomeCardsComponent } from './home/home-cards/home-cards.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { HeaderComponent } from './home/header/header.component';
     SignupPageComponent,
     SignupFormComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomeCardsComponent,
   ],
   imports: [
     BrowserModule,
