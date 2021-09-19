@@ -1,28 +1,27 @@
 @import '/src/styles.scss';
 
-
 mat-tab-group {
-  display: flex;
-  justify-content: center;
+  //width: 416px;
   height: 72px;
+  margin-left: 444px;
   top: 16px;
-  width: 100vw;
-  min-width: 1000px;
-}
-
-::ng-deep .mat-tab-body-wrapper {
-  width: 100vw;
 }
 
 mat-tab {
   text-decoration: none !important;
+
+  position: absolute;
   height: 72px !important;
+  width: 104px;
+  top: 0%;
+  bottom: 0%;
 
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 18px !important;
   line-height: 21px !important;
+  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -30,6 +29,23 @@ mat-tab {
   transition: all .5s ease;
 
   color: $black;
+
+  // &#map {
+  //   left: 35.56%;
+  //   right: 57.22%;
+  // }
+  // &#my-trips {
+  //   left: 42.78%;
+  //   right: 50%;
+  // }
+  // &#planning {
+  //   left: 50%;
+  //   right: 42.78%;
+  // }
+  // &#community {
+  //   left: 57.22%;
+  //   right: 35.56%;
+  // }
 
   // &:hover {
   //   font-size: 20px;
@@ -41,24 +57,9 @@ mat-tab {
   // }
 }
 
-app-coming-soon {
-  display: block;
-  width: 100vw;
-}
-
-::ng-deep .mat-mdc-tab-group.mat-mdc-tab-group-stretch-tabs>.mat-mdc-tab-header .mat-mdc-tab {
-  height: 72px;
-}
-
-::ng-deep .mat-tab-label-content:hover {
-  font-size: 20px !important;
-  transition: .2s ease;
-}
-
 ::ng-deep .mat-tab-label {
   height: 72px !important;
   color: $gray;
-  min-width: 32px;
 }
 
 ::ng-deep .mat-tab-label-content{
@@ -70,8 +71,7 @@ app-coming-soon {
 }
 
 ::ng-deep .mat-tab-label-active{
+  //height: 68px;
   border-bottom: 4px solid mat-color($primary);
   color: $black;
 }
-
-

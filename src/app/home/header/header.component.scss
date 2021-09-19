@@ -40,71 +40,12 @@ h2 {
   color: mat-color($primary);
 }
 
-nav {
-  width: 416px;
-  height: 72px;
-  left: 512px;
-  top: 0px;
-}
-
-.nav-item {
-  text-decoration: none !important;
-
-  position: absolute;
-  height: 72px;
-  width: 104px;
-  top: 0%;
-  bottom: 0%;
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  text-transform: capitalize;
-  transition: all .5s ease;
-
-  color: $black;
-
-  &#map {
-    left: 35.56%;
-    right: 57.22%;
-  }
-  &#my-trips {
-    left: 42.78%;
-    right: 50%;
-  }
-  &#planning {
-    left: 50%;
-    right: 42.78%;
-  }
-  &#community {
-    left: 57.22%;
-    right: 35.56%;
-  }
-
-  &:hover {
-    font-size: 20px;
-  }
-  &.active {
-    //color: $primary;
-    height: 68px;
-    border-bottom: 4px solid mat-color($primary);
-  }
-}
-
 .search-button {
   position: absolute;
   width: 36px;
   height: 36px;
   left: 1220px;
   top: 18px;
-
-  background-color: $white !important;
 
   & mat-icon {
     color: $gray;
@@ -118,8 +59,6 @@ nav {
   left: 1272px;
   top: 18px;
 
-  background-color: $white !important;
-
   & mat-icon {
     color: $gray;
   }
@@ -131,8 +70,6 @@ nav {
   height: 36px;
   left: 1324px;
   top: 18px;
-
-  background-color: $white !important;
 
   & mat-icon {
     color: $gray;
@@ -154,8 +91,6 @@ nav {
   height: 40px;
   left: 1376px;
   top: 12px;
-
-  background-color: $white !important;
 
   & mat-icon {
     font-size: 32px;

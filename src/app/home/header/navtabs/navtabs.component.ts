@@ -1,27 +1,15 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
-import { MatTabGroup } from '@angular/material/tabs';
-import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
-import { TriptrapService } from 'src/app/services/triptrap.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-navtabs',
   templateUrl: './navtabs.component.html',
   styleUrls: ['./navtabs.component.scss']
 })
-export class NavtabsComponent {
+export class NavtabsComponent implements OnInit {
 
-  constructor(
-    public triptrapService: TriptrapService,
-  ) { }
+  constructor() { }
 
-  @ViewChild("tabRef") TabGroup!: MatTabGroup;
-  TabGroup$ = new BehaviorSubject<MatTabGroup>(this.TabGroup);
-  TabIndex$ = this.triptrapService.TabIndex$;
-
-  logChange(index: number | null) {
-    if(index == 0) {
-      this.triptrapService.TabIndex$.next(0);
-    }
+  ngOnInit(): void {
   }
 
 }

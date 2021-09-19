@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { SignupFormComponent } from './signup-page/signup-form/signup-form.compo
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './home/header/header.component';
 import { HomeCardsComponent } from './home/home-cards/home-cards.component';
+import { NavtabsComponent } from './home/header/navtabs/navtabs.component';
 
 
 @NgModule({
@@ -26,12 +28,14 @@ import { HomeCardsComponent } from './home/home-cards/home-cards.component';
     HomeComponent,
     HeaderComponent,
     HomeCardsComponent,
+    NavtabsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
