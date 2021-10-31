@@ -8,7 +8,7 @@ import { HomeCard } from './home-card.interface';
 })
 export class HomeCardsComponent implements OnInit {
 
-  private HomeCards: HomeCard[] = [
+  public HomeCards: HomeCard[] = [
     {
       name: 'Trip to the island',
       description: 'Noord, Aruba',
@@ -19,6 +19,18 @@ export class HomeCardsComponent implements OnInit {
       name: 'Wonderful Ukraine',
       description: 'Bukovel, Ukraine',
       date: '7/11/19',
+      photo: "some photo"
+    },
+    {
+      name: 'Winter weekend',
+      description: 'Berlin, Germany',
+      date: '2/11/12',
+      photo: "some photo"
+    },
+    {
+      name: 'Winter weekend',
+      description: 'Berlin, Germany',
+      date: '2/11/12',
       photo: "some photo"
     },
     {
