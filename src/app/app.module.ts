@@ -15,7 +15,8 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './home/header/header.component';
 import { HomeCardsComponent } from './home/home-cards/home-cards.component';
 import { NavtabsComponent } from './home/header/navtabs/navtabs.component';
-
+import { MyTripsComponent } from './my-trips/my-trips.component';
+import { TripsGroupComponent } from './my-trips/trips-group/trips-group.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,8 @@ import { NavtabsComponent } from './home/header/navtabs/navtabs.component';
     HeaderComponent,
     HomeCardsComponent,
     NavtabsComponent,
+    MyTripsComponent,
+    TripsGroupComponent,
   ],
   imports: [
     BrowserModule,
