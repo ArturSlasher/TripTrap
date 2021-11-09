@@ -17,6 +17,8 @@ import { HomeCardsComponent } from './home/home-cards/home-cards.component';
 import { NavtabsComponent } from './home/header/navtabs/navtabs.component';
 import { MyTripsComponent } from './my-trips/my-trips.component';
 import { TripsGroupComponent } from './my-trips/trips-group/trips-group.component';
+import { UserCardComponent } from './my-trips/trips-group/user-card/user-card.component';
+import { TripsListComponent } from './my-trips/trips-group/trips-list/trips-list.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { TripsGroupComponent } from './my-trips/trips-group/trips-group.componen
     NavtabsComponent,
     MyTripsComponent,
     TripsGroupComponent,
+    UserCardComponent,
+    TripsListComponent,
   ],
   imports: [
     BrowserModule,
