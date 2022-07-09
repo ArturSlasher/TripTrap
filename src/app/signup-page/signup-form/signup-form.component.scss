@@ -73,11 +73,13 @@ button {
 
   &.login-google-button {
     top: 256px;
+    color: $white;
     background: #4286F5;
   }
 
   &.login-facebook-button {
-    top: 320px;
+    top: 280px;
+    color: $white;
     background: #3B5999;
   }
 }
@@ -145,6 +147,7 @@ input {
   left: 46px;
   top: 760px;
   background-color: mat-color($primary);
+  color: $white;
 }
 
 .login-link {
