@@ -1,68 +1,61 @@
 @import '/src/styles.scss';
 
-body {
-  position: absolute;
+.signup-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
   width: 480px;
-  height: 1024px;
-  left: 0px;
-  top: 0px;
+  height: 100vh;
+  min-height: 600px;
+  max-height: 1000px;
+  padding-top: 24px;
 }
 
-.logo {
-  position: absolute;
-  bottom: 93.75%;
-  height: 40px;
-  width: 40px;
-  left: 161px;
-  top: 24px;
-  border-radius: 0px;
-}
+.logo-container {
+  display: flex;
 
-h2 {
-  position: absolute;
-  height: 24px;
-  width: 102px;
-  left: 203px;
-  top: 36px;
-  border-radius: 0px;
-  font-family: Comfortaa;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 85%;
-  /* or 20px */
+  .logo {
+    height: 40px;
+    width: 40px;
+    border-radius: 0px;
+  }
 
-  color: mat-color($primary);
+  h2 {
+    display: inline;
+    margin-top: 12px;
+    margin-left: 4px;
+    height: 24px;
+    width: 102px;
+    border-radius: 0px;
+    font-family: Comfortaa;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 85%;
+
+    color: mat-color($primary);
+  }
+
 }
 
 h1 {
-  position: absolute;
   width: 380px;
   height: 88px;
-  left: 46px;
-  top: 112px;
 
   font-family: Comfortaa;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
   line-height: 140%;
-  /* or 50px */
-
-  display: flex;
-  align-items: center;
   text-align: center;
-
-  /* grey */
 
   color: #4E4B55;
 }
 
 button {
-  position: absolute;
   width: 380px;
   height: 40px;
-  left: 46px;
   border-radius: 40px;
   font-family: Roboto;
   font-style: normal;
@@ -72,118 +65,77 @@ button {
   color: $white;
 
   &.login-google-button {
-    top: 256px;
     color: $white;
     background: #4286F5;
   }
 
   &.login-facebook-button {
-    top: 280px;
     color: $white;
     background: #3B5999;
   }
 }
 
 .or {
-  position: absolute;
   width: 13.33px;
   height: 16px;
-  left: 229.33px;
-  top: 392px;
 
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 130%;
-  /* or 18px */
-
-  display: flex;
-  align-items: center;
   text-align: center;
 
   color: rgba(44, 43, 47, 0.56);
 }
 
 input {
-  position: absolute;
   width: 380px;
   height: 40px;
-  left: 46px;
   padding-left: 16px;
-
-  /* grey stroke */
 
   border: 1px solid #DDDDDD;
   box-sizing: border-box;
   border-radius: 4px;
-
-  &.email-input{
-
-    top: 440px;
-  }
-
-  &.username-input{
-    top: 504px;
-  }
-
-  &.password-input{
-    top: 568px;
-  }
-
-  &.confirm-password-input{
-    top: 632px;
-  }
-
-  &.city-input{
-    top: 696px;
-  }
 }
 
 .signup-button {
-  position: absolute;
   width: 380px;
   height: 40px;
-  left: 46px;
-  top: 760px;
   background-color: mat-color($primary);
   color: $white;
 }
 
-.login-link {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 130%;
-  /* or 18px */
+.login{
 
-  /* Blue 2 */
-  position: absolute;
-  color: #2D9CDB;
-  width: 114px;
-  height: 18px;
-  left: 275px;
-  top: 955px;
+  .login-link {
+    display: inline;
+    margin-inline: 4px;
 
-  margin-bottom: 56px;
-}
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 130%;
+    color: #2D9CDB;
+    width: 114px;
+    height: 18px;
 
-.already-in-triptrap {
-  position: absolute;
-  width: 123px;
-  height: 18px;
-  left: 148px;
-  top: 955px;
+    margin-bottom: 56px;
+  }
 
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 130%;
-  /* or 18px */
+  .already-in-triptrap {
+    display: inline;
+    margin-inline: 4px;
+    width: 123px;
+    height: 18px;
 
-  /* icon/grey */
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 130%;
 
-  color: rgba(44, 43, 47, 0.37);
+    color: rgba(44, 43, 47, 0.37);
+  }
 }

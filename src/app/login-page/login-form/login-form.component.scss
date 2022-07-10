@@ -1,68 +1,59 @@
 @import '/src/styles.scss';
 
-body {
-  position: absolute;
+.login-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
   width: 480px;
-  height: 1024px;
-  left: 0px;
-  top: 0px;
+  height: 100vh;
+  min-height: 480px;
+  max-height: 800px;
+  padding-top: 24px;
 }
 
-.logo {
-  position: absolute;
-  bottom: 93.75%;
-  height: 40px;
-  width: 40px;
-  left: 161px;
-  top: 24px;
-  border-radius: 0px;
-}
+.logo-container {
+  display: flex;
 
-h2 {
-  position: absolute;
-  height: 24px;
-  width: 102px;
-  left: 203px;
-  top: 36px;
-  border-radius: 0px;
-  font-family: Comfortaa;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 85%;
-  /* or 20px */
+  .logo {
+    height: 40px;
+    width: 40px;
+    border-radius: 0px;
+  }
 
-  color: mat-color($primary);
+  .logo-sign {
+    display:inline;
+    margin-top: 12px;
+    margin-left: 4px;
+    height: 24px;
+    width: 102px;
+    border-radius: 0px;
+    font-family: Comfortaa;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 85%;
+    color: mat-color($primary);
+  }
 }
 
 h1 {
-  position: absolute;
   width: 380px;
   height: 88px;
-  left: 46px;
-  top: 112px;
 
   font-family: Comfortaa;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
   line-height: 140%;
-  /* or 50px */
 
-  display: flex;
-  align-items: center;
   text-align: center;
-
-  /* grey */
-
   color: #4E4B55;
 }
 
 button {
-  position: absolute;
   width: 380px;
   height: 40px;
-  left: 46px;
   border-radius: 40px;
   font-family: Roboto;
   font-style: normal;
@@ -72,48 +63,33 @@ button {
   color: $white;
 
   &.login-google-button {
-    top: 256px;
     background: #4286F5;
     color: $white;
   }
 
   &.login-facebook-button {
-    top: 280px;
     background: #3B5999;
     color: $white;
   }
 }
 
 .or {
-  position: absolute;
   width: 13.33px;
   height: 16px;
-  left: 229.33px;
-  top: 392px;
 
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 130%;
-  /* or 18px */
-
-  display: flex;
-  align-items: center;
-  text-align: center;
 
   color: rgba(44, 43, 47, 0.56);
 }
 
 .login-input {
-  position: absolute;
   width: 380px;
   height: 40px;
-  left: 46px;
-  top: 440px;
   padding-left: 16px;
-
-  /* grey stroke */
 
   border: 1px solid #DDDDDD;
   box-sizing: border-box;
@@ -121,14 +97,9 @@ button {
 }
 
 .login-password {
-  position: absolute;
   width: 380px;
   height: 40px;
-  left: 46px;
-  top: 504px;
   padding-left: 16px;
-
-  /* grey stroke */
 
   border: 1px solid #DDDDDD;
   box-sizing: border-box;
@@ -136,11 +107,8 @@ button {
 }
 
 .remember-me-checkbox {
-  position: absolute;
   width: 134px;
   height: 24px;
-  left: 46px;
-  top: 568px;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -154,11 +122,8 @@ button {
 }
 
 .login-button {
-  position: absolute;
   width: 380px;
   height: 40px;
-  left: 46px;
-  top: 624px;
   background-color: mat-color($primary);
   color: $white;
 }
@@ -169,51 +134,41 @@ a {
   font-weight: normal;
   font-size: 14px;
   line-height: 130%;
-  /* or 18px */
-
-  /* Blue 2 */
 
   color: #2D9CDB;
 
   &.forgot-password-link {
-    position: absolute;
     width: 112px;
     height: 24px;
-    left: 180px;
-    top: 680px;
-
-
   }
 
   &.create-account-link {
-    position: absolute;
     width: 114px;
     height: 18px;
-    left: 229px;
-    top: 955px;
 
     margin-bottom: 56px;
   }
 }
 
-.new-in-triptrap {
-  position: absolute;
-  width: 106px;
-  height: 18px;
-  left: 123px;
-  top: 955px;
+.signup {
 
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 130%;
-  /* or 18px */
+  .new-in-triptrap {
+    display: inline;
+    width: 106px;
+    height: 18px;
+    margin-inline: 4px;
 
-  /* icon/grey */
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 130%;
 
-  color: rgba(44, 43, 47, 0.37);
+    color: rgba(44, 43, 47, 0.37);
+  }
+
+  .create-account-link {
+    display: inline;
+    margin-inline: 4px;
+  }
 }
-
-
-
