@@ -64,12 +64,12 @@ button {
   line-height: 130%;
   color: $white;
 
-  &.signup-google-button {
+  &.login-google-button {
     color: $white;
     background: #4286F5;
   }
 
-  &.signup-facebook-button {
+  &.login-facebook-button {
     color: $white;
     background: #3B5999;
   }
@@ -89,19 +89,6 @@ button {
   color: rgba(44, 43, 47, 0.56);
 }
 
-.incorrect-data {
-  display: none;
-  text-align: center;
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 130%;
-
-  color: mat-color($accent)
-}
-
 input {
   width: 380px;
   height: 40px;
@@ -115,13 +102,11 @@ input {
 .signup-button {
   width: 380px;
   height: 40px;
-  background-color: mat-color($primary) !important;
-  color: $white !important;
+  background-color: mat-color($primary);
+  color: $white;
 }
 
 .login{
-
-  padding-bottom: 4vh;
 
   .login-link {
     display: inline;
