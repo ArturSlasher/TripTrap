@@ -2,98 +2,89 @@
 
 
 header {
-  position: absolute;
-  width: 1440px;
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  min-width: 960px;
   height: 72px;
-  left: 0px;
-  top: 0px;
   background-color: $white;
   box-shadow: 0px 8px 16px rgba(78, 75, 85, 0.08);
 }
 
-.logo {
-  position: absolute;
-  bottom: 93.75%;
-  height: 40px;
-  width: 40px;
-  left: 24px;
-  top: 16px;
+.logo-container {
+  display: flex;
 
-  border-radius: 0px;
-}
-
-h2 {
-  position: absolute;
-  height: 24px;
-  width: 102px;
-  left: 64px;
-  top: 28px;
-
-  border-radius: 0px;
-  font-family: Comfortaa;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 85%;
-  /* or 20px */
-
-  color: mat-color($primary);
-}
-
-.search-button {
-  position: absolute;
-  width: 36px;
-  height: 36px;
-  left: 1220px;
-  top: 18px;
-
-  & mat-icon {
-    color: $gray;
+  .logo {
+    display: inline;
+    height: 40px;
+    width: 40px;
+    margin-top: 16px;
+    border-radius: 0px;
   }
-}
 
-.filter-button {
-  position: absolute;
-  width: 36px;
-  height: 36px;
-  left: 1272px;
-  top: 18px;
+  h2 {
+    display: inline;
+    height: 24px;
+    width: 102px;
+    margin-top: 30px;
+    margin-left: 4px;
 
-  & mat-icon {
-    color: $gray;
-  }
-}
+    border-radius: 0px;
+    font-family: Comfortaa;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 85%;
 
-.notifications-button {
-  position: absolute;
-  width: 36px;
-  height: 36px;
-  left: 1324px;
-  top: 18px;
-
-  & mat-icon {
-    color: $gray;
-  }
-}
-
-.mat-badge-content {
-  background: mat-color($primary);
-  color: $white !important;
-}
-
-#fuck-badge {
-  left:1400px;
-}
-
-.account-button {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  left: 1376px;
-  top: 12px;
-
-  & mat-icon {
-    font-size: 32px;
     color: mat-color($primary);
   }
+}
+
+.buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  .search-button {
+    width: 36px;
+    height: 36px;
+
+    & mat-icon {
+      color: $gray;
+    }
+  }
+
+  .filter-button {
+    width: 36px;
+    height: 36px;
+
+    & mat-icon {
+      color: $gray;
+    }
+  }
+
+  .notifications-button {
+    width: 36px;
+    height: 36px;
+
+    & mat-icon {
+      color: $gray;
+    }
+  }
+
+  .mat-badge-content {
+    background: mat-color($primary);
+    color: $white !important;
+  }
+
+  .account-button {
+    width: 40px;
+    height: 40px;
+
+    & mat-icon {
+      font-size: 32px;
+      color: mat-color($primary);
+    }
+  }
+
 }

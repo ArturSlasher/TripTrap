@@ -1,11 +1,14 @@
 @import '/src/styles.scss';
 
 .home-cards-container {
-  position: absolute;
+  // position: absolute;
   display: flex;
-  left: 28px;
-  top: 752px;
-  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  // left: 28px;
+  // top: 752px;
+  gap: 2vw;
+  margin-top: 68vh;
 }
 
 .home-card {
