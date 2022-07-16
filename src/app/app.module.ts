@@ -12,15 +12,16 @@ import { IllustrationsComponent } from './auth/illustrations/illustrations.compo
 import { SignupPageComponent } from './auth/signup-page/signup-page.component';
 import { SignupFormComponent } from './auth/signup-page/signup-form/signup-form.component';
 import { HomeComponent } from './home/home.component';
-import { HeaderComponent } from './header/header.component';
-import { HomeCardsComponent } from './home/home-cards/home-cards.component';
-import { NavtabsComponent } from './header/navtabs/navtabs.component';
-import { MyTripsComponent } from './my-trips/my-trips.component';
-import { TripsGroupComponent } from './my-trips/trips-group/trips-group.component';
-import { UserCardComponent } from './my-trips/trips-group/user-card/user-card.component';
-import { TripsListComponent } from './my-trips/trips-group/trips-list/trips-list.component';
-import { TripContentSectionComponent } from './my-trips/trip-content-section/trip-content-section.component';
+import { HeaderComponent } from './home/header/header.component';
+import { HomeCardsComponent } from './home/map/home-cards/home-cards.component';
+import { NavtabsComponent } from './home/header/navtabs/navtabs.component';
+import { MyTripsComponent } from './home/my-trips/my-trips.component';
+import { TripsGroupComponent } from './home/my-trips/trips-group/trips-group.component';
+import { UserCardComponent } from './home/my-trips/trips-group/user-card/user-card.component';
+import { TripsListComponent } from './home/my-trips/trips-group/trips-list/trips-list.component';
+import { TripContentSectionComponent } from './home/my-trips/trip-content-section/trip-content-section.component';
 import { AuthComponent } from './auth/auth.component';
+import { MapComponent } from './home/map/map.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { AuthComponent } from './auth/auth.component';
     TripsListComponent,
     TripContentSectionComponent,
     AuthComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,

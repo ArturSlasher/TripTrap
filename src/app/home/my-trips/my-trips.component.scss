@@ -1,35 +1,16 @@
-@import '/src/styles.scss';
-
-::ng-deep .mat-bottom-sheet-container{
-  max-height: 90vh;
+app-header {
+  z-index: 2;
 }
 
 .my-trips-container {
-  overflow: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  width: 100vw;
-  min-width: 1000px;
-  min-height: calc(100vh - 72px);
-  height: max-content;
+  width: 1440px;
+  height: 400vh;
+
   background: #F7F7F7;
 }
 
-button {
-  position: fixed !important;
-  z-index: 3;
-  top: 85vh;
-  right: 5vw;
-}
-
-mat-icon {
-  color: $white;
-}
-
 app-trip-content-section {
-  display: flex;
-  flex-direction: column;
-  width: calc( 98vw - 432px);
-  min-width: 550px;
+  position: absolute;
+  left: 448px;
+  top: 88px;
 }

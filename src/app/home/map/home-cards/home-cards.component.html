@@ -1,7 +1,7 @@
 <div class="home-cards-container">
-  <mat-card class="home-card" (click)="homeCardPress(trip)" *ngFor="let trip of Trips$ | async">
+  <mat-card class="home-card" *ngFor="let card of HomeCards">
     <mat-card-header>
-      <mat-card-title class="card-name">{{trip.name}}</mat-card-title>
+      <mat-card-title class="card-name">{{card.name}}</mat-card-title>
       <mat-card-actions>
         <button mat-mini-fab class="options-button mat-elevation-z0">
           <mat-icon>more_vert</mat-icon>
@@ -9,13 +9,13 @@
       </mat-card-actions>
     </mat-card-header>
     <mat-card-content>
-      <p *ngIf="trip.tripPlaces.length"><i>
-        {{trip.tripPlaces[0].location}}
-      </i></p>
       <p>
-        {{trip.date}}
+        {{card.description}}
       </p>
-      <img mat-card-image class="trip-photo" [src]="trip.photo" alt="Trip photo">
+      <p>
+        {{card.date}}
+      </p>
+      <img mat-card-image src="assets\home-card-photo.png" alt="Trip to the island photo">
     </mat-card-content>
   </mat-card>
 </div>

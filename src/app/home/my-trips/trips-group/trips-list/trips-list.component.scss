@@ -12,36 +12,22 @@
   }
 }
 
-.active {
-  background-color: mat-color($primary);
-}
-
-.inactive {
-  background-color: $white !important;
-}
-
 mat-card {
   width: 360px;
   height: 208px;
   padding: 0 0;
+  // margin-bottom: 24px;
+
+  background-image: url(..\..\..\..\assets\trip-photo.png) !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
-  cursor: pointer;
+
   filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.2)) drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.25)) drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.14));
   border-radius: 4px;
 }
 
-.background-img {
-  object-fit: cover;
-  pointer-events: none;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
 mat-card-header {
-  // width: 360px;
+  width: 360px;
   height: 105px;
   padding-top: 16px;
 
@@ -50,10 +36,6 @@ mat-card-header {
 
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.56) 0%, rgba(0, 0, 0, 0) 100%);
   border-radius: 4px;
-}
-
-.card-name {
-  margin-left: 16px;
 }
 
 mat-card-title, .date {
@@ -72,7 +54,7 @@ mat-card-actions {
 .actions-bg {
   display: flex;
   justify-content: space-around;
-  // width: 216px;
+  width: 216px;
   height: 32px;
 
   background: rgba(44, 43, 47, 0.16);
@@ -85,14 +67,11 @@ mat-card-actions {
 button {
   display: flex !important;
   width: 40px !important;
-  color: $white !important;
-  align-items: flex-start;
-    padding-top: 6px;
 }
 
 mat-icon {
-  // position: absolute;
-  // top: 4px;
+  position: absolute;
+  top: 4px;
   padding-left: 4px;
 }
 

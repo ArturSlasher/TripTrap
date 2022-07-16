@@ -1,6 +1,5 @@
-import { TriptrapService } from './../../../../services/triptrap.service';
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { Trip } from 'src/app/interfaces/trip.interface';
+import { Component, OnInit } from '@angular/core';
+import { TripCard } from './trip-card.interface';
 
 @Component({
   selector: 'app-trips-list',
@@ -9,23 +8,28 @@ import { Trip } from 'src/app/interfaces/trip.interface';
 })
 export class TripsListComponent implements OnInit {
 
-  Trips$ = this.triptrapService.Trips$;
-  cards = document.getElementsByClassName('card-container');
-  headerContainer = document.getElementsByClassName('header-container');
-  constructor(
-    private triptrapService: TriptrapService
-    ) { }
+  public TripCards: TripCard[] = [
+    {
+      name: 'Bukovel, Ukraine',
+      date: '29/05/2021',
+      photo: "some photo"
+    },
+    {
+      name: 'New York, USA',
+      date: '18/09/2016',
+      photo: "some photo"
+    },
+    {
+      name: 'Vancouver, Canada',
+      date: '16/08/2013',
+      photo: "some photo"
+    }
+  ];
+
+
+  constructor() { }
 
   ngOnInit(): void {
-  }
-
-  sendTrip(card: Element, trip: Trip) {
-    this.triptrapService.CurrentTrip$.next(trip);
-    for (var i = 0; i < this.cards.length; i++) {
-      this.cards[i].classList.remove('active');
-    }
-    card.classList.add("active");
-    this.headerContainer[0].scrollTo({ top: 0, behavior: 'smooth' });
   }
 
 }

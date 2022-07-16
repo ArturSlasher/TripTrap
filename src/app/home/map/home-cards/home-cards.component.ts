@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Trip } from 'src/app/interfaces/trip.interface';
-import { TriptrapService } from 'src/app/services/triptrap.service';
+import { HomeCard } from './home-card.interface';
 
 @Component({
   selector: 'app-home-cards',
@@ -9,18 +8,42 @@ import { TriptrapService } from 'src/app/services/triptrap.service';
 })
 export class HomeCardsComponent implements OnInit {
 
-  Trips$ = this.triptrapService.Trips$;
+  public HomeCards: HomeCard[] = [
+    {
+      name: 'Trip to the island',
+      description: 'Noord, Aruba',
+      date: '4/21/12',
+      photo: "some photo"
+    },
+    {
+      name: 'Wonderful Ukraine',
+      description: 'Bukovel, Ukraine',
+      date: '7/11/19',
+      photo: "some photo"
+    },
+    {
+      name: 'Winter weekend',
+      description: 'Berlin, Germany',
+      date: '2/11/12',
+      photo: "some photo"
+    },
+    {
+      name: 'Winter weekend',
+      description: 'Berlin, Germany',
+      date: '2/11/12',
+      photo: "some photo"
+    },
+    {
+      name: 'Winter weekend',
+      description: 'Berlin, Germany',
+      date: '2/11/12',
+      photo: "some photo"
+    }
+  ];
 
-  constructor(
-    private triptrapService: TriptrapService
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
-  }
-
-  homeCardPress(trip: Trip) {
-    this.triptrapService.CurrentTrip$.next(trip);
-    this.triptrapService.goToMyTrips();
   }
 
 }

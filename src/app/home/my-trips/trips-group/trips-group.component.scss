@@ -1,28 +1,15 @@
 @import '/src/styles.scss';
 
 .trips-group {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 
+  top: 72px;
   background-color: $white;
   width: 392px;
-  min-height: calc(100vh - 72px);
+  height: 400vh;
   box-shadow: 8px 0px 16px rgba(78, 75, 85, 0.08);
 
-}
-
-.scroll-viewport {
-  width: 392px;
-  min-height: calc(100vh - 72px);
-  height: 100vh;
-  margin-right: 2vw;
-}
-
-::ng-deep .cdk-virtual-scroll-viewport::-webkit-scrollbar {
-  width: 0;
-}
-
-::ng-deep .cdk-virtual-scroll-viewport::-webkit-scrollbar-horizontal {
-  display: none;
 }

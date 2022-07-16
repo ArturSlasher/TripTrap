@@ -1,18 +1,17 @@
 @import '/src/styles.scss';
 
 
-header {
-  display: flex;
-  justify-content: space-around;
-  width: 100vw;
-  min-width: 960px;
-  height: 72px;
+.navtabs-container {
   background-color: $white;
   box-shadow: 0px 8px 16px rgba(78, 75, 85, 0.08);
 }
 
 .logo-container {
   display: flex;
+  position: absolute;
+  top: 0px;
+  left: 4vw;
+  z-index: 2;
 
   .logo {
     display: inline;
@@ -44,6 +43,10 @@ header {
   display: flex;
   align-items: center;
   gap: 4px;
+  position: absolute;
+  top: 16px;
+  right: 4vw;
+  z-index: 2;
 
   .search-button {
     width: 36px;
@@ -85,6 +88,13 @@ header {
       font-size: 32px;
       color: mat-color($primary);
     }
+  }
+
+}
+
+@media all and (max-width: 1000px) {
+  .buttons-container {
+      left: 800px;
   }
 
 }

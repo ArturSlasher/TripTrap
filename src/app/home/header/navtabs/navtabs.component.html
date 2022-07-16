@@ -1,0 +1,8 @@
+<nav>
+  <mat-tab-group fxLayout="center center" #tabRef (selectedTabChange)="logChange(tabRef.selectedIndex)">
+    <mat-tab label="Map" id="map"><app-map></app-map></mat-tab>
+    <mat-tab label="My trips" id="my-trips"><app-my-trips></app-my-trips></mat-tab>
+    <mat-tab label="Planning" id="planning"></mat-tab>
+    <mat-tab label="Community"  id="community"></mat-tab>
+  </mat-tab-group>
+</nav>
