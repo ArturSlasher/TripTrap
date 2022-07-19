@@ -1,16 +1,16 @@
-app-header {
-  z-index: 2;
-}
-
 .my-trips-container {
-  width: 1440px;
-  height: 400vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100vw;
+  min-width: 1000px;
 
   background: #F7F7F7;
 }
 
 app-trip-content-section {
-  position: absolute;
-  left: 448px;
-  top: 88px;
+  display: flex;
+  flex-direction: column;
+  width: calc( 98vw - 432px);
+  min-width: 550px;
 }

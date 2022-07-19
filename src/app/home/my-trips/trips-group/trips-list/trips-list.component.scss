@@ -38,6 +38,10 @@ mat-card-header {
   border-radius: 4px;
 }
 
+.card-name {
+  margin-left: 16px;
+}
+
 mat-card-title, .date {
   color: $white;
   padding-right: 16px;

@@ -1,25 +1,23 @@
 @import '/src/styles.scss';
 
 mat-slider {
-  position: absolute;
-  width: 956px;
+  width: calc(98vw - 424px);
   height: 8.5px;
 }
 
 .date {
+  margin: 16px;
   font-size: 14px;
 }
+
+// ---------------------------------------
 
 ::ng-deep .mat-accent .mat-slider-track-fill, .mat-accent .mat-slider-thumb, .mat-accent .mat-slider-thumb-label {
   background-color: mat-color($primary) !important;
 }
 
 .card-container {
-  position: absolute;
-  width: 956px;
-  height: 304px;
-  // left: 64px;
-  top: 78px;
+  width: 100%;
 }
 
 mat-card {
@@ -36,6 +34,7 @@ mat-card-header {
 
 mat-card-title {
   margin-top: 16px;
+  margin-left: 16px;
 }
 
 mat-card-header p {
@@ -59,7 +58,7 @@ mat-card-content {
 .photo-group {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: space-around;
   padding-right: 40px;
 
   & img{
