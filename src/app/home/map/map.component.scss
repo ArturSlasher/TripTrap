@@ -1,41 +1,12 @@
 @import '/src/styles.scss';
 
-::ng-deep .mat-bottom-sheet-container{
-  max-height: 90vh;
-  overflow: hidden;
-}
-
-::ng-deep .leaflet-control-container {
-  display: none;
-}
-
-.map-container {
-  width: 100vw;
-  height: 100vh;
-}
-
-.map {
-  position: absolute;
-  z-index: 1;
-  width: 100vw;
-  height: 100vh;
-}
-
 button {
   position: fixed !important;
   z-index: 3;
-  top: 80vh;
+  top: 65vh;
   right: 5vw;
 }
 
 mat-icon {
   color: $white;
-}
-
-app-home-cards {
-  position: fixed !important;
-  z-index: 2;
-  top: 90vh;
-  left: 5vw;
-  width: 90vw;
 }

@@ -1,3 +1,5 @@
+@import '/src/styles.scss';
+
 .my-trips-container {
   display: flex;
   flex-direction: row;
@@ -6,6 +8,17 @@
   min-width: 1000px;
 
   background: #F7F7F7;
+}
+
+button {
+  position: fixed !important;
+  z-index: 3;
+  top: 85vh;
+  right: 5vw;
+}
+
+mat-icon {
+  color: $white;
 }
 
 app-trip-content-section {
