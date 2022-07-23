@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MatBottomSheet} from '@angular/material/bottom-sheet';
+import { AddTripComponent } from '../add-trip/add-trip.component';
 
 @Component({
   selector: 'app-my-trips',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyTripsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _bottomSheet: MatBottomSheet) { }
+
+  openBottomSheet(): void {
+    this._bottomSheet.open(AddTripComponent);
+  }
 
   ngOnInit(): void {
   }

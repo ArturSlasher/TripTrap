@@ -22,6 +22,7 @@ import { TripsListComponent } from './home/my-trips/trips-group/trips-list/trips
 import { TripContentSectionComponent } from './home/my-trips/trip-content-section/trip-content-section.component';
 import { AuthComponent } from './auth/auth.component';
 import { MapComponent } from './home/map/map.component';
+import { AddTripComponent } from './home/add-trip/add-trip.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { MapComponent } from './home/map/map.component';
     TripContentSectionComponent,
     AuthComponent,
     MapComponent,
+    AddTripComponent,
   ],
   imports: [
     BrowserModule,
