@@ -1,23 +1,15 @@
-<div class="add-trip-container">
-  <mat-form-field class="trip-input" id="name-input" appearance="fill">
-    <mat-label>Trip name</mat-label>
-    <input matInput #tripName>
-  </mat-form-field>
-  <mat-form-field appearance="fill" class="trip-input" id="date-input">
-    <mat-label>Enter a date range</mat-label>
-    <mat-date-range-input [rangePicker]="picker">
-      <input matStartDate placeholder="Start date" #tripStartDate>
-      <input matEndDate placeholder="End date" #tripEndDate>
-    </mat-date-range-input>
-    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-date-range-picker #picker></mat-date-range-picker>
-  </mat-form-field>
-  <ngp-image-picker #imagePicker [_config]="imagePickerConf" ($imageChanged)="onImageChange($event)"></ngp-image-picker>
-  <!-- <mat-form-field class="trip-summury-input" appearance="fill">
+<div class="add-trip-inputs-container">
+  <div class="name-date-inputs-container">
+    <input matInput placeholder="Trip name" class="name-input">
+    <mat-card class="calendar-card">
+      <mat-calendar></mat-calendar>
+    </mat-card>
+    <!-- <p>Selected date: {{selected}}</p> -->
+  </div>
+  <ngp-image-picker></ngp-image-picker>
+  <mat-form-field class="trip-summury-input" appearance="fill">
     <mat-label>Trip summury</mat-label>
-    <textarea matInput placeholder="" #tripDescription></textarea>
-  </mat-form-field> -->
-  <button mat-flat-button class="save-button" routerLink="/" (click)="saveTrip()">SAVE</button>
+    <textarea matInput placeholder=""></textarea>
+  </mat-form-field>
 </div>
-
+<button mat-flat-button class="save-button" routerLink="/">SAVE</button>

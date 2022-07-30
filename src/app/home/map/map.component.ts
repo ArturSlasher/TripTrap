@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatBottomSheet} from '@angular/material/bottom-sheet';
-import { AddTripComponent } from '../add-trip/add-trip.component';
+import { AddTripComponent } from './add-trip/add-trip.component';
 
 @Component({
   selector: 'app-map',

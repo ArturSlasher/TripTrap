@@ -8,6 +8,9 @@ import {MatCardModule} from '@angular/material/card';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import { NgpImagePickerModule } from 'ngp-image-picker';
 
 @NgModule({
   imports: [
@@ -19,7 +22,10 @@ import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
     MatCardModule,
     MatTabsModule,
     MatSliderModule,
-    MatBottomSheetModule
+    MatBottomSheetModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    NgpImagePickerModule
   ],
   exports: [
     MatButtonModule,
@@ -30,7 +36,10 @@ import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
     MatCardModule,
     MatTabsModule,
     MatSliderModule,
-    MatBottomSheetModule
+    MatBottomSheetModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    NgpImagePickerModule
   ]
 })
 
