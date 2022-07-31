@@ -11,6 +11,7 @@ import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import { NgpImagePickerModule } from 'ngp-image-picker';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { NgpImagePickerModule } from 'ngp-image-picker';
     MatBottomSheetModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    NgpImagePickerModule
+    NgpImagePickerModule,
+    MatInputModule
   ],
   exports: [
     MatButtonModule,
@@ -39,7 +41,8 @@ import { NgpImagePickerModule } from 'ngp-image-picker';
     MatBottomSheetModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    NgpImagePickerModule
+    NgpImagePickerModule,
+    MatInputModule
   ]
 })
 
