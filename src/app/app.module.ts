@@ -24,6 +24,8 @@ import { AuthComponent } from './auth/auth.component';
 import { MapComponent } from './home/map/map.component';
 import { AddTripComponent } from './home/map/add-trip/add-trip.component';
 import { AddPlaceComponent } from './home/my-trips/add-place/add-place.component';
+import { LocationPickerComponent } from './home/my-trips/add-place/location-picker/location-picker.component';
+import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 
 
 @NgModule({
@@ -47,13 +49,15 @@ import { AddPlaceComponent } from './home/my-trips/add-place/add-place.component
     MapComponent,
     AddTripComponent,
     AddPlaceComponent,
+    LocationPickerComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    NgxMaterialTimepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
