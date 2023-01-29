@@ -10,8 +10,6 @@ export class NavtabsComponent implements OnInit {
   constructor() { }
 
   logChange(index: number | null) {
-    console.log(index);
-
     if(index == 1) {
     }
   }
