@@ -1,0 +1,30 @@
+@import '/src/styles.scss';
+
+.coming-soon-container {
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  min-height: 480px;
+
+  .coming-soon-illustration {
+    height: 72%;
+  }
+
+  .coming-soon-text {
+    width: 424px;
+    height: 86px;
+    margin-top: 24px;
+
+    font-family: Comfortaa;
+    font-style: normal;
+    font-weight: 1;
+    font-size: 36px;
+    line-height: 140%;
+    text-align: center;
+
+    color: #4E4B55;
+    }
+}

@@ -1,0 +1,33 @@
+<div class="add-place-container">
+  <mat-form-field class="place-input" id="name-input" appearance="fill">
+    <mat-label>Place name</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <button mat-flat-button class="place-input" id="location-input" routerLink="/location">Location</button>
+
+  <mat-form-field appearance="fill" class="place-input" id="date-input">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field class="place-input" id="date-input" appearance="fill">
+    <mat-label>Choose time</mat-label>
+    <input matInput type="time">
+  </mat-form-field>
+
+  <ngp-image-picker></ngp-image-picker>
+  <button mat-fab color="primary" aria-label="add photo button" class="add-photo-button">
+    <mat-icon>add</mat-icon>
+  </button>
+
+  <mat-form-field class="place-summury-input" appearance="fill">
+    <mat-label>Place summury</mat-label>
+    <textarea matInput placeholder=""></textarea>
+  </mat-form-field>
+  <button mat-flat-button class="save-button" routerLink="/">SAVE</button>
+</div>
+

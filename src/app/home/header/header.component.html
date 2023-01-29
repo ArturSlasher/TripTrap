@@ -1,0 +1,30 @@
+<header>
+  <div class="navtabs-container">
+    <app-navtabs></app-navtabs>
+  </div>
+
+  <div class="logo-container">
+    <img src="assets\Logo.png" alt="" class="logo">
+    <h2>TripTrap</h2>
+  </div>
+
+  <div class="buttons-container">
+    <button mat-icon-button class="search-button">
+      <mat-icon>search</mat-icon>
+    </button>
+    <button mat-icon-button  class="filter-button">
+      <mat-icon>filter_list</mat-icon>
+    </button>
+    <button mat-icon-button  class="notifications-button">
+      <mat-icon matbadge="3" class="mat-icon mat-badge material-icons-outlined material-icons mat-icon-no-color mat-badge-overlap mat-badge-above mat-badge-after mat-badge-medium">
+        notifications
+        <span id="mat-badge-content-0" class="mat-badge-content mat-badge-active">
+          3
+        </span>
+      </mat-icon>
+    </button>
+    <button mat-icon-button class="account-button" routerLink="/login">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+  </div>
+</header>

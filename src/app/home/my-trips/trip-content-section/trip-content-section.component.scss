@@ -1,0 +1,86 @@
+@import '/src/styles.scss';
+
+mat-slider {
+  width: calc(98vw - 424px);
+  height: 8.5px;
+}
+
+.date {
+  margin: 16px;
+  font-size: 14px;
+}
+
+// ---------------------------------------
+
+::ng-deep .mat-accent .mat-slider-track-fill, .mat-accent .mat-slider-thumb, .mat-accent .mat-slider-thumb-label {
+  background-color: mat-color($primary) !important;
+}
+
+.card-container {
+  width: 100%;
+}
+
+mat-card {
+  display: flex;
+  padding: 0px;
+  margin-block: 24px;
+}
+
+mat-card-header {
+  width: 330px;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+mat-card-title {
+  margin-top: 16px;
+  margin-left: 16px;
+}
+
+mat-card-header p {
+  margin-left: 16px;
+  width: 264px;
+}
+
+mat-card-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-block: 8px;
+}
+
+.options-button {
+  background-color: $white !important;
+  margin-right: 4px;
+}
+
+.photo-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-right: 40px;
+
+  & img{
+    margin: 8px;
+  }
+}
+
+.actions-bg {
+  display: flex;
+  justify-content: space-around;
+  width: 216px;
+  height: 32px;
+  margin-right: 4px;
+}
+
+button {
+  display: flex !important;
+  width: 40px !important;
+}
+
+mat-icon {
+  position: absolute;
+  top: 4px;
+  padding-left: 4px;
+}

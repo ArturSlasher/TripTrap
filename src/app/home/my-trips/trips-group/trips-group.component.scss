@@ -1,0 +1,13 @@
+@import '/src/styles.scss';
+
+.trips-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: $white;
+  width: 392px;
+  margin-right: 2vw;
+  box-shadow: 8px 0px 16px rgba(78, 75, 85, 0.08);
+
+}

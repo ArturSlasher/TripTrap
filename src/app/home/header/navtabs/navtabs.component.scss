@@ -1,0 +1,68 @@
+@import '/src/styles.scss';
+
+
+mat-tab-group {
+  display: flex;
+  justify-content: center;
+  height: 72px;
+  top: 16px;
+  width: 100vw;
+  min-width: 1000px;
+}
+
+::ng-deep .mat-tab-body-wrapper {
+  width: 100vw;
+}
+
+mat-tab {
+  text-decoration: none !important;
+  height: 72px !important;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px !important;
+  line-height: 21px !important;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+  transition: all .5s ease;
+
+  color: $black;
+
+  // &:hover {
+  //   font-size: 20px;
+  // }
+  // &.active {
+  //   //color: $primary;
+  //   height: 68px;
+  //   border-bottom: 4px solid mat-color($primary);
+  // }
+}
+
+::ng-deep .mat-tab-label-content:hover {
+  font-size: 20px !important;
+  transition: .2s ease;
+}
+
+::ng-deep .mat-tab-label {
+  height: 72px !important;
+  color: $gray;
+  min-width: 32px;
+}
+
+::ng-deep .mat-tab-label-content{
+  font-family: Roboto !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 18px !important;
+  line-height: 21px !important;
+}
+
+::ng-deep .mat-tab-label-active{
+  border-bottom: 4px solid mat-color($primary);
+  color: $black;
+}
+
+

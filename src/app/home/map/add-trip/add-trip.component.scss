@@ -1,0 +1,59 @@
+@import '/src/styles.scss';
+
+::ng-deep mat-bottom-sheet-container {
+  border-radius: 4px 4px 0px 0px;
+}
+
+.add-trip-container {
+  display: grid;
+  grid-gap: 2vw;
+  grid-template-columns: 35vw 35vw;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+}
+
+.trip-input {
+  width: 30vw;
+
+  #name-input {
+    grid-column: 1;
+  }
+
+  #date-input {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+
+ngp-image-picker {
+  grid-column: 2;
+  grid-row: 1 / 3;
+}
+
+::ng-deep .image-upload-btn {
+  border-radius: 4px !important;
+  width: 30vw !important;
+  height: 20vw !important;
+}
+
+.trip-summury-input {
+  width: 70vw;
+  grid-column: 1 / 3;
+}
+
+textarea {
+  height: 25vh;
+}
+
+.save-button {
+  grid-column: 2;
+  grid-row: 4;
+  width: 16vw;
+  margin-left: 16vw;
+  height: 40px;
+  background-color: mat-color($primary);
+  color: $white;
+}

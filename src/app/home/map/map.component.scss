@@ -1,0 +1,12 @@
+@import '/src/styles.scss';
+
+button {
+  position: fixed !important;
+  z-index: 3;
+  top: 70vh;
+  right: 5vw;
+}
+
+mat-icon {
+  color: $white;
+}
