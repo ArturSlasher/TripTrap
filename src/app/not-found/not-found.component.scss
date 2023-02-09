@@ -1,6 +1,6 @@
 @import '/src/styles.scss';
 
-.coming-soon-container {
+.not-found-container {
   background-color: $white;
   display: flex;
   flex-direction: column;
@@ -9,11 +9,11 @@
   height: 100vh;
   min-height: 480px;
 
-  .coming-soon-illustration {
-    height: 50%;
+  .not-found-illustration {
+    height: 60%;
   }
 
-  .coming-soon-text {
+  .not-found-text {
     width: 424px;
     height: 86px;
     margin-top: 4vh;

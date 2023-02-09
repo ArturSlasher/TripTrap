@@ -27,6 +27,7 @@ import { AddPlaceComponent } from './home/my-trips/add-place/add-place.component
 import { LocationPickerComponent } from './home/my-trips/add-place/location-picker/location-picker.component';
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { ComingSoonComponent } from './home/coming-soon/coming-soon.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
@@ -52,6 +53,7 @@ import { ComingSoonComponent } from './home/coming-soon/coming-soon.component';
     AddPlaceComponent,
     LocationPickerComponent,
     ComingSoonComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
