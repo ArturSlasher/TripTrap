@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MatBottomSheet} from '@angular/material/bottom-sheet';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { AddPlaceComponent } from './add-place/add-place.component';
 
 @Component({

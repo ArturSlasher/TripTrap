@@ -1,12 +1,13 @@
 @import '/src/styles.scss';
 
 .my-trips-container {
+  overflow: auto;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   width: 100vw;
   min-width: 1000px;
-
+  height: max-content;
   background: #F7F7F7;
 }
 
