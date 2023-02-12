@@ -1,5 +1,6 @@
+import { TriptrapService } from './../../../../services/triptrap.service';
 import { Component, OnInit } from '@angular/core';
-import { TripCard } from './trip-card.interface';
+import { Trip } from '../../../../interfaces/trip.interface';
 
 @Component({
   selector: 'app-trips-list',
@@ -8,28 +9,18 @@ import { TripCard } from './trip-card.interface';
 })
 export class TripsListComponent implements OnInit {
 
-  public TripCards: TripCard[] = [
-    {
-      name: 'Bukovel, Ukraine',
-      date: '29/05/2021',
-      photo: "some photo"
-    },
-    {
-      name: 'New York, USA',
-      date: '18/09/2016',
-      photo: "some photo"
-    },
-    {
-      name: 'Vancouver, Canada',
-      date: '16/08/2013',
-      photo: "some photo"
-    }
-  ];
-
-
-  constructor() { }
+  constructor(
+    private triptrapService: TriptrapService
+    ) { }
 
   ngOnInit(): void {
   }
+
+  sendTrip(tripCard: Trip) {
+    this.triptrapService.getTrip(tripCard);
+    document.documentElement.scrollTop = 0;
+  }
+
+  TripCards: Trip[] = this.triptrapService.getTripCards();
 
 }

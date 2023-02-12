@@ -12,6 +12,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import { NgpImagePickerModule } from 'ngp-image-picker';
 import {MatInputModule} from '@angular/material/input';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   imports: [
@@ -27,7 +28,8 @@ import {MatInputModule} from '@angular/material/input';
     MatDatepickerModule,
     MatNativeDateModule,
     NgpImagePickerModule,
-    MatInputModule
+    MatInputModule,
+    MatSidenavModule
   ],
   exports: [
     MatButtonModule,
@@ -42,7 +44,8 @@ import {MatInputModule} from '@angular/material/input';
     MatDatepickerModule,
     MatNativeDateModule,
     NgpImagePickerModule,
-    MatInputModule
+    MatInputModule,
+    MatSidenavModule
   ]
 })
 

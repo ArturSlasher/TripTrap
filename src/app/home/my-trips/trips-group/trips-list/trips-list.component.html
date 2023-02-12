@@ -1,5 +1,5 @@
 <div class="card-container" *ngFor="let card of TripCards">
-<mat-card class="trip-card">
+<mat-card class="trip-card" (click)="sendTrip(card)">
   <mat-card-header>
     <mat-card-title class="card-name">{{card.name}}</mat-card-title>
     <p class="date">

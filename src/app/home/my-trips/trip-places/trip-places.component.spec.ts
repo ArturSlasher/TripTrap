@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TripContentSectionComponent } from './trip-content-section.component';
+import { TripContentSectionComponent } from './trip-places.component';
 
 describe('TripContentSectionComponent', () => {
   let component: TripContentSectionComponent;

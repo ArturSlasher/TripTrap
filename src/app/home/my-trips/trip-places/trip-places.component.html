@@ -1,0 +1,49 @@
+<!-- <mat-slider aria-label="unit(s)" class="primary"></mat-slider> -->
+<div class="card-container" *ngFor="let place of CurrentTrip$.value.tripPlaces">
+  <p class="date">{{ place.date }}</p>
+  <mat-card class="place-card">
+    <mat-card-header>
+      <mat-card-title class="card-name">{{ place.name }}</mat-card-title>
+      <p class="location">
+        {{ place.location }}
+      </p>
+      <p class="time">
+        {{ place.time }}
+      </p>
+      <div class="subtitle-div">
+        <p>
+          {{ place.description }}
+        </p>
+      </div>
+    </mat-card-header>
+    <mat-card-content>
+      <button mat-mini-fab class="options-button mat-elevation-z0">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <div class="photo-group">
+        <img src="assets/place-photo.png">
+        <img src="assets/place-photo.png">
+        <img src="assets/place-photo.png">
+        <img src="assets/place-photo.png">
+        <img src="assets/place-photo.png">
+        <img src="assets/place-photo.png">
+        <img src="assets/place-photo.png">
+        <img src="assets/place-photo.png">
+      </div>
+      <mat-card-actions>
+        <div class="actions-bg">
+          <button mat-button class="comment-button mat-elevation-z0">
+            <p>12
+              <mat-icon>comment</mat-icon>
+            </p>
+          </button>
+          <button mat-button class="favorite-button mat-elevation-z0">
+            <p>45
+              <mat-icon>favorite</mat-icon>
+            </p>
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card-content>
+  </mat-card>
+  </div>
