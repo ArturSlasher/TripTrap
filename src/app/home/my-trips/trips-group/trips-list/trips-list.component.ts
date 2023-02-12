@@ -1,6 +1,6 @@
 import { TriptrapService } from './../../../../services/triptrap.service';
 import { Component, OnInit } from '@angular/core';
-import { Trip } from '../../../../interfaces/trip.interface';
+import { Trip } from 'src/app/interfaces/trip-card.interface';
 
 @Component({
   selector: 'app-trips-list',

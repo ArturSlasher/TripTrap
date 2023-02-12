@@ -1,7 +1,7 @@
 import { TripPlace } from './../interfaces/trip-place.interface';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
-import { Trip } from '../interfaces/trip.interface';
+import { Trip } from '../interfaces/trip-card.interface';
 
 @Injectable({
   providedIn: 'root'
