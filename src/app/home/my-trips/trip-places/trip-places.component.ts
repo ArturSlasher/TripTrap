@@ -14,9 +14,9 @@ export class TripContentSectionComponent implements AfterViewInit {
 
   CurrentTrip$ = this.TriptrapService.CurrentTrip$;
 
-  @ViewChild("test-image") placeImage!: HTMLElement;
-  @ViewChild("full-image") fullImage!: HTMLElement;
-  @ViewChild("image-viewer") viewer!: HTMLElement;
+  @ViewChild("testimage") placeImage!: HTMLElement;
+  @ViewChild("fullimage") fullImage!: HTMLElement;
+  @ViewChild("imageviewer") viewer!: HTMLElement;
   @ViewChild("close") close!: HTMLElement;
 
   constructor(
