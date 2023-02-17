@@ -23,11 +23,11 @@
       </button>
       <div class="photo-group">
         <div class="images" #images>
-          <img #testimage src="https://www.w3schools.com/howto/img_fjords.jpg" alt="" width="300" height="200">
+          <img (click)="viewImage()" #testimage id="test-image" src="https://www.w3schools.com/howto/img_fjords.jpg" alt="" width="300" height="200">
         </div>
-        <div #imageviewer>
-          <span #close>&times;</span>
-          <img src="assets/place-photo.png" class="modal-content" #fullimage>
+        <div #imageviewer id="image-viewer">
+          <span #close class="close">&times;</span>
+          <img src="assets/place-photo.png" class="modal-content" #fullimage id="full-image">
         </div>
         <img src="assets/place-photo.png">
         <img src="assets/place-photo.png">

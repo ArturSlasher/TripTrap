@@ -19,20 +19,32 @@ export class TripContentSectionComponent implements AfterViewInit {
   @ViewChild("imageviewer") viewer!: HTMLElement;
   @ViewChild("close") close!: HTMLElement;
 
+  viewImage() { };
+
   constructor(
     private TriptrapService: TriptrapService
   ) { }
 
   ngAfterViewInit() {
-      console.log(this.placeImage)
 
-      this.placeImage.onclick = () => {
-        this.fullImage.setAttribute("src", "https://www.w3schools.com/howto/img_fjords.jpg");
-        this.viewer.style.display = 'block';
-      };
 
-      this.close.onclick = () => {
-        this.viewer.style.display = 'none';
-      };
+
+    this.viewImage = () => {
+      console.log(this.viewer)
+      console.log("click")
+      this.viewer.style.display = 'block';
+    };
+
+      // console.log(this.placeImage)
+
+      // this.placeImage.onclick = () => {
+      //   console.log("click")
+      //   this.fullImage.setAttribute("src", "https://www.w3schools.com/howto/img_fjords.jpg");
+      //   this.viewer.style.display = 'block';
+      // };
+
+      // this.close.onclick = () => {
+      //   this.viewer.style.display = 'none';
+      // };
   }
 }
