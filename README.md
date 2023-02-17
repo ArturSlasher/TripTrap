@@ -4,6 +4,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
+Web-servive build on HTML, SCSS, TypeScript, Angular, Angular Material and FireBase.
+The service provides users with the opportunity to save media materials and memories from their travels in a convenient form.
+
+## Development server
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
