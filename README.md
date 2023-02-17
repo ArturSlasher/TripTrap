@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.4.
 
-## Development server
+## Description
 
 Web-servive build on HTML, SCSS, TypeScript, Angular, Angular Material and FireBase.
 The service provides users with the opportunity to save media materials and memories from their travels in a convenient form.
