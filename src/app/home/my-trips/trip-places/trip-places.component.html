@@ -21,22 +21,21 @@
       <button mat-mini-fab class="options-button mat-elevation-z0">
         <mat-icon>more_vert</mat-icon>
       </button>
-      <div class="photo-group">
+      <div class="photo-group" *ngFor="let photo of CurrentTrip$.value.tripPlaces">
         <div class="images" #images>
-          <img (click)="viewImage()" #testimage id="test-image" src="https://www.w3schools.com/howto/img_fjords.jpg" alt="" width="300" height="200">
+          <img #testimage id="test-image" class="place-image-s" src="assets/place-photo.png" alt="">
         </div>
         <div #imageviewer id="image-viewer">
-          <span #close class="close">&times;</span>
           <img src="assets/place-photo.png" class="modal-content" #fullimage id="full-image">
         </div>
-        <img src="assets/place-photo.png">
-        <img src="assets/place-photo.png">
-        <img src="assets/place-photo.png">
-        <img src="assets/place-photo.png">
-        <img src="assets/place-photo.png">
-        <img src="assets/place-photo.png">
-        <img src="assets/place-photo.png">
-        <img src="assets/place-photo.png">
+        <!-- <img src="assets/place-photo.png"> -->
+        <!-- <img class="place-image-s" src="assets/place-photo.png">
+        <img class="place-image-s" src="assets/place-photo.png">
+        <img class="place-image-s" src="assets/place-photo.png">
+        <img class="place-image-s" src="assets/place-photo.png">
+        <img class="place-image-s" src="assets/place-photo.png">
+        <img class="place-image-s" src="assets/place-photo.png">
+        <img class="place-image-s" src="assets/place-photo.png"> -->
       </div>
       <mat-card-actions>
         <div class="actions-bg">
