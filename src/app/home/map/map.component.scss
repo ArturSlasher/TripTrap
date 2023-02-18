@@ -1,5 +1,13 @@
 @import '/src/styles.scss';
 
+.map-container {
+  background: url('../../../assets/map.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 button {
   position: fixed !important;
   z-index: 3;

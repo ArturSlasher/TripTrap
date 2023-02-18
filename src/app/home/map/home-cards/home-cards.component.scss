@@ -1,15 +1,12 @@
 @import '/src/styles.scss';
 
 .home-cards-container {
-  // position: absolute;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  // left: 28px;
-  // top: 752px;
   gap: 2vw;
   padding-top: 72vh;
-  background-color: #A2DDFD;
+  padding-bottom: 4vh;
 }
 
 .home-card {

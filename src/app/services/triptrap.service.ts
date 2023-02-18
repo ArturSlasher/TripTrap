@@ -8,7 +8,7 @@ import { Trip } from '../interfaces/trip-card.interface';
 })
 export class TriptrapService {
 
-  TripCards: Trip[] = [
+  Trips: Trip[] = [
     {
       name: 'Bukovel, Ukraine',
       date: '29/05/2021',
@@ -112,7 +112,7 @@ export class TriptrapService {
     }
   ];
 
-  CurrentTrip$ = new BehaviorSubject<Trip>(this.TripCards[0]);
+  CurrentTrip$ = new BehaviorSubject<Trip>(this.Trips[0]);
 
   constructor() { }
 
@@ -121,7 +121,7 @@ export class TriptrapService {
   }
 
   getTripCards(){
-    return this.TripCards;
+    return this.Trips;
   }
 
 }
