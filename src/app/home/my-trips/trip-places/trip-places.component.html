@@ -24,21 +24,11 @@
       </button>
 
       <mat-card-content>
-        <div class="photo-group" *ngFor="let photo of CurrentTrip$.value.tripPlaces[i].photos">
-          <div class="images" #images>
-            <img #testimage id="test-image" class="place-image-s" [src]="photo" alt="" (click)="viewImage()">
-          </div>
+        <div class="place-photo-group" *ngFor="let photo of CurrentTrip$.value.tripPlaces[i].photos">
+          <img #placeimage class="place-image-s" id="place-image" [src]="photo" (click)="viewImage()">
           <div #imageviewer id="image-viewer" (click)="closeImage()">
-            <img [src]="photo" class="modal-content" #fullimage id="full-image">
+            <img #fullimage class="modal-content" id="full-image" [src]="photo">
           </div>
-          <!-- <img src="assets/place-photo.png">
-          <img class="place-image-s" src="assets/place-photo.png">
-          <img class="place-image-s" src="assets/place-photo.png">
-          <img class="place-image-s" src="assets/place-photo.png">
-          <img class="place-image-s" src="assets/place-photo.png">
-          <img class="place-image-s" src="assets/place-photo.png">
-          <img class="place-image-s" src="assets/place-photo.png">
-          <img class="place-image-s" src="assets/place-photo.png"> -->
         </div>
       </mat-card-content>
 
