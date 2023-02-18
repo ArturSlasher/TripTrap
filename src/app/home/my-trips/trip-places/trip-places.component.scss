@@ -1,9 +1,9 @@
 @import '/src/styles.scss';
 
-mat-slider {
-  width: calc(98vw - 424px);
-  height: 8.5px;
-}
+// mat-slider {
+//   width: calc(98vw - 424px);
+//   height: 8.5px;
+// }
 
 .date {
   margin: 16px;
@@ -17,7 +17,7 @@ mat-slider {
 }
 
 .card-container {
-  width: 100%;
+  width: calc( 98vw - 432px);
 }
 
 mat-card {
@@ -42,12 +42,21 @@ mat-card-header p {
   width: 264px;
 }
 
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: 16px;
+}
+
 mat-card-content {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-end;
   padding-block: 8px;
+  width: calc( 98vw - 762px);
 }
 
 .options-button {
@@ -59,12 +68,13 @@ mat-card-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  padding-right: 40px;
 
   & .place-image-s{
     margin: 8px;
     width: 140px;
     height: 100px;
+    cursor: pointer;
+    transition: 0.3s;
   }
 }
 

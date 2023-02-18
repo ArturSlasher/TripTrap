@@ -1,6 +1,6 @@
 <!-- <mat-slider aria-label="unit(s)" class="primary"></mat-slider> -->
 
-<div class="card-container" *ngFor="let place of CurrentTrip$.value.tripPlaces">
+<div class="card-container" *ngFor="let place of CurrentTrip$.value.tripPlaces; let i = index">
   <p class="date">{{ place.date }}</p>
   <mat-card class="place-card">
     <mat-card-header>
@@ -17,40 +17,45 @@
         </p>
       </div>
     </mat-card-header>
-    <mat-card-content>
+
+    <div class="content-container">
       <button mat-mini-fab class="options-button mat-elevation-z0">
         <mat-icon>more_vert</mat-icon>
       </button>
-      <div class="photo-group" *ngFor="let photo of CurrentTrip$.value.tripPlaces">
-        <div class="images" #images>
-          <img #testimage id="test-image" class="place-image-s" src="assets/place-photo.png" alt="">
+
+      <mat-card-content>
+        <div class="photo-group" *ngFor="let photo of CurrentTrip$.value.tripPlaces[i].photos">
+          <div class="images" #images>
+            <img #testimage id="test-image" class="place-image-s" [src]="photo" alt="" (click)="viewImage()">
+          </div>
+          <div #imageviewer id="image-viewer" (click)="closeImage()">
+            <img [src]="photo" class="modal-content" #fullimage id="full-image">
+          </div>
+          <!-- <img src="assets/place-photo.png">
+          <img class="place-image-s" src="assets/place-photo.png">
+          <img class="place-image-s" src="assets/place-photo.png">
+          <img class="place-image-s" src="assets/place-photo.png">
+          <img class="place-image-s" src="assets/place-photo.png">
+          <img class="place-image-s" src="assets/place-photo.png">
+          <img class="place-image-s" src="assets/place-photo.png">
+          <img class="place-image-s" src="assets/place-photo.png"> -->
         </div>
-        <div #imageviewer id="image-viewer">
-          <img src="assets/place-photo.png" class="modal-content" #fullimage id="full-image">
-        </div>
-        <!-- <img src="assets/place-photo.png"> -->
-        <!-- <img class="place-image-s" src="assets/place-photo.png">
-        <img class="place-image-s" src="assets/place-photo.png">
-        <img class="place-image-s" src="assets/place-photo.png">
-        <img class="place-image-s" src="assets/place-photo.png">
-        <img class="place-image-s" src="assets/place-photo.png">
-        <img class="place-image-s" src="assets/place-photo.png">
-        <img class="place-image-s" src="assets/place-photo.png"> -->
-      </div>
+      </mat-card-content>
+
       <mat-card-actions>
         <div class="actions-bg">
           <button mat-button class="comment-button mat-elevation-z0">
-            <p>12
+            <p>{{ CurrentTrip$.value.tripPlaces[i].photos.length }}
               <mat-icon>comment</mat-icon>
             </p>
           </button>
           <button mat-button class="favorite-button mat-elevation-z0">
-            <p>45
+            <p>{{ CurrentTrip$.value.tripPlaces[i].photos.length*5 }}
               <mat-icon>favorite</mat-icon>
             </p>
           </button>
         </div>
       </mat-card-actions>
-    </mat-card-content>
+    </div>
   </mat-card>
   </div>

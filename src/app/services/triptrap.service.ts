@@ -33,18 +33,18 @@ export class TriptrapService {
         {
           name: "Opera and Ballet Theatre",
           location: "Lviv, Svobody Avenue, 28",
-          date: "9 June, 2021",
+          date: "19 June, 2021",
           time: "14:58",
           description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-          photos: ["assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png"]
+          photos: ["assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png"]
         },
         {
           name: "Opera and Ballet Theatre",
           location: "Lviv, Svobody Avenue, 28",
-          date: "9 June, 2021",
+          date: "29 June, 2021",
           time: "14:58",
           description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-          photos: ["assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png"]
+          photos: ["assets/place-photo.png", "assets/place-photo.png"]
         }
       ]
     },

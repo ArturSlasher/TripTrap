@@ -19,18 +19,20 @@ export class TripContentSectionComponent implements AfterViewInit {
   @ViewChild("imageviewer") viewer!: ElementRef;
   @ViewChild("close") close!: ElementRef;
 
+  viewImage(){ }
+  closeImage(){ }
+
   constructor(
     private TriptrapService: TriptrapService
   ) { }
 
   ngAfterViewInit() {
 
-    this.placeImage.nativeElement.onclick = () => {
-      console.log("click")
+    this.viewImage = () => {
       this.viewer.nativeElement.style.display = 'block';
     };
 
-    this.viewer.nativeElement.onclick = () => {
+    this.closeImage = () => {
       this.viewer.nativeElement.style.display = 'none';
     };
   }
