@@ -1,15 +1,15 @@
-<div class="card-container" *ngFor="let card of TripCards">
-<mat-card class="trip-card" (click)="sendTrip(card)">
+<div class="card-container" *ngFor="let trip of Trips">
+<mat-card class="trip-card" (click)="sendTrip(trip)">
   <mat-card-header>
-    <mat-card-title class="card-name">{{card.name}}</mat-card-title>
+    <mat-card-title class="card-name">{{trip.name}}</mat-card-title>
     <p class="date">
-      {{card.date}}
+      {{trip.date}}
     </p>
   </mat-card-header>
   <mat-card-actions>
     <div class="actions-bg">
       <button mat-button class="place-button mat-elevation-z0">
-        <p>14
+        <p>{{ Trips.length }}
           <mat-icon>place</mat-icon>
         </p>
       </button>

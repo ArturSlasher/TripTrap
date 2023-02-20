@@ -21,6 +21,6 @@ export class TripsListComponent implements OnInit {
     document.documentElement.scrollTop = 0;
   }
 
-  TripCards: Trip[] = this.triptrapService.getTripCards();
+  Trips: Trip[] = this.triptrapService.getTrips();
 
 }

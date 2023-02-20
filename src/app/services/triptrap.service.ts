@@ -120,7 +120,7 @@ export class TriptrapService {
     this.CurrentTrip$.next(trip);
   }
 
-  getTripCards(){
+  getTrips(){
     return this.Trips;
   }
 
