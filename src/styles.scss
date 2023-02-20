@@ -45,7 +45,7 @@ $triptrap-website-theme: mat.define-light-theme((
 
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@use '@angular/material' as mat;
+// @use '@angular/material' as mat;
 // Plus imports for other components in your app.
 @import '@angular/material/theming';
 
@@ -60,8 +60,8 @@ $triptrap-website-theme: mat.define-light-theme((
 //  If you don't need the default component typographies but still want the hierarchy styles,
 //  you can delete this line and instead use:
 //    `@include mat.legacy-typography-hierarchy(mat.define-legacy-typography-config());`
-@include mat.all-legacy-component-typographies();
-@include mat.legacy-core();
+// @include mat.all-legacy-component-typographies();
+// @include mat.legacy-core();
 
 $tripttrap-website-primary: (
   50 : #ecf8f0,
