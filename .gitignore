@@ -1,7 +1,5 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-/Comfortaa
-
 # compiled output
 /dist
 /tmp
@@ -12,6 +10,7 @@
 # dependencies
 /node_modules
 /.angular
+/Comfortaa
 
 # profiling files
 chrome-profiler-events*.json
