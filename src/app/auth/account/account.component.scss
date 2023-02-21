@@ -1,0 +1,68 @@
+@import '/src/styles.scss';
+
+.account-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+mat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 25vw;
+  border-radius: 0px;
+  box-shadow: none !important;
+}
+
+.user-photo {
+   width: 10vw;
+   height: 10vw;
+}
+
+user-card-header {
+  margin-top: 24px !important;
+}
+
+::ng-deep .mat-mdc-card-header {
+  padding: 16px 16px 16px;
+}
+
+// mat-card-actions {
+//   margin-left: 116px;
+//   padding: 0 0;
+// }
+
+mat-card-content {
+  text-align: center;
+  margin-block: 16px;
+}
+
+.account-input {
+  width: 25vw;
+}
+
+.account-button {
+  width: 25vw;
+  height: 40px;
+  border-radius: 40px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130%;
+
+  &#logout-button {
+    background-color: $gray !important;
+    color: $white !important;
+  }
+
+  &#delete-button {
+    background-color: mat-color($accent) !important;
+    color: $white !important;
+    margin-top: 16px;
+  }
+}

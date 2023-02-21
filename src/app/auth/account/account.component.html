@@ -1,0 +1,32 @@
+<div class="account-container">
+  <mat-card class="user-card mat-elevation-z0">
+    <mat-card-header>
+      <img mat-card-image src="assets\photo.png" alt="User photo" class="user-photo">
+      <!-- <mat-card-actions>
+        <button mat-icon-button class="settings-button mat-elevation-z0">
+          <mat-icon>settings</mat-icon>
+        </button>
+      </mat-card-actions> -->
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field class="account-input" id="name-input" appearance="fill">
+        <mat-label>Annette Black</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field class="account-input" id="address-input" appearance="fill">
+        <mat-label>Los Angeles, USA</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field class="account-input" id="bio-input" appearance="fill">
+        <mat-label>Bio</mat-label>
+        <textarea matInput placeholder="I’m an artist. Love traveling, montains, dogs, yoga. Nice to see you here"></textarea>
+      </mat-form-field>
+      <button mat-flat-button class="account-button" id="logout-button" routerLink="/login">Log out</button>
+      <button mat-flat-button class="account-button" id="delete-button" routerLink="/signup">Delete account</button>
+    </mat-card-content>
+</mat-card>
+
+
+
+  <app-auth-illustration></app-auth-illustration>
+</div>

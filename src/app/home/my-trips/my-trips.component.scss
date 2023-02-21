@@ -1,5 +1,9 @@
 @import '/src/styles.scss';
 
+::ng-deep .mat-bottom-sheet-container{
+  max-height: 90vh;
+}
+
 .my-trips-container {
   overflow: auto;
   display: flex;

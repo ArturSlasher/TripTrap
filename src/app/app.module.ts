@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MaterialModule} from './material.module';
 import { LoginPageComponent } from './auth/login-page/login-page.component';
 import { LoginFormComponent } from './auth/login-page/login-form/login-form.component';
-import { IllustrationsComponent } from './auth/illustrations/illustrations.component';
+import { AuthIllustrationComponent } from './auth/auth-illustration/auth-illustration.component';
 import { SignupPageComponent } from './auth/signup-page/signup-page.component';
 import { SignupFormComponent } from './auth/signup-page/signup-form/signup-form.component';
 import { HomeComponent } from './home/home.component';
@@ -24,10 +24,10 @@ import { AuthComponent } from './auth/auth.component';
 import { MapComponent } from './home/map/map.component';
 import { AddTripComponent } from './home/map/add-trip/add-trip.component';
 import { AddPlaceComponent } from './home/my-trips/add-place/add-place.component';
-import { LocationPickerComponent } from './home/my-trips/add-place/location-picker/location-picker.component';
-import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 import { ComingSoonComponent } from './home/coming-soon/coming-soon.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AccountComponent } from './auth/account/account.component';
 
 
 @NgModule({
@@ -35,7 +35,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AppComponent,
     LoginPageComponent,
     LoginFormComponent,
-    IllustrationsComponent,
+    AuthIllustrationComponent,
     SignupPageComponent,
     SignupFormComponent,
     HomeComponent,
@@ -51,9 +51,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     MapComponent,
     AddTripComponent,
     AddPlaceComponent,
-    LocationPickerComponent,
     ComingSoonComponent,
     NotFoundComponent,
+    AccountComponent,
   ],
   imports: [
     BrowserModule,
