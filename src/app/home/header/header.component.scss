@@ -50,7 +50,6 @@
 
   .search-button {
     width: 36px;
-    height: 36px;
 
     & mat-icon {
       color: $gray;
@@ -59,7 +58,6 @@
 
   .filter-button {
     width: 36px;
-    height: 36px;
 
     & mat-icon {
       color: $gray;
@@ -68,7 +66,6 @@
 
   .notifications-button {
     width: 36px;
-    height: 36px;
 
     & mat-icon {
       color: $gray;
@@ -82,11 +79,14 @@
 
   .account-button {
     width: 40px;
-    height: 40px;
 
     & mat-icon {
-      font-size: 32px;
+      font-size: 24px;
       color: mat-color($primary);
+      width: auto;
+      height: auto;
+      margin: 0;
+      padding: 0;
     }
   }
 

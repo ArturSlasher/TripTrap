@@ -1,5 +1,6 @@
 <div class="card-container" *ngFor="let trip of Trips">
-<mat-card class="trip-card" (click)="sendTrip(trip)">
+<mat-card class="trip-card" (click)="sendTrip(trip)" [ngStyle]="{'background-image':'trip.photo'}">
+  <img class="background-img" [src]="trip.photo">
   <mat-card-header>
     <mat-card-title class="card-name">{{trip.name}}</mat-card-title>
     <p class="date">
@@ -9,17 +10,17 @@
   <mat-card-actions>
     <div class="actions-bg">
       <button mat-button class="place-button mat-elevation-z0">
-        <p>{{ Trips.length }}
+        <p>{{ trip.tripPlaces.length }}
           <mat-icon>place</mat-icon>
         </p>
       </button>
       <button mat-button class="comment-button mat-elevation-z0">
-        <p>12
+        <p>{{ Trips.length*3 }}
           <mat-icon>comment</mat-icon>
         </p>
       </button>
       <button mat-button class="favorite-button mat-elevation-z0">
-        <p>45
+        <p>{{ Trips.length*9 }}
           <mat-icon>favorite</mat-icon>
         </p>
       </button>

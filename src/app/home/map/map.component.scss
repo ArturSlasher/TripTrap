@@ -1,6 +1,7 @@
 @import '/src/styles.scss';
 
 .map-container {
+  width: 100vw;
   background: url('../../../assets/map.png') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
