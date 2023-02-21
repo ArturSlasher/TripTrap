@@ -19,9 +19,9 @@
     </mat-card-header>
 
     <div class="content-container">
-      <button mat-mini-fab class="options-button mat-elevation-z0">
+      <!-- <button mat-mini-fab class="options-button mat-elevation-z0">
         <mat-icon>more_vert</mat-icon>
-      </button>
+      </button> -->
 
       <mat-card-content>
         <div class="place-photo-group" *ngFor="let photo of CurrentTrip$.value.tripPlaces[i].photos">
@@ -35,14 +35,12 @@
       <mat-card-actions>
         <div class="actions-bg">
           <button mat-button class="comment-button mat-elevation-z0">
-            <p>{{ CurrentTrip$.value.tripPlaces[i].photos.length }}
-              <mat-icon>comment</mat-icon>
-            </p>
+            <p>{{ CurrentTrip$.value.tripPlaces[i].photos.length }}</p>
+            <mat-icon>comment</mat-icon>
           </button>
           <button mat-button class="favorite-button mat-elevation-z0">
-            <p>{{ CurrentTrip$.value.tripPlaces[i].photos.length*5 }}
-              <mat-icon>favorite</mat-icon>
-            </p>
+            <p>{{ CurrentTrip$.value.tripPlaces[i].photos.length*5 }}</p>
+            <mat-icon>favorite</mat-icon>
           </button>
         </div>
       </mat-card-actions>

@@ -102,8 +102,8 @@ input {
 .signup-button {
   width: 380px;
   height: 40px;
-  background-color: mat-color($primary);
-  color: $white;
+  background-color: mat-color($primary) !important;
+  color: $white !important;
 }
 
 .login{

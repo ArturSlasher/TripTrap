@@ -34,7 +34,7 @@ mat-card {
 }
 
 mat-card-header {
-  width: 360px;
+  // width: 360px;
   height: 105px;
   padding-top: 16px;
 
@@ -65,7 +65,7 @@ mat-card-actions {
 .actions-bg {
   display: flex;
   justify-content: space-around;
-  width: 216px;
+  // width: 216px;
   height: 32px;
 
   background: rgba(44, 43, 47, 0.16);
@@ -78,11 +78,14 @@ mat-card-actions {
 button {
   display: flex !important;
   width: 40px !important;
+  color: $white !important;
+  align-items: flex-start;
+    padding-top: 6px;
 }
 
 mat-icon {
-  position: absolute;
-  top: 4px;
+  // position: absolute;
+  // top: 4px;
   padding-left: 4px;
 }
 

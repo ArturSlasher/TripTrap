@@ -107,7 +107,7 @@ button {
 }
 
 .remember-me-checkbox {
-  width: 134px;
+  // width: 134px;
   height: 24px;
   font-family: Roboto;
   font-style: normal;
@@ -124,8 +124,8 @@ button {
 .login-button {
   width: 380px;
   height: 40px;
-  background-color: mat-color($primary);
-  color: $white;
+  background-color: mat-color($primary) !important;
+  color: $white !important;
 }
 
 a {

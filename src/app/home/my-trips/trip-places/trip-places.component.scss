@@ -5,6 +5,15 @@
 //   height: 8.5px;
 // }
 
+p {
+  margin: 0;
+}
+
+mat-icon {
+  width: 24px !important;
+  height: 24px !important;
+}
+
 .date {
   margin: 16px;
   font-size: 14px;
@@ -22,6 +31,7 @@
 
 mat-card {
   display: flex;
+  flex-direction: row;
   padding: 0px;
   margin-block: 24px;
 }
@@ -50,6 +60,11 @@ mat-card-header p {
   margin-top: 16px;
 }
 
+::ng-deep .mat-mdc-button>.mat-icon {
+  width: auto;
+  height: auto;
+}
+
 mat-card-content {
   display: flex;
   flex-wrap: wrap;
@@ -59,9 +74,13 @@ mat-card-content {
   width: calc( 98vw - 762px);
 }
 
+mat-card-actions {
+  margin-bottom: 8px;
+}
+
 .options-button {
   background-color: $white !important;
-  margin-right: 4px;
+  margin-right: 24px;
 }
 
 .place-photo-group {

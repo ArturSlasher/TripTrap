@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: calc(100vh - 72px);
   min-height: 480px;
 
   .coming-soon-illustration {
@@ -14,8 +14,8 @@
   }
 
   .coming-soon-text {
-    width: 424px;
-    height: 86px;
+    // width: 424px;
+    // height: 86px;
     margin-top: 4vh;
 
     font-family: Comfortaa;

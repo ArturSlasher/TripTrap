@@ -7,34 +7,41 @@ mat-card {
   height: auto;
   width: 232px;
   border-radius: 0px;
-
+  box-shadow: none !important;
 }
 
 .user-photo {
    width: 64px;
    height: 64px;
-   margin-left: 124px;
 }
 
 user-card-header {
   margin-top: 24px !important;
 }
 
-mat-card-actions {
-  margin-left: 116px;
-  padding: 0 0;
+::ng-deep .mat-mdc-card-header {
+  padding: 16px 16px 16px;
 }
+
+// mat-card-actions {
+//   margin-left: 116px;
+//   padding: 0 0;
+// }
 
 mat-card-content {
   text-align: center;
 }
 
 mat-card-title {
+  font-weight: bold;
+  font-size: 18px;
   color: $black;
+  margin-block: 8px;
 }
 
 .bio {
   color: $gray;
+  width: 300px;
   padding-inline: 16px;
   margin-top: 24px;
 }
