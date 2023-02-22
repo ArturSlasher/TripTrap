@@ -6,6 +6,15 @@
 
 .map-container {
   width: 100vw;
+  height: 100vh;
+}
+
+.map {
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
   background: url('../../../assets/map.png') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -22,4 +31,12 @@ button {
 
 mat-icon {
   color: $white;
+}
+
+app-home-cards {
+  position: fixed !important;
+  z-index: 2;
+  top: 80vh;
+  left: 5vw;
+  width: 90vw;
 }
