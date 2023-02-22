@@ -10,22 +10,16 @@
 }
 
 .map {
-  pointer-events: none;
   position: absolute;
   z-index: 1;
   width: 100vw;
   height: 100vh;
-  background: url('../../../assets/map.png') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 button {
   position: fixed !important;
   z-index: 3;
-  top: 70vh;
+  top: 80vh;
   right: 5vw;
 }
 
@@ -36,7 +30,7 @@ mat-icon {
 app-home-cards {
   position: fixed !important;
   z-index: 2;
-  top: 80vh;
+  top: 90vh;
   left: 5vw;
   width: 90vw;
 }
