@@ -1,23 +1,37 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import {MatBottomSheet, MatBottomSheetRef} from '@angular/material/bottom-sheet';
+import { TriptrapService } from 'src/app/services/triptrap.service';
 
 @Component({
   selector: 'app-add-trip',
   templateUrl: './add-trip.component.html',
   styleUrls: ['./add-trip.component.scss']
 })
-export class AddTripComponent implements OnInit {
+export class AddTripComponent implements AfterViewInit {
 
-  constructor() {  }
+  Trips$ = this.triptrapService.Trips$;
+  @ViewChild("tripName") tripName!: ElementRef;
+  @ViewChild("tripDate") tripDate!: ElementRef;
 
-  // imagePickerConf: ImagePickerConf = {
-  //   borderRadius: '4px',
-  //   language: 'en',
-  //   width: '320px',
-  //   height: '240px',
-  // };
+  constructor(
+    private triptrapService: TriptrapService,
+    private _bottomSheetRef: MatBottomSheetRef
+  ) {  }
 
-  ngOnInit(): void {
+  saveTrip() {
+    const updatedTrips = this.Trips$.value;
+    updatedTrips.push({
+      name: this.tripName.nativeElement.value,
+      date: this.tripDate.nativeElement.value,
+      photo: "assets/trip-photo.png",
+      tripPlaces: []
+    })
+    this.Trips$.next(updatedTrips);
+    this._bottomSheetRef.dismiss();
+  }
+
+  ngAfterViewInit() {
+
   }
 
 }

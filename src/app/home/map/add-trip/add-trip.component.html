@@ -1,12 +1,12 @@
 <div class="add-trip-container">
   <mat-form-field class="trip-input" id="name-input" appearance="fill">
     <mat-label>Trip name</mat-label>
-    <input matInput>
+    <input matInput #tripName>
   </mat-form-field>
   <mat-form-field appearance="fill" class="trip-input" id="date-input">
     <mat-label>Enter a date range</mat-label>
     <mat-date-range-input [rangePicker]="picker">
-      <input matStartDate placeholder="Start date">
+      <input matStartDate placeholder="Start date" #tripDate>
       <input matEndDate placeholder="End date">
     </mat-date-range-input>
     <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
@@ -14,10 +14,10 @@
     <mat-date-range-picker #picker></mat-date-range-picker>
   </mat-form-field>
   <ngp-image-picker></ngp-image-picker>
-  <mat-form-field class="trip-summury-input" appearance="fill">
+  <!-- <mat-form-field class="trip-summury-input" appearance="fill">
     <mat-label>Trip summury</mat-label>
-    <textarea matInput placeholder=""></textarea>
-  </mat-form-field>
-  <button mat-flat-button class="save-button" routerLink="/">SAVE</button>
+    <textarea matInput placeholder="" #tripDescription></textarea>
+  </mat-form-field> -->
+  <button mat-flat-button class="save-button" routerLink="/" (click)="saveTrip()">SAVE</button>
 </div>
 

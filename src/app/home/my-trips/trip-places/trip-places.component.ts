@@ -1,4 +1,4 @@
-import { Trip } from './../../../interfaces/trip-card.interface';
+import { Trip } from '../../../interfaces/trip.interface';
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 import { TriptrapService } from 'src/app/services/triptrap.service';

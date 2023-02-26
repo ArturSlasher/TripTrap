@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Trip } from 'src/app/interfaces/trip-card.interface';
+import { Trip } from 'src/app/interfaces/trip.interface';
 import { TriptrapService } from 'src/app/services/triptrap.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { TriptrapService } from 'src/app/services/triptrap.service';
 })
 export class HomeCardsComponent implements OnInit {
 
-  Trips: Trip[] = this.triptrapService.getTrips();
+  Trips$ = this.triptrapService.Trips$;
 
   constructor(
     private triptrapService: TriptrapService
