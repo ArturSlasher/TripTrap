@@ -1,5 +1,6 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import {MatBottomSheet, MatBottomSheetRef} from '@angular/material/bottom-sheet';
+import { Trip } from 'src/app/interfaces/trip.interface';
 import { TriptrapService } from 'src/app/services/triptrap.service';
 
 @Component({
@@ -20,16 +21,17 @@ export class AddTripComponent implements AfterViewInit {
   ) {  }
 
   saveTrip() {
-    const updatedTrips = this.Trips$.value;
-    updatedTrips.push({
+    const newTrip: Trip = {
       name: this.tripName.nativeElement.value,
       date: this.tripStartDate.nativeElement.value + "-" + this.tripEndDate.nativeElement.value,
       photo: "assets/trip-photo.png",
       tripPlaces: []
-    })
+    }
+    const updatedTrips: Trip[] = this.Trips$.value;
+    updatedTrips.unshift(newTrip)
     this.Trips$.next(updatedTrips);
+    this.triptrapService.CurrentTrip$.next(newTrip);
     this._bottomSheetRef.dismiss();
-    console.log(this.tripEndDate)
   }
 
   ngAfterViewInit() {

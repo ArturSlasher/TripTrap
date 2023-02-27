@@ -1,4 +1,4 @@
-<div class="card-container" *ngFor="let trip of Trips">
+<div class="card-container" *ngFor="let trip of Trips$ | async">
 <mat-card class="trip-card" (click)="sendTrip(trip)" [ngStyle]="{'background-image':'trip.photo'}">
   <img class="background-img" [src]="trip.photo">
   <mat-card-header>
@@ -14,11 +14,11 @@
         <mat-icon>place</mat-icon>
       </button>
       <button mat-button class="comment-button mat-elevation-z0">
-        <p>{{ Trips.length*3 }}</p>
+        <p>{{ Trips$.value.length*3 }}</p>
         <mat-icon>comment</mat-icon>
       </button>
       <button mat-button class="favorite-button mat-elevation-z0">
-        <p>{{ Trips.length*9 }}</p>
+        <p>{{ Trips$.value.length*9 }}</p>
         <mat-icon>favorite</mat-icon>
       </button>
     </div>

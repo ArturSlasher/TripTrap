@@ -9,6 +9,8 @@ import { Trip } from 'src/app/interfaces/trip.interface';
 })
 export class TripsListComponent implements OnInit {
 
+  Trips$ = this.triptrapService.Trips$;
+
   constructor(
     private triptrapService: TriptrapService
     ) { }
@@ -16,11 +18,9 @@ export class TripsListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  sendTrip(tripCard: Trip) {
-    this.triptrapService.getTrip(tripCard);
+  sendTrip(trip: Trip) {
+    this.triptrapService.CurrentTrip$.next(trip)
     document.documentElement.scrollTop = 0;
   }
-
-  Trips: Trip[] = this.triptrapService.getTrips();
 
 }

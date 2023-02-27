@@ -27,11 +27,11 @@ export class AddPlaceComponent implements OnInit {
 
   savePlace() {
     const updatedCurrentTrip = this.CurrentTrip$.value;
-    updatedCurrentTrip.tripPlaces.push({
+    updatedCurrentTrip.tripPlaces.unshift({
       name: this.placeName.nativeElement.value,
       location: this.placeLocation.nativeElement.value,
-      date: "date-filler",
-      time: "time-filler",
+      date: this.placeDate.nativeElement.value,
+      time: this.placeTime.nativeElement.value,
       description: this.placeDescription.nativeElement.value,
       photos: []
     })

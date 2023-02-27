@@ -1,16 +1,16 @@
 <!-- <mat-slider aria-label="unit(s)" class="primary"></mat-slider> -->
 
 <div class="card-container" *ngFor="let place of CurrentTrip$.value.tripPlaces; let i = index">
-  <p class="date">{{ place.date }}</p>
+  <div class="time-container">
+    <p class="date">{{ place.date }}</p>
+    <p class="time">{{ place.time }}</p>
+  </div>
   <mat-card class="place-card">
     <mat-card-header>
       <mat-card-title class="card-name">{{ place.name }}</mat-card-title>
-      <p class="location">
+      <p class="location"><i>
         {{ place.location }}
-      </p>
-      <p class="time">
-        {{ place.time }}
-      </p>
+      </i></p>
       <div class="subtitle-div">
         <p>
           {{ place.description }}
