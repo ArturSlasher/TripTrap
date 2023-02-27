@@ -49,6 +49,7 @@ mat-card-title {
 
 mat-card-header p {
   margin-left: 16px;
+  margin-bottom: 16px;
   width: 264px;
 }
 
@@ -69,7 +70,7 @@ mat-card-content {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: flex-start;
   padding-block: 8px;
   width: calc( 98vw - 762px);
 }
@@ -83,10 +84,15 @@ mat-card-actions {
   margin-right: 24px;
 }
 
-.place-photo-group {
+.place-photo-group-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  width: calc(98vw - 826px);
+}
+
+.place-photo {
+
 
   & .place-image-s {
     margin: 8px;
