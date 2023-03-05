@@ -7,10 +7,10 @@
     <button mat-flat-button class="login-google-button" routerLink="/">Log in with Google</button>
     <button mat-flat-button class="login-facebook-button" routerLink="/">Log in with Facebook</button>
     <p class="or">or</p>
-    <input matInput placeholder="Email or username" class="login-input">
-    <input matInput placeholder="Password" type="password" class="login-password">
+    <input matInput placeholder="Email or username" class="login-input" #email>
+    <input matInput placeholder="Password" type="password" class="login-password" #password>
     <mat-checkbox class="remember-me-checkbox">Remember me</mat-checkbox>
-    <button mat-flat-button class="login-button" routerLink="/">Log in</button>
+    <button mat-flat-button class="login-button" (click)="login(email.value, password.value)" routerLink="/">Log in</button>
     <a href="" class="forgot-password-link">Forgot password?</a>
     <div class="signup">
       <p class="new-in-triptrap">New in TripTrap?</p>

@@ -1,3 +1,4 @@
+import { TriptrapService } from 'src/app/services/triptrap.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public triptrapService: TriptrapService
+  ) { }
 
   ngOnInit(): void {
   }
 
+  login(email: string, password: string) {
+    this.triptrapService.login(email, password);
+  }
 }

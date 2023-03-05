@@ -28,6 +28,7 @@ import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 import { ComingSoonComponent } from './home/coming-soon/coming-soon.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AccountComponent } from './auth/account/account.component';
+import { AuthGuardService } from './services/auth-guard.service';
 
 
 @NgModule({
@@ -63,7 +64,9 @@ import { AccountComponent } from './auth/account/account.component';
     FlexLayoutModule,
     NgxMaterialTimepickerModule
   ],
-  providers: [],
+  providers: [
+    AuthGuardService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
