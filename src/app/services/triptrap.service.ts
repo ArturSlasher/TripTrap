@@ -4,6 +4,7 @@ import { Trip } from '../interfaces/trip.interface';
 import { TripPlace } from './../interfaces/trip-place.interface';
 import { User } from '../interfaces/user';
 import { Auth } from '../interfaces/auth';
+import { Subject } from 'rxjs/internal/Subject';
 
 @Injectable({
   providedIn: 'root'
@@ -219,7 +220,7 @@ export class TriptrapService {
 
   CurrentTrip$ = new BehaviorSubject<Trip>(this.Trips$.value[0]);
 
-  auth: Auth[] = [
+  auths: Auth[] = [
     {
       id: 1,
       email: "demo",
@@ -236,7 +237,7 @@ export class TriptrapService {
     {
       id: 1,
       username: "Annette Black",
-      photo: "assets\photo.png",
+      photo: "assets/photo.png",
       address: "Los Angeles, USA",
       bio: "I’m an artist. Love traveling, montains, dogs, yoga. Nice to see you here",
       Trips: this.Trips$
@@ -251,13 +252,34 @@ export class TriptrapService {
     }
   ]
 
-  isLoggedIn: boolean = false;
+  User$ = new BehaviorSubject<User | undefined>(undefined);
 
-  signup(email: string, password: string) {
-    this.isLoggedIn = true;
+  findUserByID(id: number){
+    for (let user of this.users){
+      if (user.id === id){
+        return user;
+      }
+    }
+    return undefined;
   }
 
+  isLoggedIn: boolean = false;
+
   login(email: string, password: string) {
+    for(let auth of this.auths){
+      if (auth.email === email || auth.password === password){
+        this.isLoggedIn = true;
+        this.User$.next(this.findUserByID(auth.id));
+        if (this.User$.value != undefined) {
+          this.Trips$.next(this.User$.value.Trips.value)
+        }
+        return true;
+      }
+    }
+    return false;
+  }
+
+  signup(email: string, password: string) {
     this.isLoggedIn = true;
   }
 

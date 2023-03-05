@@ -1,7 +1,7 @@
 <div class="account-container">
   <mat-card class="user-card mat-elevation-z0">
     <mat-card-header>
-      <img mat-card-image src="assets\photo.png" alt="User photo" class="user-photo">
+      <img mat-card-image [src]="User$.value?.photo" alt="user photo" class="user-photo">
       <!-- <mat-card-actions>
         <button mat-icon-button class="settings-button mat-elevation-z0">
           <mat-icon>settings</mat-icon>
@@ -11,18 +11,18 @@
     <mat-card-content>
       <mat-form-field class="account-input" id="name-input" appearance="fill">
         <mat-label>Name</mat-label>
-        <input matInput placeholder="Annette Black">
+        <input matInput placeholder='{{ User$.value?.username }}'>
       </mat-form-field>
       <mat-form-field class="account-input" id="address-input" appearance="fill">
-        <mat-label>Address</mat-label>
-        <input matInput placeholder="Los Angeles, USA">
+        <mat-label>City</mat-label>
+        <input matInput placeholder='{{ User$.value?.address }}'>
       </mat-form-field>
       <mat-form-field class="account-input" id="bio-input" appearance="fill">
         <mat-label>Bio</mat-label>
-        <textarea matInput placeholder="I’m an artist. Love traveling, montains, dogs, yoga. Nice to see you here"></textarea>
+        <textarea matInput placeholder='{{ User$.value?.bio }}'></textarea>
       </mat-form-field>
-      <button mat-flat-button class="account-button" id="logout-button" routerLink="/login">Log out</button>
-      <button mat-flat-button class="account-button" id="delete-button" routerLink="/signup">Delete account</button>
+      <button mat-flat-button class="account-button" id="logout-button" (click)="logout()" routerLink="/login">Log out</button>
+      <button mat-flat-button class="account-button" id="delete-button" routerLink="/comming-soon">Delete account</button>
     </mat-card-content>
 </mat-card>
 

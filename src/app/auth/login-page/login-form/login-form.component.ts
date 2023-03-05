@@ -1,5 +1,5 @@
 import { TriptrapService } from 'src/app/services/triptrap.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-login-form',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login-form.component.scss']
 })
 export class LoginFormComponent implements OnInit {
+
+  @ViewChild("incorrect") incorrect!: ElementRef;
 
   constructor(
     public triptrapService: TriptrapService
@@ -16,6 +18,9 @@ export class LoginFormComponent implements OnInit {
   }
 
   login(email: string, password: string) {
-    this.triptrapService.login(email, password);
+    if (!this.triptrapService.login(email, password)){
+      this.incorrect.nativeElement.style.display = 'block';
+    }
+    else this.triptrapService.login(email, password);
   }
 }

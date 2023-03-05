@@ -1,6 +1,6 @@
 <mat-card class="user-card mat-elevation-z0">
     <mat-card-header>
-      <img mat-card-image src="assets\photo.png" alt="User photo" class="user-photo">
+      <img mat-card-image [src]="User$.value?.photo" alt="User photo" class="user-photo">
       <!-- <mat-card-actions>
         <button mat-icon-button class="settings-button mat-elevation-z0">
           <mat-icon>settings</mat-icon>
@@ -8,9 +8,9 @@
       </mat-card-actions> -->
     </mat-card-header>
     <mat-card-content>
-      <mat-card-title class="user-name">Annette Black</mat-card-title>
-      <p class="address">Los Angeles, USA</p>
-      <p class="bio">I’m an artist. Love traveling, montains, dogs, yoga. Nice to see you here</p>
+      <mat-card-title class="user-name">{{ User$.value?.username }}</mat-card-title>
+      <p class="address">{{ User$.value?.address }}</p>
+      <p class="bio">{{ User$.value?.bio}}</p>
     </mat-card-content>
 </mat-card>
 

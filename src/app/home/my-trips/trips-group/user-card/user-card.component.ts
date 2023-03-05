@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TriptrapService } from 'src/app/services/triptrap.service';
 
 @Component({
   selector: 'app-user-card',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserCardComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public triptrapService: TriptrapService
+  ) { }
+
+  User$ = this.triptrapService.User$;
 
   ngOnInit(): void {
   }
