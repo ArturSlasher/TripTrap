@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { TriptrapService } from 'src/app/services/triptrap.service';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup-form',
@@ -7,7 +9,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupFormComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild("incorrect") incorrect!: ElementRef;
+
+  constructor(
+    public triptrapService: TriptrapService,
+    public router: Router
+  ) { }
+
+  signup(email: string, password: string, confirmpassword: string, username: string){
+    if (!this.checkPassword(password, confirmpassword)) {
+      this.checkPassword(password, confirmpassword)
+      this.router.navigate(['signup']);
+    }
+    else this.triptrapService.signup(email, password, username);
+  }
+
+  checkPassword(password: string, confirmpassword: string) {
+    if (password === confirmpassword){
+      return true;
+    }
+    else {
+      this.incorrect.nativeElement.style.display = 'block';
+      return false;
+    }
+  }
 
   ngOnInit(): void {
   }

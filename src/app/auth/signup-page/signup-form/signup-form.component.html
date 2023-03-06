@@ -8,12 +8,13 @@
     <button mat-flat-button class="login-google-button" routerLink="/comming-soon">Sign up with Google</button>
     <button mat-flat-button class="login-facebook-button" routerLink="/comming-soon">Sign up with Facebook</button>
     <p class="or">or</p>
-    <input matInput placeholder="Email" class="email-input">
-    <input matInput placeholder="Password" type="password" class="password-input">
-    <input matInput placeholder="Confirm password" type="password" class="confirm-password-input">
-    <input matInput placeholder="Username" class="username-input">
+    <p class="incorrect-data" #incorrect>You have entered incorrect data</p>
+    <input matInput placeholder="Email" class="email-input" #email>
+    <input matInput placeholder="Password" type="password" class="password-input" #password>
+    <input matInput placeholder="Confirm password" type="password" class="confirm-password-input" #confirmpassword>
+    <input matInput placeholder="Username" class="username-input" #username>
     <!-- <input matInput placeholder="City" class="city-input"> -->
-    <button mat-flat-button class="signup-button" routerLink="/">Sign up</button>
+    <button mat-flat-button class="signup-button" (click)="signup(email.value, password.value, confirmpassword.value, username.value)" routerLink="/">Sign up</button>
     <div class="login">
       <p class="already-in-triptrap">Already in TripTrap?</p>
       <a href="/login" class="login-link">Log in</a>

@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import {MatBottomSheet} from '@angular/material/bottom-sheet';
 import { AddTripComponent } from './add-trip/add-trip.component';
+import { TriptrapService } from 'src/app/services/triptrap.service';
 import * as L from 'leaflet';
 
 @Component({
@@ -10,7 +11,12 @@ import * as L from 'leaflet';
 })
 export class MapComponent implements AfterViewInit {
 
-  constructor(private _bottomSheet: MatBottomSheet) { }
+  Trips$ = this.TriptrapService.Trips$;
+
+  constructor(
+    private _bottomSheet: MatBottomSheet,
+    private TriptrapService: TriptrapService
+    ) { }
 
   private map: any;
 

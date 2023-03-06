@@ -12,6 +12,7 @@ import { TripPlace } from 'src/app/interfaces/trip-place.interface';
 })
 export class TripContentSectionComponent implements AfterViewInit {
 
+  Trips$ = this.TriptrapService.Trips$;
   CurrentTrip$ = this.TriptrapService.CurrentTrip$;
 
   @ViewChild("placeimage") placeImage!: ElementRef;

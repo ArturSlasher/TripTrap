@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { AddPlaceComponent } from './add-place/add-place.component';
+import { TriptrapService } from 'src/app/services/triptrap.service';
 
 @Component({
   selector: 'app-my-trips',
@@ -9,7 +10,12 @@ import { AddPlaceComponent } from './add-place/add-place.component';
 })
 export class MyTripsComponent implements OnInit {
 
-  constructor(private _bottomSheet: MatBottomSheet) { }
+  Trips$ = this.TriptrapService.Trips$;
+
+  constructor(
+    private _bottomSheet: MatBottomSheet,
+    private TriptrapService: TriptrapService
+    ) { }
 
   openBottomSheet(): void {
     this._bottomSheet.open(AddPlaceComponent);

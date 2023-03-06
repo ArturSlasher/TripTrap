@@ -89,6 +89,18 @@ button {
   color: rgba(44, 43, 47, 0.56);
 }
 
+.incorrect-data {
+  display: none;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130%;
+
+  color: mat-color($accent)
+}
+
 input {
   width: 380px;
   height: 40px;

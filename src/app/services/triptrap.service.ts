@@ -11,6 +11,10 @@ import { Subject } from 'rxjs/internal/Subject';
 })
 export class TriptrapService {
 
+  constructor() { }
+
+  EmptyTrips$ = new BehaviorSubject<Trip[]>([])
+
   Trips$ = new BehaviorSubject<Trip[]>(
     [
       {
@@ -248,11 +252,29 @@ export class TriptrapService {
       photo: "",
       address: "",
       bio: "",
-      Trips: this.Trips$
+      Trips: this.EmptyTrips$
     }
   ]
 
   User$ = new BehaviorSubject<User | undefined>(undefined);
+
+  isLoggedIn: boolean = false;
+
+  login(email: string, password: string) {
+    for(let auth of this.auths){
+      if (auth.email === email || auth.password === password){
+        this.updateAfterLogin();
+        return true;
+      }
+    }
+    return false;
+  }
+
+  signup(email: string, password: string, username: string) {
+    this.auths.push({ id: this.auths.length+1, email: email, password: password});
+    this.users.push({ id: this.users.length+1, username: username, photo: "", address: "", bio: "", Trips: this.EmptyTrips$});
+    this.updateAfterLogin();
+  }
 
   findUserByID(id: number){
     for (let user of this.users){
@@ -263,25 +285,13 @@ export class TriptrapService {
     return undefined;
   }
 
-  isLoggedIn: boolean = false;
-
-  login(email: string, password: string) {
-    for(let auth of this.auths){
-      if (auth.email === email || auth.password === password){
-        this.isLoggedIn = true;
-        this.User$.next(this.findUserByID(auth.id));
-        if (this.User$.value != undefined) {
-          this.Trips$.next(this.User$.value.Trips.value)
-        }
-        return true;
-      }
-    }
-    return false;
-  }
-
-  signup(email: string, password: string) {
+  updateAfterLogin(){
     this.isLoggedIn = true;
+    this.User$.next(this.findUserByID(this.auths.length));
+      if (this.User$.value != undefined) {
+        this.Trips$.next(this.User$.value.Trips.value)
+        this.CurrentTrip$.next(this.User$.value.Trips.value[0])
+      }
   }
 
-  constructor() { }
 }

@@ -1,8 +1,10 @@
 <div class="my-trips-container">
   <!-- <app-header></app-header> -->
   <app-trips-group></app-trips-group>
-  <button mat-fab color="accent" aria-label="add trip button" class="add-trip-button" (click)="openBottomSheet()">
-    <mat-icon>add</mat-icon>
-  </button>
+  <ng-container *ngIf="Trips$.value.length">
+    <button mat-fab color="accent" aria-label="add trip button" class="add-trip-button" (click)="openBottomSheet()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </ng-container>
   <app-trip-places></app-trip-places>
 </div>
