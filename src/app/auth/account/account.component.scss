@@ -54,6 +54,12 @@ mat-card-content {
   font-weight: normal;
   font-size: 14px;
   line-height: 130%;
+  margin-bottom: 16px;
+
+  &#edit-button {
+    background-color: mat-color($primary) !important;
+    color: $white !important;
+  }
 
   &#logout-button {
     background-color: $gray !important;
@@ -63,6 +69,5 @@ mat-card-content {
   &#delete-button {
     background-color: mat-color($accent) !important;
     color: $white !important;
-    margin-top: 16px;
   }
 }

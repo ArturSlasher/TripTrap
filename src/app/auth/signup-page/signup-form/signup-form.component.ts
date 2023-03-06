@@ -17,21 +17,19 @@ export class SignupFormComponent implements OnInit {
   ) { }
 
   signup(email: string, password: string, confirmpassword: string, username: string){
-    if (!this.checkPassword(password, confirmpassword)) {
+    if (email.length && username.length && this.checkPassword(password, confirmpassword)) {
+      this.triptrapService.signup(email, password, username);
+    }
+    else {
       this.checkPassword(password, confirmpassword)
       this.router.navigate(['signup']);
+      this.incorrect.nativeElement.style.display = 'block';
     }
-    else this.triptrapService.signup(email, password, username);
   }
 
   checkPassword(password: string, confirmpassword: string) {
-    if (password === confirmpassword){
-      return true;
-    }
-    else {
-      this.incorrect.nativeElement.style.display = 'block';
-      return false;
-    }
+    if (password.length >= 4 && password === confirmpassword) return true;
+    else return false;
   }
 
   ngOnInit(): void {
