@@ -1,5 +1,5 @@
 import { TriptrapService } from './../../../../services/triptrap.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Trip } from 'src/app/interfaces/trip.interface';
 
 @Component({
@@ -10,6 +10,7 @@ import { Trip } from 'src/app/interfaces/trip.interface';
 export class TripsListComponent implements OnInit {
 
   Trips$ = this.triptrapService.Trips$;
+  cards = document.getElementsByClassName('card-container')
 
   constructor(
     private triptrapService: TriptrapService
@@ -18,8 +19,12 @@ export class TripsListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  sendTrip(trip: Trip) {
-    this.triptrapService.CurrentTrip$.next(trip)
+  sendTrip(card: Element, trip: Trip) {
+    this.triptrapService.CurrentTrip$.next(trip);
+    for (var i = 0; i < this.cards.length; i++) {
+      this.cards[i].classList.remove('active');
+    }
+    card.classList.add("active");
     document.documentElement.scrollTop = 0;
   }
 
