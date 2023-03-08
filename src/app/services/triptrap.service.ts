@@ -501,4 +501,9 @@ export class TriptrapService {
     }
   }
 
+  TabIndex$ = new BehaviorSubject<number | undefined>(undefined);
+  goToMyTrips(){
+    this.TabIndex$.next(1);
+  }
+
 }

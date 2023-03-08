@@ -18,4 +18,9 @@ export class HomeCardsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  homeCardPress(trip: Trip) {
+    this.triptrapService.CurrentTrip$.next(trip);
+    this.triptrapService.goToMyTrips();
+  }
+
 }

@@ -10,7 +10,7 @@ import { Trip } from 'src/app/interfaces/trip.interface';
 export class TripsListComponent implements OnInit {
 
   Trips$ = this.triptrapService.Trips$;
-  cards = document.getElementsByClassName('card-container')
+  cards = document.getElementsByClassName('card-container');
 
   constructor(
     private triptrapService: TriptrapService

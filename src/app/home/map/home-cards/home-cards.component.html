@@ -1,5 +1,5 @@
 <div class="home-cards-container">
-  <mat-card class="home-card" *ngFor="let trip of Trips$ | async">
+  <mat-card class="home-card" (click)="homeCardPress(trip)" *ngFor="let trip of Trips$ | async">
     <mat-card-header>
       <mat-card-title class="card-name">{{trip.name}}</mat-card-title>
       <mat-card-actions>
