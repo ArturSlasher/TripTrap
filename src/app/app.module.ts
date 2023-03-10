@@ -29,6 +29,7 @@ import { ComingSoonComponent } from './home/coming-soon/coming-soon.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AccountComponent } from './auth/account/account.component';
 import { AuthGuardService } from './services/auth-guard.service';
+import { EditAccountComponent } from './auth/account/edit-account/edit-account.component';
 
 
 @NgModule({
@@ -55,6 +56,7 @@ import { AuthGuardService } from './services/auth-guard.service';
     ComingSoonComponent,
     NotFoundComponent,
     AccountComponent,
+    EditAccountComponent
   ],
   imports: [
     BrowserModule,

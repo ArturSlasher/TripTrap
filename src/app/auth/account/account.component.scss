@@ -41,8 +41,22 @@ mat-card-content {
   margin-block: 16px;
 }
 
-.account-input {
-  width: 25vw;
+.account-data {
+  margin: 1rem;
+
+  &#name {
+    font-weight: bold;
+    font-size: 18px
+  }
+
+  &#address {
+    font-size: 14px;
+  }
+
+  &#bio {
+    font-size: 14px;
+    color: $gray;
+  }
 }
 
 .account-button {
@@ -59,6 +73,7 @@ mat-card-content {
   &#edit-button {
     background-color: mat-color($primary) !important;
     color: $white !important;
+    margin-top: 1rem;
   }
 
   &#logout-button {
