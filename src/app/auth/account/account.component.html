@@ -1,5 +1,8 @@
 <div class="account-container">
   <mat-card class="user-card mat-elevation-z0">
+    <button mat-fab color="accent" aria-label="back button" class="back-button" id="back-button-account" routerLink="/">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
     <mat-card-header>
       <img mat-card-image [src]="User$.value?.photo" alt="user photo" class="user-photo">
     </mat-card-header>
