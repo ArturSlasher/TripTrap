@@ -22,10 +22,15 @@
     <input matInput type="time" #placeTime>
   </mat-form-field>
 
-  <ngp-image-picker></ngp-image-picker>
-  <button mat-fab color="primary" aria-label="add photo button" class="add-photo-button">
-    <mat-icon>add</mat-icon>
-  </button>
+  <div class="add-image-section">
+    <ng-container *ngFor="let picker of imageCount$.value">
+      <ngp-image-picker #imagePicker [_config]="imagePickerConf" ($imageChanged)="onImageChange($event)"></ngp-image-picker>
+    </ng-container>
+
+    <button #addPhoto mat-fab color="primary" aria-label="add photo button" class="add-photo-button" (click)="addExtraPhoto()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
 
   <mat-form-field class="place-summury-input" appearance="fill">
     <mat-label>Place summary</mat-label>
