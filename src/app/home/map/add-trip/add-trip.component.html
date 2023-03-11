@@ -13,7 +13,7 @@
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-date-range-picker #picker></mat-date-range-picker>
   </mat-form-field>
-  <ngp-image-picker></ngp-image-picker>
+  <ngp-image-picker #imagePicker [_config]="imagePickerConf" ($imageChanged)="onImageChange($event)"></ngp-image-picker>
   <!-- <mat-form-field class="trip-summury-input" appearance="fill">
     <mat-label>Trip summury</mat-label>
     <textarea matInput placeholder="" #tripDescription></textarea>
