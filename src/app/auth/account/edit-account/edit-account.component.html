@@ -7,7 +7,7 @@
     <mat-label>City</mat-label>
     <input matInput placeholder='{{ User$.value?.address }}' #address>
   </mat-form-field>
-  <ngp-image-picker></ngp-image-picker>
+  <ngp-image-picker #imagePicker [_config]="imagePickerConf" ($imageChanged)="onImageChange($event)"></ngp-image-picker>
   <mat-form-field class="account-input" id="bio-input" appearance="fill">
     <mat-label>Bio</mat-label>
     <textarea matInput placeholder='{{ User$.value?.bio }}' #bio></textarea>

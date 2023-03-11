@@ -39,15 +39,14 @@ ngp-image-picker {
 }
 
 ::ng-deep .image-holder {
-  border-radius: 100vw !important;
   margin-inline: auto;
 }
 
-::ng-deep .image-upload-btn {
-  border-radius: 100vw !important;
-  width: 20vw !important;
-  height: 20vw !important;
-}
+// ::ng-deep .image-upload-btn {
+//   border-radius: 100vw !important;
+//   width: 20vw !important;
+//   height: 20vw !important;
+// }
 
 textarea {
   height: 25vh;

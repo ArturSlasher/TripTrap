@@ -11,10 +11,14 @@ mat-card {
 }
 
 .user-photo {
-  width: 64px;
-  height: 64px;
+  width: 8vw;
+  min-width: 64px;
+  max-width: 200px;
+  height: 8vw;
+  min-height: 64px;
+  max-height: 200px;
   border-radius: 50% !important;
-  border: 4px solid mat-color($primary);
+  border: 0.4vw solid mat-color($primary);
 }
 
 user-card-header {
