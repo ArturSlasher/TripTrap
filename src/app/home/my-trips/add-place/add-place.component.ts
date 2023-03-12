@@ -46,10 +46,10 @@ export class AddPlaceComponent implements OnInit {
     const updatedImageCount = this.imageCount$.value;
     this.imageCount$.value.push(this.imageCount$.value.length+1);
     this.imageCount$.next(updatedImageCount);
-    console.log(this.imageCount$.value)
   }
 
   savePlace() {
+    console.log(this.placeTime);
     const updatedCurrentTrip = this.CurrentTrip$.value;
     updatedCurrentTrip.tripPlaces.unshift({
       name: this.placeName.nativeElement.value,

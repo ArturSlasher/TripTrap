@@ -5,7 +5,6 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 2vw;
-  // margin-top: 72vh;
   padding-bottom: 4vh;
   margin-inline: auto;
   width: 90vw;
@@ -22,7 +21,7 @@
 }
 
 .home-card:hover {
-  top: -10vh;
+  top: -15vh;
 }
 
 mat-card-header {
@@ -36,7 +35,6 @@ mat-card-header {
 }
 
 .card-name {
-  height: 16px;
   margin-top: 8px;
   font-weight: bold;
   font-size: 16px;
@@ -45,11 +43,8 @@ mat-card-header {
 }
 
 mat-card-actions {
-  // height: 24px;
   width: 24px;
   margin-top: -8px;
-  // right: 16px;
-  // top: -24px;
   border-radius: 0px;
   padding: 0;
 
