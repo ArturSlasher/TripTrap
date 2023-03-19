@@ -484,6 +484,14 @@ export class TriptrapService {
     this.updateAfterLogin(this.auths.length);
   }
 
+  updateAfterLogin(id: number){
+    this.User$.next(this.findUserByID(id));
+    if (this.User$.value != undefined) {
+      this.Trips$.next(this.User$.value.Trips.value);
+      this.CurrentTrip$.next(this.User$.value.Trips.value[0]);
+    }
+  }
+
   findUserByID(id: number){
     for (let user of this.users){
       if (user.id === id){
@@ -493,12 +501,13 @@ export class TriptrapService {
     return undefined;
   }
 
-  updateAfterLogin(id: number){
-    this.User$.next(this.findUserByID(id));
-    if (this.User$.value != undefined) {
-      this.Trips$.next(this.User$.value.Trips.value);
-      this.CurrentTrip$.next(this.User$.value.Trips.value[0]);
+  findUserByEmail(email: string){
+    for (let auth of this.auths){
+      if (auth.email === email){
+        return auth;
+      }
     }
+    return undefined;
   }
 
   TabIndex$ = new BehaviorSubject<number | undefined>(undefined);

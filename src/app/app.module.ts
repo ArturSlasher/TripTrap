@@ -30,7 +30,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { AccountComponent } from './auth/account/account.component';
 import { AuthGuardService } from './services/auth-guard.service';
 import { EditAccountComponent } from './auth/account/edit-account/edit-account.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -64,7 +64,8 @@ import { EditAccountComponent } from './auth/account/edit-account/edit-account.c
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
-    NgxMaterialTimepickerModule
+    NgxMaterialTimepickerModule,
+    ReactiveFormsModule
   ],
   providers: [
     AuthGuardService

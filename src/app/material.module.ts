@@ -19,6 +19,7 @@ import { NgpImagePickerModule } from 'ngp-image-picker';
 // import {MatLegacyInputModule as MatInputModule} from '@angular/material/legacy-input';
 import { MatInputModule } from '@angular/material/input';
 // import {MatSidenavModule} from '@angular/material/sidenav';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -33,7 +34,8 @@ import { MatInputModule } from '@angular/material/input';
     MatDatepickerModule,
     MatNativeDateModule,
     NgpImagePickerModule,
-    MatInputModule
+    MatInputModule,
+    ReactiveFormsModule
   ],
   exports: [
     MatButtonModule,

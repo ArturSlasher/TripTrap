@@ -1,21 +1,28 @@
-<div class="login-form-container">
+<form [formGroup]="loginForm" (ngSubmit)="login(email.value, password.value)" class="login-form-container">
     <div class="logo-container">
       <img src="assets\Logo.png" alt="" class="logo">
       <h2 class="logo-sign">TripTrap</h2>
     </div>
     <h1>Adventure starts with TripTrap</h1>
-    <button mat-flat-button class="login-google-button" routerLink="/comming-soon">Log in with Google</button>
-    <button mat-flat-button class="login-facebook-button" routerLink="/comming-soon">Log in with Facebook</button>
+    <button mat-flat-button type="button" class="login-google-button" routerLink="/comming-soon">Log in with Google</button>
+    <button mat-flat-button type="button" class="login-facebook-button" routerLink="/comming-soon">Log in with Facebook</button>
     <p class="or">or</p>
-    <p class="demo">Please, to use demonstration account set "demo" as username and password</p>
+    <p class="demo">Please, to use demonstration account set "demo" as email and password</p>
+
+    <p class="incorrect-data" #incorrectEmail>Incorrect email format</p>
+    <p class="incorrect-data" #nonexistentEmail>No accaunt with this email</p>
+    <input matInput formControlName="emailControl" placeholder="Email" class="login-input" #email>
+
+    <p class="incorrect-data" #incorrectPassword>Password must be between 4 and 8 digits long and include at least one numeric digit</p>
+    <input matInput formControlName="passwordControl" placeholder="Password" type="password" class="login-password" #password>
+
     <p class="incorrect-data" #incorrect>You have entered incorrect data</p>
-    <input matInput placeholder="Email or username" class="login-input" #email>
-    <input matInput placeholder="Password" type="password" class="login-password" #password>
+    <button mat-flat-button type="submit" class="login-button" routerLink="/">Log in</button>
     <!-- <mat-checkbox class="remember-me-checkbox">Remember me</mat-checkbox> -->
-    <button mat-flat-button class="login-button" (click)="login(email.value, password.value)" routerLink="/">Log in</button>
+
     <a href="" class="forgot-password-link" routerLink="/comming-soon">Forgot password?</a>
     <div class="signup">
       <p class="new-in-triptrap">New in TripTrap?</p>
       <a href="/signup" class="create-account-link">Create account</a>
     </div>
-</div>
+</form>
