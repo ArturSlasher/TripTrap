@@ -2,6 +2,7 @@ import { TriptrapService } from 'src/app/services/triptrap.service';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { debounceTime, filter, map } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-form',
@@ -30,7 +31,8 @@ export class LoginFormComponent implements OnInit {
 
   constructor(
     public triptrapService: TriptrapService,
-    public formBuilder: FormBuilder
+    public formBuilder: FormBuilder,
+    public router: Router
   ) { }
 
   ngOnInit(): void {
@@ -76,6 +78,9 @@ export class LoginFormComponent implements OnInit {
     if (!this.loginForm.valid || !this.triptrapService.login(email, password)){
       this.incorrect.nativeElement.style.display = 'block';
     }
-    else this.triptrapService.login(email, password);
+    else {
+      this.triptrapService.login(email, password);
+      this.router.navigate(['']);
+    }
   }
 }

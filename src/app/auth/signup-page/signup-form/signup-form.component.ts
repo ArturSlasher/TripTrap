@@ -101,8 +101,8 @@ export class SignupFormComponent implements OnInit {
       this.incorrect.nativeElement.style.display = 'block';
     }
     else {
+      this.router.navigate(['']);
       this.triptrapService.signup(email, password, username);
-      this.router.navigate(['map']);
     }
   }
 }
