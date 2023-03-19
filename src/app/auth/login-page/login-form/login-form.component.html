@@ -9,15 +9,15 @@
     <p class="or">or</p>
     <p class="demo">Please, to use demonstration account set "demo" as email and password</p>
 
+    <input matInput formControlName="emailControl" placeholder="Email" class="login-input" #email>
     <p class="incorrect-data" #incorrectEmail>Incorrect email format</p>
     <p class="incorrect-data" #nonexistentEmail>No accaunt with this email</p>
-    <input matInput formControlName="emailControl" placeholder="Email" class="login-input" #email>
 
-    <p class="incorrect-data" #incorrectPassword>Password must be between 4 and 8 digits long and include at least one numeric digit</p>
     <input matInput formControlName="passwordControl" placeholder="Password" type="password" class="login-password" #password>
+    <p class="incorrect-data" #incorrectPassword>Password must be between 4 and 8 digits long and include at least one numeric digit</p>
 
-    <p class="incorrect-data" #incorrect>You have entered incorrect data</p>
     <button mat-flat-button type="submit" class="login-button">Log in</button>
+    <p class="incorrect-data" #incorrect>You have entered incorrect data</p>
     <!-- <mat-checkbox class="remember-me-checkbox">Remember me</mat-checkbox> -->
 
     <a href="" class="forgot-password-link" routerLink="/comming-soon">Forgot password?</a>
