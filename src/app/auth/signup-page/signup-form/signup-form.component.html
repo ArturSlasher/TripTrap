@@ -1,23 +1,32 @@
 <body>
-  <div class="signup-form-container">
+  <form [formGroup]="signupForm" (ngSubmit)="signup(email.value, password.value, confirmpassword.value, username.value)" class="signup-form-container">
     <div class="logo-container">
       <img src="assets\Logo.png" alt="" class="logo">
       <h2>TripTrap</h2>
     </div>
     <h1>Adventure starts with TripTrap</h1>
-    <button mat-flat-button class="login-google-button" routerLink="/comming-soon">Sign up with Google</button>
-    <button mat-flat-button class="login-facebook-button" routerLink="/comming-soon">Sign up with Facebook</button>
+    <button mat-flat-button type="button" class="signup-google-button" routerLink="/comming-soon">Sign up with Google</button>
+    <button mat-flat-button type="button" class="signup-facebook-button" routerLink="/comming-soon">Sign up with Facebook</button>
     <p class="or">or</p>
-    <p class="incorrect-data" #incorrect>You have entered incorrect data</p>
-    <input matInput placeholder="Email" class="email-input" #email>
-    <input matInput placeholder="Password" type="password" class="password-input" #password>
-    <input matInput placeholder="Confirm password" type="password" class="confirm-password-input" #confirmpassword>
-    <input matInput placeholder="Username" class="username-input" #username>
+
+    <p class="incorrect-data" #incorrectEmail>Incorrect email format</p>
+    <p class="incorrect-data" #existentEmail>This email is already taken</p>
+    <input matInput formControlName="emailControl" placeholder="Email" class="email-input" #email>
+
+    <p class="incorrect-data" #incorrectPassword>Password must be between 4 and 8 digits long and include at least one numeric digit</p>
+    <input matInput formControlName="passwordControl" placeholder="Password" type="password" class="password-input" #password>
+
+    <p class="incorrect-data" #unconfimedPassword>Password mismatch</p>
+    <input matInput formControlName="confirmPasswordControl" placeholder="Confirm password" type="password" class="confirm-password-input" #confirmpassword>
+
+    <input matInput formControlName="usernameControl" placeholder="Username" class="username-input" #username>
+
     <!-- <input matInput placeholder="City" class="city-input"> -->
-    <button mat-flat-button class="signup-button" (click)="signup(email.value, password.value, confirmpassword.value, username.value)" routerLink="/">Sign up</button>
+    <p class="incorrect-data" #incorrect>You have entered incorrect data</p>
+    <button mat-flat-button type="submit" class="signup-button" routerLink="/">Sign up</button>
     <div class="login">
       <p class="already-in-triptrap">Already in TripTrap?</p>
       <a href="/login" class="login-link">Log in</a>
     </div>
-  </div>
+  </form>
 </body>

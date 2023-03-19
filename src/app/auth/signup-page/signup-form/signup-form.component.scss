@@ -64,12 +64,12 @@ button {
   line-height: 130%;
   color: $white;
 
-  &.login-google-button {
+  &.signup-google-button {
     color: $white;
     background: #4286F5;
   }
 
-  &.login-facebook-button {
+  &.signup-facebook-button {
     color: $white;
     background: #3B5999;
   }
@@ -91,6 +91,7 @@ button {
 
 .incorrect-data {
   display: none;
+  text-align: center;
 
   font-family: Roboto;
   font-style: normal;
