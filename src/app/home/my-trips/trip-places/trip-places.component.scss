@@ -92,14 +92,15 @@ mat-card-actions {
 
   & .place-photo {
     & .place-image-s {
+      object-fit: cover;
       margin: 8px;
-      width: 140px;
-      height: 100px;
+      width: calc(8vw * 1.4);
+      height: 8vw;
       cursor: pointer;
       transition: 0.3s;
     }
 
-    & .place-image-s:hover, .place-mage-s:focus {
+    & .place-image-s:hover, .place-image-s:focus {
       color: #bbb;
       text-decoration: none;
       cursor: pointer;

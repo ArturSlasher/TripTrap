@@ -12,6 +12,7 @@ mat-card {
 
 .user-photo {
   width: 8vw;
+  object-fit: cover;
   min-width: 64px;
   max-width: 200px;
   height: 8vw;

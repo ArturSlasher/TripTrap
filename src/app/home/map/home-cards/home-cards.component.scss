@@ -58,6 +58,7 @@ mat-card-actions {
 }
 
 .trip-photo {
+  object-fit: cover;
   width: 192px;
   margin-inline: auto;
 }

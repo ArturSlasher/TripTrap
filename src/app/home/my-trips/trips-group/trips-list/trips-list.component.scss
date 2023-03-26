@@ -32,6 +32,7 @@ mat-card {
 }
 
 .background-img {
+  object-fit: cover;
   pointer-events: none;
   position: absolute;
   width: 100%;
