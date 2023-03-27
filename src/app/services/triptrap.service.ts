@@ -13,7 +13,8 @@ export class TriptrapService {
 
   constructor() { }
 
-  EmptyTrips$ = new BehaviorSubject<Trip[]>([])
+  Trips$ = new BehaviorSubject<Trip[]>([]);
+  EmptyTrips$ = new BehaviorSubject<Trip[]>([]);
   FullTrips$ = new BehaviorSubject<Trip[]>(
     [
       {
@@ -123,36 +124,20 @@ export class TriptrapService {
         photo: "assets/demo-photos/slovakia-trip-photo.png",
         tripPlaces: [
           {
-            name: "Opera and Ballet Theatre",
-            location: "Lviv, Svobody Avenue, 28",
-            date: "9/6/2021",
-            time: "14:58",
-            description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-            photos: [
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png"]
+            name: "Bratislava",
+            location: "Bratislava, Slovakia",
+            date: "19/02/2016",
+            time: "12:00",
+            description: "As someone who has traveled to Bratislava, I can say that it is a charming city with a rich history and culture. The city's old town, with its narrow streets, colorful buildings, and historical landmarks, was a delight to explore. The city's many museums and galleries offered a fascinating insight into the city's past and present. One of the highlights of my trip was visiting the Bratislava Castle, which offers stunning views of the city and the Danube River.",
+            photos: ["assets/demo-photos/slovakia-place-photo-1.png", "assets/demo-photos/slovakia-place-photo-2.png", "assets/demo-photos/slovakia-place-photo-3.png", "assets/demo-photos/slovakia-place-photo-4.png", "assets/demo-photos/slovakia-place-photo-5.png", "assets/demo-photos/slovakia-place-photo-6.png", "assets/demo-photos/slovakia-place-photo-7.png", "assets/demo-photos/slovakia-place-photo-8.png"]
           },
           {
-            name: "Opera and Ballet Theatre",
-            location: "Lviv, Svobody Avenue, 28",
-            date: "19/6/2021",
-            time: "14:58",
-            description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-            photos: ["assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png"]
-          },
-          {
-            name: "Opera and Ballet Theatre",
-            location: "Lviv, Svobody Avenue, 28",
-            date: "29/6/2021",
-            time: "14:58",
-            description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-            photos: ["assets/place-photo.png", "assets/place-photo.png"]
+            name: "Jasna Low Tatras",
+            location: "Demänovská Dolina, Slovakia",
+            date: "29/01/2016",
+            time: "10:00",
+            description: "The snow-covered slopes and stunning mountain views are simply breathtaking. The feeling of gliding down the slopes, the wind in my face and the sun on my skin, is like nothing else. The ski resort I visited was also filled with great food, entertainment, and a lively après-ski scene.",
+            photos: ["assets/demo-photos/ski-place-photo-1.png", "assets/demo-photos/ski-place-photo-2.png", "assets/demo-photos/ski-place-photo-3.png", "assets/demo-photos/ski-place-photo-4.png", "assets/demo-photos/ski-place-photo-5.png", "assets/demo-photos/ski-place-photo-6.png", "assets/demo-photos/ski-place-photo-7.png", "assets/demo-photos/ski-place-photo-8.png"]
           }
         ]
       },
@@ -189,286 +174,55 @@ export class TriptrapService {
       },
       {
         name: 'Montenegro',
-        date: '00/00/2008-00/00/2008',
+        date: '01/06/2008-31/08/2008',
         photo: "assets/demo-photos/montenegro-trip-photo.png",
         tripPlaces: [
           {
-            name: "Opera and Ballet Theatre",
-            location: "Lviv, Svobody Avenue, 28",
-            date: "9/6/2021",
-            time: "14:58",
-            description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-            photos: [
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png"]
+            name: "Kotor",
+            location: "Kotor, Montenegro",
+            date: "01/08/2008",
+            time: "12:38",
+            description: "The city's medieval old town, surrounded by ancient walls and nestled between the mountains and the sea, is simply breathtaking. The winding alleys, charming squares, and historical landmarks, such as the Cathedral of Saint Tryphon and the Maritime Museum, offer a fascinating insight into the city's rich history and culture.",
+            photos: ["assets/demo-photos/kotor-place-photo-1.png", "assets/demo-photos/kotor-place-photo-2.png", "assets/demo-photos/kotor-place-photo-3.png", "assets/demo-photos/kotor-place-photo-4.png", "assets/demo-photos/kotor-place-photo-5.png", "assets/demo-photos/kotor-place-photo-6.png"]
           },
           {
-            name: "Opera and Ballet Theatre",
-            location: "Lviv, Svobody Avenue, 28",
-            date: "19/6/2021",
-            time: "14:58",
-            description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-            photos: ["assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png"]
+            name: "Budva",
+            location: "Budva, Montenegro",
+            date: "01/07/2008",
+            time: "13:48",
+            description: "The old town, with its cobbled streets, ancient walls, and charming architecture, is a delight to explore. The city is also known for its stunning beaches, with crystal clear waters and picturesque views.",
+            photos: ["assets/demo-photos/budva-place-photo-1.png", "assets/demo-photos/budva-place-photo-2.png", "assets/demo-photos/budva-place-photo-3.png", "assets/demo-photos/budva-place-photo-4.png", "assets/demo-photos/budva-place-photo-5.png", "assets/demo-photos/budva-place-photo-6.png"]
           },
           {
-            name: "Opera and Ballet Theatre",
-            location: "Lviv, Svobody Avenue, 28",
-            date: "29/6/2021",
+            name: "Tivat",
+            location: "Tivat, Montenegro",
+            date: "01/08/2008",
             time: "14:58",
-            description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-            photos: ["assets/place-photo.png", "assets/place-photo.png"]
+            description: "The town has a relaxed and laid-back atmosphere, making it the perfect destination for a peaceful getaway. The marina is a highlight of the town, with luxurious yachts and sailboats docked along the waterfront. The town also boasts a beautiful promenade, lined with palm trees and offering stunning views of the bay.",
+            photos: ["assets/demo-photos/tivat-place-photo-1.png", "assets/demo-photos/tivat-place-photo-2.png", "assets/demo-photos/tivat-place-photo-3.png", "assets/demo-photos/tivat-place-photo-4.png", "assets/demo-photos/tivat-place-photo-5.png", "assets/demo-photos/tivat-place-photo-6.png"]
           }
         ]
       },
       {
         name: 'Turkey',
-        date: '00/00/2007-00/00/2007',
+        date: '25/08/2007-07/09/2007',
         photo: "assets/demo-photos/turkey-trip-photo.png",
         tripPlaces: [
           {
-            name: "Opera and Ballet Theatre",
-            location: "Lviv, Svobody Avenue, 28",
-            date: "9/6/2021",
-            time: "14:58",
-            description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-            photos: [
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png"]
+            name: "Istanbul",
+            location: "Istanbul, Türkiye",
+            date: "01/09/2007",
+            time: "13:00",
+            description: "The city's historical landmarks, such as the Hagia Sophia, Blue Mosque, and Topkapi Palace, are simply stunning and offer a glimpse into the city's rich past. The vibrant markets and bazaars, such as the Grand Bazaar and Spice Market, are filled with colorful goods and delicious local cuisine. The city's location at the crossroads of Europe and Asia also adds to its unique character, with a blend of cultures and cuisines that are truly fascinating.",
+            photos: ["assets/demo-photos/istanbul-place-photo-1.png", "assets/demo-photos/istanbul-place-photo-2.png", "assets/demo-photos/istanbul-place-photo-3.png", "assets/demo-photos/istanbul-place-photo-4.png", "assets/demo-photos/istanbul-place-photo-5.png", "assets/demo-photos/istanbul-place-photo-6.png", "assets/demo-photos/istanbul-place-photo-7.png", "assets/demo-photos/istanbul-place-photo-8.png", "assets/demo-photos/istanbul-place-photo-9.png", "assets/demo-photos/istanbul-place-photo-10.png", "assets/demo-photos/istanbul-place-photo-11.png", "assets/demo-photos/istanbul-place-photo-12.png"]
           },
           {
-            name: "Opera and Ballet Theatre",
-            location: "Lviv, Svobody Avenue, 28",
-            date: "19/6/2021",
-            time: "14:58",
-            description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-            photos: ["assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png"]
-          },
-          {
-            name: "Opera and Ballet Theatre",
-            location: "Lviv, Svobody Avenue, 28",
-            date: "29/6/2021",
-            time: "14:58",
-            description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-            photos: ["assets/place-photo.png", "assets/place-photo.png"]
-          }
-        ]
-      }
-    ]
-  );
-
-  Trips$ = new BehaviorSubject<Trip[]>(
-    [
-      {
-        name: 'Germany',
-        date: '14/01/2022-07/02/2022',
-        photo: "germany-trip-photo.png",
-        tripPlaces: [
-          {
-            name: "Opera and Ballet Theatre",
-            location: "Lviv, Svobody Avenue, 28",
-            date: "9/6/2021",
-            time: "14:58",
-            description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-            photos: [
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png"]
-          },
-          {
-            name: "Opera and Ballet Theatre",
-            location: "Lviv, Svobody Avenue, 28",
-            date: "9/6/2021",
-            time: "14:58",
-            description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-            photos: ["assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png"]
-          },
-          {
-            name: "Opera and Ballet Theatre",
-            location: "Lviv, Svobody Avenue, 28",
-            date: "29/6/2021",
-            time: "14:58",
-            description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-            photos: ["assets/place-photo.png", "assets/place-photo.png"]
-          }
-        ]
-      },
-      {
-        name: 'New York, USA',
-        date: '18/09/2016-18/10/2016',
-        photo: "assets/place-photo.png",
-        tripPlaces: [
-          {
-            name: "Opera and Ballet Theatre",
-            location: "New York, Svobody Avenue, 28",
-            date: "9/6/2020",
-            time: "14:58",
-            description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-            photos: ["assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png"]
-          },
-          {
-            name: "Opera and Ballet Theatre",
-            location: "New York, Svobody Avenue, 28",
-            date: "19/6/2020",
-            time: "14:58",
-            description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-            photos: ["assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png"]
-          },
-          {
-            name: "Opera and Ballet Theatre",
-            location: "New York, Svobody Avenue, 28",
-            date: "29/6/2020",
-            time: "14:58",
-            description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-            photos: ["assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png"]
-          }
-        ]
-      },
-      {
-        name: 'Vancouver, Canada',
-        date: '16/08/2013-16/09/2013',
-        photo: "assets/trip-photo.png",
-        tripPlaces: [
-          {
-            name: "Opera and Ballet Theatre",
-            location: "Vancouver, Svobody Avenue, 28",
-            date: "9/6/2019",
-            time: "14:58",
-            description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-            photos: ["assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png"]
-          },
-          {
-            name: "Opera and Ballet Theatre",
-            location: "Vancouver, Svobody Avenue, 28",
-            date: "9/6/2019",
-            time: "14:58",
-            description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-            photos: ["assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png"]
-          },
-          {
-            name: "Opera and Ballet Theatre",
-            location: "Vancouver, Svobody Avenue, 28",
-            date: "9/6/2019",
-            time: "14:58",
-            description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-            photos: ["assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png"]
-          }
-        ]
-      },
-      {
-        name: 'Bukovel, Ukraine',
-        date: '29/05/2021-29/06/2021',
-        photo: "assets/trip-photo.png",
-        tripPlaces: [
-          {
-            name: "Opera and Ballet Theatre",
-            location: "Lviv, Svobody Avenue, 28",
-            date: "9/6/2021",
-            time: "14:58",
-            description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-            photos: [
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png",
-              "assets/place-photo.png"]
-          },
-          {
-            name: "Opera and Ballet Theatre",
-            location: "Lviv, Svobody Avenue, 28",
-            date: "19/6/2021",
-            time: "14:58",
-            description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-            photos: ["assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png"]
-          },
-          {
-            name: "Opera and Ballet Theatre",
-            location: "Lviv, Svobody Avenue, 28",
-            date: "29/6/2021",
-            time: "14:58",
-            description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-            photos: ["assets/place-photo.png", "assets/place-photo.png"]
-          }
-        ]
-      },
-      {
-        name: 'New York, USA',
-        date: '18/09/2016-18/10/2016',
-        photo: "assets/place-photo.png",
-        tripPlaces: [
-          {
-            name: "Opera and Ballet Theatre",
-            location: "New York, Svobody Avenue, 28",
-            date: "9/6/2020",
-            time: "14:58",
-            description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-            photos: ["assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png"]
-          },
-          {
-            name: "Opera and Ballet Theatre",
-            location: "New York, Svobody Avenue, 28",
-            date: "9/6/2020",
-            time: "14:58",
-            description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-            photos: ["assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png"]
-          },
-          {
-            name: "Opera and Ballet Theatre",
-            location: "New York, Svobody Avenue, 28",
-            date: "9/6/2020",
-            time: "14:58",
-            description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-            photos: ["assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png"]
-          }
-        ]
-      },
-      {
-        name: 'Vancouver, Canada',
-        date: '16/08/2013-16/09/2013',
-        photo: "assets/trip-photo.png",
-        tripPlaces: [
-          {
-            name: "Opera and Ballet Theatre",
-            location: "Vancouver, Svobody Avenue, 28",
-            date: "9/6/2019",
-            time: "14:58",
-            description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-            photos: ["assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png"]
-          },
-          {
-            name: "Opera and Ballet Theatre",
-            location: "Vancouver, Svobody Avenue, 28",
-            date: "9/6/2019",
-            time: "14:58",
-            description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-            photos: ["assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png"]
-          },
-          {
-            name: "Opera and Ballet Theatre",
-            location: "Vancouver, Svobody Avenue, 28",
-            date: "9/6/2019",
-            time: "14:58",
-            description: "Travel is one of most people's favorite activities. Why do so many people like to travel so much? It's simple, when a person travels, he gets to know the world around him and himself...",
-            photos: ["assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png", "assets/place-photo.png"]
+            name: "Turkey Resort Hotel",
+            location: "Alanya/Antalya, Türkiye",
+            date: "25/08/2007",
+            time: "15:00",
+            description: "The hotel was stunning, with luxurious amenities and breathtaking views of the Mediterranean Sea.",
+            photos: ["assets/demo-photos/turkey-place-photo-1.png", "assets/demo-photos/turkey-place-photo-2.png", "assets/demo-photos/turkey-place-photo-3.png", "assets/demo-photos/turkey-place-photo-4.png", "assets/demo-photos/turkey-place-photo-5.png", "assets/demo-photos/turkey-place-photo-6.png"]
           }
         ]
       }
