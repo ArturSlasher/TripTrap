@@ -25,7 +25,10 @@ export class TripsListComponent implements OnInit {
       this.cards[i].classList.remove('active');
     }
     card.classList.add("active");
-    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+
+    
   }
 
 }
