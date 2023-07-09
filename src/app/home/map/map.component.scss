@@ -5,6 +5,10 @@
   overflow: hidden;
 }
 
+::ng-deep .leaflet-control-container {
+  display: none;
+}
+
 .map-container {
   width: 100vw;
   height: 100vh;
