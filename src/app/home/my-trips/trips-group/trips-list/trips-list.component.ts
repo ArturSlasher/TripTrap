@@ -11,7 +11,7 @@ export class TripsListComponent implements OnInit {
 
   Trips$ = this.triptrapService.Trips$;
   cards = document.getElementsByClassName('card-container');
-
+  headerContainer = document.getElementsByClassName('header-container');
   constructor(
     private triptrapService: TriptrapService
     ) { }
@@ -25,10 +25,7 @@ export class TripsListComponent implements OnInit {
       this.cards[i].classList.remove('active');
     }
     card.classList.add("active");
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-
-    
+    this.headerContainer[0].scrollTo({ top: 0, behavior: 'smooth' });
   }
 
 }
