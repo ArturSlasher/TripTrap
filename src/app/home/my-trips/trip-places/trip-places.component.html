@@ -1,52 +1,53 @@
 <!-- <mat-slider aria-label="unit(s)" class="primary"></mat-slider> -->
-
-<ng-container *ngIf="Trips$.value.length">
-  <div class="card-container" *ngFor="let place of CurrentTrip$.value.tripPlaces; let i = index">
-    <div class="time-container">
-      <p class="date">{{ place.date }}</p>
-      <p class="time">{{ place.time }}</p>
-    </div>
-    <mat-card class="place-card">
-      <mat-card-header>
-        <mat-card-title class="card-name">{{ place.name }}</mat-card-title>
-        <p class="location"><i>
-          {{ place.location }}
-        </i></p>
-        <div class="subtitle-div">
-          <p>
-            {{ place.description }}
-          </p>
-        </div>
-      </mat-card-header>
-
-      <div class="content-container">
-
-
-        <mat-card-content>
-          <div class="place-photo-group-container">
-            <div class="place-photo" *ngFor="let photo of CurrentTrip$.value.tripPlaces[i].photos">
-              <img class="place-image-s" id="place-image" [src]="photo" (click)="openDialog(CurrentTrip$.value.tripPlaces[i].photos, photo)">
-            </div>
-          </div>
-
-          <button mat-mini-fab class="options-button mat-elevation-z0">
-            <mat-icon>more_vert</mat-icon>
-          </button>
-        </mat-card-content>
-
-        <mat-card-actions>
-          <div class="actions-bg">
-            <button mat-button class="comment-button mat-elevation-z0">
-              <p>{{ CurrentTrip$.value.tripPlaces[i].photos.length }}</p>
-              <mat-icon>comment</mat-icon>
-            </button>
-            <button mat-button class="favorite-button mat-elevation-z0">
-              <p>{{ CurrentTrip$.value.tripPlaces[i].photos.length*5 }}</p>
-              <mat-icon>favorite</mat-icon>
-            </button>
-          </div>
-        </mat-card-actions>
+<cdk-virtual-scroll-viewport appendOnly itemSize="500" class="scroll-viewport">
+  <ng-container *ngIf="Trips$.value.length">
+    <div class="card-container" *ngFor="let place of CurrentTrip$.value.tripPlaces; let i = index">
+      <div class="time-container">
+        <p class="date">{{ place.date }}</p>
+        <p class="time">{{ place.time }}</p>
       </div>
-    </mat-card>
-  </div>
-</ng-container>
+      <mat-card class="place-card">
+        <mat-card-header>
+          <mat-card-title class="card-name">{{ place.name }}</mat-card-title>
+          <p class="location"><i>
+            {{ place.location }}
+          </i></p>
+          <div class="subtitle-div">
+            <p>
+              {{ place.description }}
+            </p>
+          </div>
+        </mat-card-header>
+
+        <div class="content-container">
+
+
+          <mat-card-content>
+            <div class="place-photo-group-container">
+              <div class="place-photo" *ngFor="let photo of CurrentTrip$.value.tripPlaces[i].photos">
+                <img class="place-image-s" id="place-image" [src]="photo" (click)="openDialog(CurrentTrip$.value.tripPlaces[i].photos, photo)">
+              </div>
+            </div>
+
+            <button mat-mini-fab class="options-button mat-elevation-z0">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+          </mat-card-content>
+
+          <mat-card-actions>
+            <div class="actions-bg">
+              <button mat-button class="comment-button mat-elevation-z0">
+                <p>{{ CurrentTrip$.value.tripPlaces[i].photos.length }}</p>
+                <mat-icon>comment</mat-icon>
+              </button>
+              <button mat-button class="favorite-button mat-elevation-z0">
+                <p>{{ CurrentTrip$.value.tripPlaces[i].photos.length*5 }}</p>
+                <mat-icon>favorite</mat-icon>
+              </button>
+            </div>
+          </mat-card-actions>
+        </div>
+      </mat-card>
+    </div>
+  </ng-container>
+</cdk-virtual-scroll-viewport>

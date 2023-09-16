@@ -11,6 +11,20 @@ mat-icon {
 
 // ---------------------------------------
 
+.scroll-viewport {
+  width: calc( 98vw - 432px);
+  height: 100vh;
+}
+
+::ng-deep .cdk-virtual-scroll-viewport::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Hide the horizontal scroll bar (if applicable) */
+::ng-deep .cdk-virtual-scroll-viewport::-webkit-scrollbar-horizontal {
+  display: none;
+}
+
 ::ng-deep .mat-accent .mat-slider-track-fill, .mat-accent .mat-slider-thumb, .mat-accent .mat-slider-thumb-label {
   background-color: mat-color($primary) !important;
 }

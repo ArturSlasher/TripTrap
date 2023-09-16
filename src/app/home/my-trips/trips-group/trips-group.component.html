@@ -1,4 +1,8 @@
-<div class="trips-group">
-  <app-user-card></app-user-card>
-  <app-trips-list></app-trips-list>
-</div>
+<cdk-virtual-scroll-viewport appendOnly itemSize="240" class="scroll-viewport">
+  <div class="trips-group">
+    <app-user-card></app-user-card>
+    <app-trips-list></app-trips-list>
+  </div>
+</cdk-virtual-scroll-viewport>
+
+
