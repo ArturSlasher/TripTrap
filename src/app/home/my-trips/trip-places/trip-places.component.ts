@@ -3,7 +3,8 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
 import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 import { TriptrapService } from 'src/app/services/triptrap.service';
 import { TripPlace } from 'src/app/interfaces/trip-place.interface';
-
+import {Dialog, DIALOG_DATA, DialogModule} from '@angular/cdk/dialog';
+import { ImageDialogComponent } from './image-dialog/image-dialog.component';
 
 @Component({
   selector: 'app-trip-places',
@@ -15,25 +16,20 @@ export class TripContentSectionComponent implements AfterViewInit {
   Trips$ = this.TriptrapService.Trips$;
   CurrentTrip$ = this.TriptrapService.CurrentTrip$;
 
-  @ViewChild("placeimage") placeImage!: ElementRef;
-  @ViewChild("fullimage") fullImage!: ElementRef;
-  @ViewChild("imageviewer") viewer!: ElementRef;
-
-  viewImage(){ }
-  closeImage(){ }
-
   constructor(
-    private TriptrapService: TriptrapService
+    private TriptrapService: TriptrapService,
+    public dialog: Dialog
   ) { }
 
+  openDialog(photo: string) {
+    this.dialog.open(ImageDialogComponent, {
+      minWidth: '300px',
+      data: {
+        placePhoto: photo
+      }
+    });
+  }
+
   ngAfterViewInit() {
-
-    this.viewImage = () => {
-      this.viewer.nativeElement.style.display = 'block';
-    };
-
-    this.closeImage = () => {
-      this.viewer.nativeElement.style.display = 'none';
-    };
   }
 }

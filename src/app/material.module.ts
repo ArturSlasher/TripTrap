@@ -20,6 +20,7 @@ import { NgpImagePickerModule } from 'ngp-image-picker';
 import { MatInputModule } from '@angular/material/input';
 // import {MatSidenavModule} from '@angular/material/sidenav';
 import { ReactiveFormsModule } from '@angular/forms';
+import {DialogModule} from '@angular/cdk/dialog';
 
 @NgModule({
   imports: [
@@ -35,7 +36,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatNativeDateModule,
     NgpImagePickerModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DialogModule
   ],
   exports: [
     MatButtonModule,
@@ -49,7 +51,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatDatepickerModule,
     MatNativeDateModule,
     NgpImagePickerModule,
-    MatInputModule
+    MatInputModule,
+    DialogModule
   ]
 })
 
