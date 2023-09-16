@@ -21,10 +21,11 @@ export class TripContentSectionComponent implements AfterViewInit {
     public dialog: Dialog
   ) { }
 
-  openDialog(photo: string) {
+  openDialog(photos: string[], photo: string) {
     this.dialog.open(ImageDialogComponent, {
       minWidth: '300px',
       data: {
+        placePhotos: photos,
         placePhoto: photo
       }
     });

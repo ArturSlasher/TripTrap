@@ -25,7 +25,7 @@
         <mat-card-content>
           <div class="place-photo-group-container">
             <div class="place-photo" *ngFor="let photo of CurrentTrip$.value.tripPlaces[i].photos">
-              <img class="place-image-s" id="place-image" [src]="photo" (click)="openDialog(photo)">
+              <img class="place-image-s" id="place-image" [src]="photo" (click)="openDialog(CurrentTrip$.value.tripPlaces[i].photos, photo)">
             </div>
           </div>
 
