@@ -32,6 +32,8 @@ import { AuthGuardService } from './services/auth-guard.service';
 import { EditAccountComponent } from './auth/account/edit-account/edit-account.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ImageDialogComponent } from './home/my-trips/trip-places/image-dialog/image-dialog.component';
+import { PlanningComponent } from './home/planning/planning.component';
+import { AddPlanningComponent } from './home/planning/add-planning/add-planning.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +60,9 @@ import { ImageDialogComponent } from './home/my-trips/trip-places/image-dialog/i
     NotFoundComponent,
     AccountComponent,
     EditAccountComponent,
-    ImageDialogComponent
+    ImageDialogComponent,
+    PlanningComponent,
+    AddPlanningComponent
   ],
   imports: [
     BrowserModule,

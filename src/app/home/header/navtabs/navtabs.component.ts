@@ -22,6 +22,12 @@ export class NavtabsComponent {
     if(index == 0) {
       this.triptrapService.TabIndex$.next(0);
     }
+
+    if (index == 2 && !this.triptrapService.IsPlanningMapRedrawNeeded$.value) {
+      this.triptrapService.IsPlanningMapRedrawNeeded$.next(true);
+    }
   }
+
+
 
 }
