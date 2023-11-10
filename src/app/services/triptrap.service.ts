@@ -316,4 +316,6 @@ export class TriptrapService {
     this.TabIndex$.next(1);
   }
 
+  IsPlanningMapRedrawNeeded$ = new BehaviorSubject<boolean>(false);
+
 }

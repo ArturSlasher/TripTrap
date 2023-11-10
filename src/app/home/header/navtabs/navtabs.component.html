@@ -2,7 +2,7 @@
   <mat-tab-group fxLayout="center center" #tabRef [selectedIndex]="TabIndex$.value" (selectedTabChange)="logChange(tabRef.selectedIndex)">
     <mat-tab label="Map" id="map"><app-map></app-map></mat-tab>
     <mat-tab label="My trips" id="my-trips"><app-my-trips></app-my-trips></mat-tab>
-    <mat-tab label="Planning" id="planning"><app-coming-soon></app-coming-soon></mat-tab>
+    <mat-tab label="Planning" id="planning"><app-planning></app-planning></mat-tab>
     <mat-tab label="Community"  id="community"><app-coming-soon></app-coming-soon></mat-tab>
   </mat-tab-group>
 </nav>
