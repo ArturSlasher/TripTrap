@@ -12,8 +12,14 @@ import 'leaflet-routing-machine';
 })
 export class PlanningComponent implements AfterViewInit {
 
+  constructor(
+    private _bottomSheet: MatBottomSheet,
+    private TriptrapService: TriptrapService
+    ) { }
+
   private planningMap: any;
   IsPlanningMapRedrawNeeded$ = this.TriptrapService.IsPlanningMapRedrawNeeded$;
+  Planning$ = this.TriptrapService.Planning$;
 
   private redrawMap = this.IsPlanningMapRedrawNeeded$.subscribe(() => {
     if (this.IsPlanningMapRedrawNeeded$.value) {
@@ -29,11 +35,15 @@ export class PlanningComponent implements AfterViewInit {
       });
 
       tiles.addTo(this.planningMap);
+    }
+  })
 
+  private drawPlanning = this.Planning$.subscribe((planning) => {
+    if (this.IsPlanningMapRedrawNeeded$.value) {
+      console.log(planning);
       const waypoints = [
-        L.latLng(46.59027614061278, 30.795222481508862),
-          L.latLng(46.44302692468426, 30.749383483911494),
-          L.latLng(46.41306176109284, 30.72468104612119)
+        L.latLng(planning.startPointX, planning.startPointY),
+        L.latLng(planning.endPointX, planning.endPointY)
       ];
 
       const customIcon = L.icon({
@@ -54,11 +64,6 @@ export class PlanningComponent implements AfterViewInit {
       }).addTo(this.planningMap);
     }
   })
-
-  constructor(
-    private _bottomSheet: MatBottomSheet,
-    private TriptrapService: TriptrapService
-    ) { }
 
   openBottomSheet(): void {
     this._bottomSheet.open(AddPlanningComponent);

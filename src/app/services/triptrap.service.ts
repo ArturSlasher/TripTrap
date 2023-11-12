@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 import { Trip } from '../interfaces/trip.interface';
 import { TripPlace } from './../interfaces/trip-place.interface';
-import { User } from '../interfaces/user';
-import { Auth } from '../interfaces/auth';
+import { Planning } from '../interfaces/planning.interface';
+import { User } from '../interfaces/user.interface';
+import { Auth } from '../interfaces/auth.interface';
 import { Subject } from 'rxjs/internal/Subject';
 
 @Injectable({
@@ -317,5 +318,18 @@ export class TriptrapService {
   }
 
   IsPlanningMapRedrawNeeded$ = new BehaviorSubject<boolean>(false);
-
+  Planning$ = new BehaviorSubject<Planning>({
+    startPointX: 0,
+    startPointY: 0,
+    endPointX: 0,
+    endPointY: 0
+  });
+  drawPlanning(startPointX: number, startPointY: number, endPointX: number, endPointY: number) {
+    this.Planning$.next({
+      startPointX: startPointX,
+      startPointY: startPointY,
+      endPointX: endPointX,
+      endPointY: endPointY
+    });
+  }
 }

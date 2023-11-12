@@ -1,0 +1,60 @@
+@import '/src/styles.scss';
+
+::ng-deep .mat-bottom-sheet-container {
+  border-radius: 4px 4px 0px 0px;
+}
+
+.add-planning-container {
+  display: grid;
+  grid-gap: 2vw;
+  grid-template-columns: 35vw 35vw;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 90vh;
+  padding: 8px;
+  margin-top: 8px;
+}
+
+.planning-input {
+  width: 30vw;
+
+  &#start-point-x {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  &#start-point-y {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  &#end-point-x {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  &#end-point-y {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+::ng-deep .popup{
+  width: 100% !important;
+}
+
+textarea {
+  height: 25vh;
+}
+
+.save-button {
+  grid-column: 2;
+  grid-row: 4;
+  width: 16vw;
+  margin-left: 16vw;
+  height: 40px;
+  background-color: mat-color($primary);
+  color: $white;
+}
