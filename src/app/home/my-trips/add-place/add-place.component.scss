@@ -19,24 +19,24 @@
 .place-input {
   width: 30vw;
 
-  #name-input {
+  &#name-input {
     grid-column: 1;
     grid-row: 1;
   }
 
-  #location-input {
+  &#location-input {
     grid-column: 2;
     grid-row: 1;
 
     background-color: rgba(0, 0, 0, 0.04) !important;
   }
 
-  #date-input {
+  &#date-input {
     grid-column: 1;
     grid-row: 2;
   }
 
-  #time-input {
+  &#time-input {
     grid-column: 2;
     grid-row: 2;
   }

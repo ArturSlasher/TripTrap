@@ -1,1 +1,20 @@
-<p>add-planning works!</p>
+<div class="add-planning-container">
+  <mat-form-field class="planning-input" id="start-point-x" appearance="fill">
+    <mat-label>Start point x</mat-label>
+    <input matInput #startPointX value="46.59027614061278">
+  </mat-form-field>
+  <mat-form-field class="planning-input" id="start-point-y" appearance="fill">
+    <mat-label>Start point y</mat-label>
+    <input matInput #startPointY value="30.795222481508862">
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="planning-input" id="end-point-x">
+    <mat-label>End point x</mat-label>
+    <input matInput #endPointX value="46.41306176109284">
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="planning-input" id="end-point-y">
+    <mat-label>End point y</mat-label>
+    <input matInput #endPointY value="30.72468104612119">
+  </mat-form-field>
+  <button mat-flat-button class="save-button" (click)="savePlanning()">SAVE</button>
+</div>
+
