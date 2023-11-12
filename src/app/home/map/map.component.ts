@@ -35,12 +35,27 @@ export class MapComponent implements AfterViewInit {
     tiles.addTo(this.map);
   }
 
+  private drawMarkers(): void {
+    const triptrapMarker = this.TriptrapService.triptrapMarker;
+
+    for (let trip of this.Trips$.value){
+      L.marker(
+        [
+          trip.tripPlaces[0].location.split(',').map(Number)[0],
+          trip.tripPlaces[0].location.split(',').map(Number)[1]
+        ],
+        {icon: triptrapMarker}
+        ).addTo(this.map)
+    }
+  }
+
   openBottomSheet(): void {
     this._bottomSheet.open(AddTripComponent);
   }
 
   ngAfterViewInit(): void {
     this.initMap();
+    this.drawMarkers();
   }
 }
 

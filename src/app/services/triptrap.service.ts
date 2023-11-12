@@ -6,6 +6,7 @@ import { Planning } from '../interfaces/planning.interface';
 import { User } from '../interfaces/user.interface';
 import { Auth } from '../interfaces/auth.interface';
 import { Subject } from 'rxjs/internal/Subject';
+import * as L from 'leaflet';
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +26,7 @@ export class TriptrapService {
         tripPlaces: [
           {
             name: "Frankfurt am Mein",
-            location: "Frankfurt am Mein, Germany",
+            location: "50.1109,8.6821",
             date: "19/01/2022",
             time: "14:00",
             description: "I was blown away by the modern skyscrapers and impressive skyline, but also delighted by the charming Old Town and beautiful parks. Frankfurt is a true international hub, with a bustling business district, world-class museums, and a diverse food scene that left me wanting more.",
@@ -56,7 +57,7 @@ export class TriptrapService {
         tripPlaces: [
           {
             name: "Kreschatik",
-            location: "Kreschatik, Ukraine",
+            location: "50.4501,30.5234",
             date: "26/07/2021",
             time: "18:00",
             description: "The bustling atmosphere was infectious, with street performers, vendors, and locals all adding to the vibrancy of the scene. I loved strolling along the picturesque street, taking in the sights and sounds of the city, and browsing the many shops and cafes. The street was lined with historical buildings and landmarks, each with its own unique story and charm.",
@@ -95,7 +96,7 @@ export class TriptrapService {
         tripPlaces: [
           {
             name: "Praha",
-            location: "Prahue, Czech Republic",
+            location: "50.0755,14.4378",
             date: "15/08/2017",
             time: "17:00",
             description: "I can say that it is a city that truly captures the essence of European charm and beauty. The city's stunning architecture, rich history, and vibrant culture left me completely mesmerized. Exploring the winding streets and alleyways, I felt like I was stepping back in time to a bygone era. The Gothic and Baroque-style buildings were simply breathtaking, and I found myself constantly stopping to take in the intricate details of each structure. The city's many landmarks, such as the Charles Bridge and Prague Castle, were equally impressive, offering panoramic views of the city's stunning skyline.",
@@ -126,7 +127,7 @@ export class TriptrapService {
         tripPlaces: [
           {
             name: "Bratislava",
-            location: "Bratislava, Slovakia",
+            location: "48.1486,17.1077",
             date: "19/02/2016",
             time: "12:00",
             description: "As someone who has traveled to Bratislava, I can say that it is a charming city with a rich history and culture. The city's old town, with its narrow streets, colorful buildings, and historical landmarks, was a delight to explore. The city's many museums and galleries offered a fascinating insight into the city's past and present. One of the highlights of my trip was visiting the Bratislava Castle, which offers stunning views of the city and the Danube River.",
@@ -149,7 +150,7 @@ export class TriptrapService {
         tripPlaces: [
           {
             name: "Poon Hill",
-            location: "Poon Hill, Nepal",
+            location: "28.4002,83.6893",
             date: "01/10/2010",
             time: "05:00",
             description: "The beauty and grandeur of the natural landscape is truly breathtaking, with majestic peaks rising up against the sky and rugged terrain stretching out as far as the eye can see. Hiking or trekking through the mountains is a challenging but rewarding experience, with each step bringing new sights and sensations. The fresh air and peaceful atmosphere are a welcome escape from the noise and stress of everyday life. Whether you're an experienced mountaineer or a first-time hiker, a trip to the mountains is sure to leave you feeling rejuvenated and inspired.",
@@ -180,7 +181,7 @@ export class TriptrapService {
         tripPlaces: [
           {
             name: "Kotor",
-            location: "Kotor, Montenegro",
+            location: "42.4247,18.7712",
             date: "01/08/2008",
             time: "12:38",
             description: "The city's medieval old town, surrounded by ancient walls and nestled between the mountains and the sea, is simply breathtaking. The winding alleys, charming squares, and historical landmarks, such as the Cathedral of Saint Tryphon and the Maritime Museum, offer a fascinating insight into the city's rich history and culture.",
@@ -211,7 +212,7 @@ export class TriptrapService {
         tripPlaces: [
           {
             name: "Istanbul",
-            location: "Istanbul, Türkiye",
+            location: "41.0082,28.9784",
             date: "01/09/2007",
             time: "13:00",
             description: "The city's historical landmarks, such as the Hagia Sophia, Blue Mosque, and Topkapi Palace, are simply stunning and offer a glimpse into the city's rich past. The vibrant markets and bazaars, such as the Grand Bazaar and Spice Market, are filled with colorful goods and delicious local cuisine. The city's location at the crossroads of Europe and Asia also adds to its unique character, with a blend of cultures and cuisines that are truly fascinating.",
@@ -231,6 +232,8 @@ export class TriptrapService {
   );
 
   CurrentTrip$ = new BehaviorSubject<Trip>(this.Trips$.value[0]);
+
+// ==============================================================
 
   auths: Auth[] = [
     {
@@ -312,10 +315,18 @@ export class TriptrapService {
     return undefined;
   }
 
+// ==============================================================
+
   TabIndex$ = new BehaviorSubject<number | undefined>(undefined);
   goToMyTrips(){
     this.TabIndex$.next(1);
   }
+
+  triptrapMarker = L.icon({
+    iconUrl: 'assets/Logo.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 32]
+  });
 
   IsPlanningMapRedrawNeeded$ = new BehaviorSubject<boolean>(false);
   Planning$ = new BehaviorSubject<Planning>({

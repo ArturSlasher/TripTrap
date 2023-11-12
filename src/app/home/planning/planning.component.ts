@@ -40,24 +40,19 @@ export class PlanningComponent implements AfterViewInit {
 
   private drawPlanning = this.Planning$.subscribe((planning) => {
     if (this.IsPlanningMapRedrawNeeded$.value) {
-      console.log(planning);
       const waypoints = [
         L.latLng(planning.startPointX, planning.startPointY),
         L.latLng(planning.endPointX, planning.endPointY)
       ];
 
-      const customIcon = L.icon({
-        iconUrl: 'assets/Logo.png', // Path to your custom marker image
-        iconSize: [32, 32], // Adjust the size of the custom marker image
-        iconAnchor: [16, 32] // Adjust the anchor point of the custom marker image
-      });
+      const triptrapMarker = this.TriptrapService.triptrapMarker;
 
       L.Routing.control({
         waypoints: waypoints,
         plan: L.Routing.plan(waypoints, {
           createMarker: function(i, wp) {
             return L.marker(wp.latLng, {
-              icon: customIcon
+              icon: triptrapMarker
             });
           }
         })
