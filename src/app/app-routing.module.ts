@@ -7,6 +7,7 @@ import { AccountComponent } from './auth/account/account.component';
 import { HomeComponent } from './home/home.component';
 import { ComingSoonComponent } from './home/coming-soon/coming-soon.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { LocationPickerComponent } from './location-picker/location-picker.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuardService]},
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'login', component: LoginPageComponent},
   { path: 'account', component: AccountComponent, canActivate: [AuthGuardService]},
   { path: 'comming-soon', component: ComingSoonComponent},
+  { path: 'location-picker', component: LocationPickerComponent},
   { path: '**', component: NotFoundComponent}
 ];
 

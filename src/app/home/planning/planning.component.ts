@@ -25,7 +25,7 @@ export class PlanningComponent implements AfterViewInit {
     if (this.IsPlanningMapRedrawNeeded$.value) {
       this.planningMap = L.map('planning-map', {
         center: [ 46.44302692468426, 30.749383483911494 ],
-        zoom: 3
+        zoom: 11
       });
 
       const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
