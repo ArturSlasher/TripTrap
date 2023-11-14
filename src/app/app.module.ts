@@ -34,6 +34,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ImageDialogComponent } from './home/my-trips/trip-places/image-dialog/image-dialog.component';
 import { PlanningComponent } from './home/planning/planning.component';
 import { AddPlanningComponent } from './home/planning/add-planning/add-planning.component';
+import { LocationPickerComponent } from './location-picker/location-picker.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { AddPlanningComponent } from './home/planning/add-planning/add-planning.
     EditAccountComponent,
     ImageDialogComponent,
     PlanningComponent,
-    AddPlanningComponent
+    AddPlanningComponent,
+    LocationPickerComponent
   ],
   imports: [
     BrowserModule,
