@@ -21,7 +21,9 @@ import { MatInputModule } from '@angular/material/input';
 // import {MatSidenavModule} from '@angular/material/sidenav';
 import { ReactiveFormsModule } from '@angular/forms';
 import {DialogModule} from '@angular/cdk/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import {ScrollingModule} from '@angular/cdk/scrolling';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -39,7 +41,9 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
     MatInputModule,
     ReactiveFormsModule,
     DialogModule,
-    ScrollingModule
+    MatDialogModule,
+    ScrollingModule,
+    FormsModule
   ],
   exports: [
     MatButtonModule,
@@ -55,7 +59,9 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
     NgpImagePickerModule,
     MatInputModule,
     DialogModule,
-    ScrollingModule
+    MatDialogModule,
+    ScrollingModule,
+    FormsModule
   ]
 })
 

@@ -4,9 +4,9 @@
     <input matInput #placeName>
   </mat-form-field>
 
-  <mat-form-field class="place-input" id="location-input" appearance="fill">
+  <mat-form-field class="place-input" id="location-input" appearance="fill" (click)="pickLocation()">
     <mat-label>Location</mat-label>
-    <input matInput #placeLocation>
+    <input matInput #placeLocation readonly [(ngModel)]="locationText">
   </mat-form-field>
 
   <mat-form-field appearance="fill" class="place-input" id="date-input">

@@ -3,6 +3,7 @@
 ::ng-deep .mat-bottom-sheet-container{
   border-radius: 4px 4px 0px 0px;
   max-height: 90vh;
+  overflow: auto !important;
 }
 
 .add-place-container {

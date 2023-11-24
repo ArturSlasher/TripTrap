@@ -1,9 +1,11 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { MatBottomSheetRef } from '@angular/material/bottom-sheet';
 import { ImagePickerConf } from 'ngp-image-picker';
-import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 import { BehaviorSubject } from 'rxjs';
 import { TriptrapService } from 'src/app/services/triptrap.service';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { Location } from 'src/app/interfaces/location.interface';
+import { LocationPickerComponent } from 'src/app/location-picker/location-picker.component';
 
 @Component({
   selector: 'app-add-place',
@@ -21,13 +23,31 @@ export class AddPlaceComponent implements OnInit {
   @ViewChild('addPhoto') addPhotoButton!: ElementRef;
   @ViewChild('imagePicker', { static: false }) imagePicker: ElementRef | null | undefined = null;
   photos: string[] = [];
+  location: Location = {lat: 0, lng: 0};
+  locationText: string = "";
 
   constructor(
     private triptrapService: TriptrapService,
-    private _bottomSheetRef: MatBottomSheetRef
+    private _bottomSheetRef: MatBottomSheetRef,
+    public dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
+  }
+
+  pickLocation() {
+    const dialogRef = this.dialog.open(LocationPickerComponent, {
+      minWidth: '300px',
+      data: {
+
+      }
+    });
+    dialogRef.afterClosed().subscribe((result: Location) => {
+      if (result) {
+        this.location = result;
+        this.locationText = this.location.lat + ", " + this.location.lng;
+      }
+    });
   }
 
   imagePickerConf: ImagePickerConf = {
@@ -53,7 +73,7 @@ export class AddPlaceComponent implements OnInit {
     const updatedCurrentTrip = this.CurrentTrip$.value;
     updatedCurrentTrip.tripPlaces.unshift({
       name: this.placeName.nativeElement.value,
-      location: this.placeLocation.nativeElement.value,
+      location: this.location,
       date: this.placeDate.nativeElement.value,
       time: this.placeTime.nativeElement.value,
       description: this.placeDescription.nativeElement.value,

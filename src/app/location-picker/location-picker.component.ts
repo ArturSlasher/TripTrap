@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { TriptrapService } from 'src/app/services/triptrap.service';
+import { MatDialogRef } from '@angular/material/dialog';
 import * as L from 'leaflet';
 import 'leaflet-routing-machine';
 import 'leaflet-draw';
@@ -12,7 +13,8 @@ import 'leaflet-draw';
 export class LocationPickerComponent implements AfterViewInit {
 
   constructor(
-    private TriptrapService: TriptrapService
+    private TriptrapService: TriptrapService,
+    public dialogRef: MatDialogRef<LocationPickerComponent>
     ) { }
 
   private locationMap: any;
@@ -28,7 +30,19 @@ export class LocationPickerComponent implements AfterViewInit {
       [e.latlng.lat, e.latlng.lng],
       {icon: this.triptrapMarker}
       ).addTo(this.locationMap)
-    console.log('Coordinates:', e.latlng.lat, e.latlng.lng);
+  }
+
+  saveLocation() {
+    if (this.currentMarker) {
+      const markerLatLng = this.currentMarker.getLatLng();
+      this.dialogRef.close(markerLatLng);
+      // this.locationBuffer$.next({ lat: markerLatLng.lat, lng: markerLatLng.lng });
+      // this.TriptrapService.fromLocationPickerToHome = true;
+      // this.router.navigate(['/']);
+
+    } else {
+      console.log('No marker available to save coordinates.');
+    }
   }
 
   ngAfterViewInit(): void {

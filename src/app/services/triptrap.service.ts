@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 import { Trip } from '../interfaces/trip.interface';
 import { TripPlace } from './../interfaces/trip-place.interface';
+import { Location } from '../interfaces/location.interface';
 import { Planning } from '../interfaces/planning.interface';
 import { User } from '../interfaces/user.interface';
 import { Auth } from '../interfaces/auth.interface';
@@ -26,7 +27,7 @@ export class TriptrapService {
         tripPlaces: [
           {
             name: "Frankfurt am Mein",
-            location: "50.1109,8.6821",
+            location: { lat: 50.1109, lng: 8.6821 },
             date: "19/01/2022",
             time: "14:00",
             description: "I was blown away by the modern skyscrapers and impressive skyline, but also delighted by the charming Old Town and beautiful parks. Frankfurt is a true international hub, with a bustling business district, world-class museums, and a diverse food scene that left me wanting more.",
@@ -34,7 +35,7 @@ export class TriptrapService {
           },
           {
             name: "Cologne",
-            location: "Köln, Germany",
+            location: { lat: 50.9375, lng: 6.9603 },
             date: "15/01/2022",
             time: "10:00",
             description: "The towering spires of the Cologne Cathedral took my breath away, and I loved wandering through the charming streets of the city's Old Town. Whether you're interested in history, culture, or simply soaking up the atmosphere of a vibrant German city, Cologne is an excellent destination that won't disappoint.",
@@ -42,7 +43,7 @@ export class TriptrapService {
           },
           {
             name: "Dusseldorf",
-            location: "Dusseldorf, Germany",
+            location: { lat: 51.2277, lng: 51.2277},
             date: "14/01/2022",
             time: "11:00",
             description: "The stunning architecture along the Rhine River took my breath away, and I found myself wandering through the streets, mesmerized by the beauty of the city. Overall, my trip to Düsseldorf was an unforgettable experience that left me with a deep appreciation for the city's unique blend of modernity and tradition.",
@@ -56,8 +57,8 @@ export class TriptrapService {
         photo: "assets/demo-photos/kyiv-trip-photo.png",
         tripPlaces: [
           {
-            name: "Kreschatik",
-            location: "50.4501,30.5234",
+            name: "Khreshchatyk",
+            location: { lat: 50.4501, lng: 30.5234 },
             date: "26/07/2021",
             time: "18:00",
             description: "The bustling atmosphere was infectious, with street performers, vendors, and locals all adding to the vibrancy of the scene. I loved strolling along the picturesque street, taking in the sights and sounds of the city, and browsing the many shops and cafes. The street was lined with historical buildings and landmarks, each with its own unique story and charm.",
@@ -65,7 +66,7 @@ export class TriptrapService {
           },
           {
             name: "Motherland Monument",
-            location: "Rodina-mat, Ukraine",
+            location: { lat: 50.4265, lng: 30.5631 },
             date: "25/07/2021",
             time: "13:00",
             description: "The monument was a stark reminder of the past, with its imposing concrete structures and somber tone. I felt a mix of emotions as I explored the monument, from sadness and reflection to curiosity and awe. The intricate details and symbolism in the monument were fascinating to study, and I gained a new appreciation for the historical significance of the Soviet era.",
@@ -73,7 +74,7 @@ export class TriptrapService {
           },
           {
             name: "Santa Sofia Catedral",
-            location: "Catedral Santa Sofia, Ukraine",
+            location: { lat: 50.4529, lng: 30.5143 },
             date: "24/07/2021",
             time: "10:00",
             description: "I can say that it was a truly awe-inspiring experience. The grandeur and beauty of the architecture, with its soaring ceilings and intricate details, left me feeling humbled and in awe. I spent hours exploring the different sections of the cathedral, from the nave to the crypt, and marveled at the works of art and religious artifacts on display. The atmosphere was peaceful and serene, with soft music and the flickering of candlelight adding to the ambiance.",
@@ -81,7 +82,7 @@ export class TriptrapService {
           },
           {
             name: "Kievan Rus",
-            location: "Kievan Rus amusement park, Ukraine",
+            location: { lat: 50.2659, lng: 30.3059},
             date: "23/07/2021",
             time: "15:00",
             description: "I can say that it was a truly unique experience. The park was designed to transport visitors back in time, with attractions and activities that recreated life in a bygone era. It was fascinating to see the historical costumes and props, and to learn about the customs and traditions of the past.",
@@ -96,7 +97,7 @@ export class TriptrapService {
         tripPlaces: [
           {
             name: "Praha",
-            location: "50.0755,14.4378",
+            location: { lat:50.0755, lng: 14.4378 },
             date: "15/08/2017",
             time: "17:00",
             description: "I can say that it is a city that truly captures the essence of European charm and beauty. The city's stunning architecture, rich history, and vibrant culture left me completely mesmerized. Exploring the winding streets and alleyways, I felt like I was stepping back in time to a bygone era. The Gothic and Baroque-style buildings were simply breathtaking, and I found myself constantly stopping to take in the intricate details of each structure. The city's many landmarks, such as the Charles Bridge and Prague Castle, were equally impressive, offering panoramic views of the city's stunning skyline.",
@@ -104,7 +105,7 @@ export class TriptrapService {
           },
           {
             name: "Vienna",
-            location: "Vienna, Austria",
+            location: { lat: 48.2082, lng: 16.3719 },
             date: "10/08/2017",
             time: "13:00",
             description: " I can say that it is a city that truly embodies the grandeur and elegance of Europe's imperial past. The city's stunning architecture, world-renowned art and music scenes, and rich cultural heritage left me completely captivated. Walking through the streets, I was struck by the opulence and splendor of the grand palaces and baroque-style buildings.",
@@ -112,7 +113,7 @@ export class TriptrapService {
           },
           {
             name: "Dresden",
-            location: "Dresden, Germany",
+            location: { lat: 51.0504, lng: 13.7373 },
             date: "03/08/2017",
             time: "09:00",
             description: "I can say that it is a city that is steeped in history and culture. The city's stunning architecture, from the grand Baroque buildings to the modern architecture, is a true feast for the eyes. Walking through the city's winding streets and alleyways, I was struck by the charm and beauty of the city's many landmarks, such as the Frauenkirche and the Zwinger Palace.",
@@ -127,7 +128,7 @@ export class TriptrapService {
         tripPlaces: [
           {
             name: "Bratislava",
-            location: "48.1486,17.1077",
+            location: { lat: 48.1486, lng: 17.1077 },
             date: "19/02/2016",
             time: "12:00",
             description: "As someone who has traveled to Bratislava, I can say that it is a charming city with a rich history and culture. The city's old town, with its narrow streets, colorful buildings, and historical landmarks, was a delight to explore. The city's many museums and galleries offered a fascinating insight into the city's past and present. One of the highlights of my trip was visiting the Bratislava Castle, which offers stunning views of the city and the Danube River.",
@@ -135,7 +136,7 @@ export class TriptrapService {
           },
           {
             name: "Jasna Low Tatras",
-            location: "Demänovská Dolina, Slovakia",
+            location: { lat: 48.9693, lng: 19.5812},
             date: "29/01/2016",
             time: "10:00",
             description: "The snow-covered slopes and stunning mountain views are simply breathtaking. The feeling of gliding down the slopes, the wind in my face and the sun on my skin, is like nothing else. The ski resort I visited was also filled with great food, entertainment, and a lively après-ski scene.",
@@ -150,7 +151,7 @@ export class TriptrapService {
         tripPlaces: [
           {
             name: "Poon Hill",
-            location: "28.4002,83.6893",
+            location: { lat: 28.4002, lng: 83.6893 },
             date: "01/10/2010",
             time: "05:00",
             description: "The beauty and grandeur of the natural landscape is truly breathtaking, with majestic peaks rising up against the sky and rugged terrain stretching out as far as the eye can see. Hiking or trekking through the mountains is a challenging but rewarding experience, with each step bringing new sights and sensations. The fresh air and peaceful atmosphere are a welcome escape from the noise and stress of everyday life. Whether you're an experienced mountaineer or a first-time hiker, a trip to the mountains is sure to leave you feeling rejuvenated and inspired.",
@@ -158,7 +159,7 @@ export class TriptrapService {
           },
           {
             name: "Chitwan National Park",
-            location: "Chitwan, Nepal",
+            location: { lat: 27.5193, lng: 27.5193 },
             date: "10/10/2019",
             time: "21:00",
             description: "he dense foliage, vibrant colors, and diverse wildlife were unlike anything I had ever experienced before. Trekking through the jungle, I felt as though I was uncovering a hidden world full of mysteries waiting to be discovered. From the haunting calls of monkeys swinging in the treetops to the playful antics of brightly colored parrots, the jungle was filled with incredible sights and sounds.",
@@ -166,7 +167,7 @@ export class TriptrapService {
           },
           {
             name: "Bhutan",
-            location: "Thimphu, Bhutan",
+            location: { lat: 27.4716, lng: 89.6386 },
             date: "20/10/2010",
             time: "11:00",
             description: "This small country, nestled in the Himalayas, is known for its stunning natural beauty, vibrant culture, and commitment to preserving its traditional way of life. The people of Bhutan were warm and welcoming, and I was struck by their deep reverence for the natural world. Trekking through the majestic mountains and lush valleys, I was awed by the pristine landscapes and stunning vistas around every corner. The country's rich history and spiritual heritage were evident in the stunning temples and monasteries that dotted the landscape.",
@@ -181,7 +182,7 @@ export class TriptrapService {
         tripPlaces: [
           {
             name: "Kotor",
-            location: "42.4247,18.7712",
+            location: { lat: 42.4247, lng: 18.7712 },
             date: "01/08/2008",
             time: "12:38",
             description: "The city's medieval old town, surrounded by ancient walls and nestled between the mountains and the sea, is simply breathtaking. The winding alleys, charming squares, and historical landmarks, such as the Cathedral of Saint Tryphon and the Maritime Museum, offer a fascinating insight into the city's rich history and culture.",
@@ -189,7 +190,7 @@ export class TriptrapService {
           },
           {
             name: "Budva",
-            location: "Budva, Montenegro",
+            location: { lat: 42.2911, lng: 18.8403 },
             date: "01/07/2008",
             time: "13:48",
             description: "The old town, with its cobbled streets, ancient walls, and charming architecture, is a delight to explore. The city is also known for its stunning beaches, with crystal clear waters and picturesque views.",
@@ -197,7 +198,7 @@ export class TriptrapService {
           },
           {
             name: "Tivat",
-            location: "Tivat, Montenegro",
+            location: { lat: 42.4319, lng: 18.6986},
             date: "01/08/2008",
             time: "14:58",
             description: "The town has a relaxed and laid-back atmosphere, making it the perfect destination for a peaceful getaway. The marina is a highlight of the town, with luxurious yachts and sailboats docked along the waterfront. The town also boasts a beautiful promenade, lined with palm trees and offering stunning views of the bay.",
@@ -212,7 +213,7 @@ export class TriptrapService {
         tripPlaces: [
           {
             name: "Istanbul",
-            location: "41.0082,28.9784",
+            location: { lat: 41.0082, lng: 28.9784 },
             date: "01/09/2007",
             time: "13:00",
             description: "The city's historical landmarks, such as the Hagia Sophia, Blue Mosque, and Topkapi Palace, are simply stunning and offer a glimpse into the city's rich past. The vibrant markets and bazaars, such as the Grand Bazaar and Spice Market, are filled with colorful goods and delicious local cuisine. The city's location at the crossroads of Europe and Asia also adds to its unique character, with a blend of cultures and cuisines that are truly fascinating.",
@@ -220,7 +221,7 @@ export class TriptrapService {
           },
           {
             name: "Turkey Resort Hotel",
-            location: "Alanya/Antalya, Türkiye",
+            location: { lat: 36.5444, lng: 31.9954 },
             date: "25/08/2007",
             time: "15:00",
             description: "The hotel was stunning, with luxurious amenities and breathtaking views of the Mediterranean Sea.",
@@ -324,23 +325,19 @@ export class TriptrapService {
 
   triptrapMarker = L.icon({
     iconUrl: 'assets/Logo.png',
-    iconSize: [32, 32],
-    iconAnchor: [16, 32]
+    iconSize: [40, 40],
+    iconAnchor: [20, 40]
   });
 
   IsPlanningMapRedrawNeeded$ = new BehaviorSubject<boolean>(false);
   Planning$ = new BehaviorSubject<Planning>({
-    startPointX: 0,
-    startPointY: 0,
-    endPointX: 0,
-    endPointY: 0
+    startPoint: { lat: 0, lng: 0 },
+    endPoint: { lat: 0, lng: 0 }
   });
-  drawPlanning(startPointX: number, startPointY: number, endPointX: number, endPointY: number) {
+  drawPlanning(startPoint: Location, endPoint: Location) {
     this.Planning$.next({
-      startPointX: startPointX,
-      startPointY: startPointY,
-      endPointX: endPointX,
-      endPointY: endPointY
+      startPoint: startPoint,
+      endPoint: endPoint
     });
   }
 }
