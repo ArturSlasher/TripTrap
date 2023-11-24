@@ -41,8 +41,8 @@ export class MapComponent implements AfterViewInit {
     for (let trip of this.Trips$.value){
       L.marker(
         [
-          trip.tripPlaces[0].location.split(',').map(Number)[0],
-          trip.tripPlaces[0].location.split(',').map(Number)[1]
+          trip.tripPlaces[0].location.lat,
+          trip.tripPlaces[0].location.lng
         ],
         {icon: triptrapMarker}
         ).addTo(this.map)

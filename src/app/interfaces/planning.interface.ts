@@ -1,6 +1,6 @@
+import { Location } from './location.interface';
+
 export interface Planning {
-  startPointX: number,
-  startPointY: number,
-  endPointX: number,
-  endPointY: number
+  startPoint: Location,
+  endPoint: Location
 }
