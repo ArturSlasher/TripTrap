@@ -15,6 +15,7 @@ import { LocationPickerComponent } from 'src/app/location-picker/location-picker
 export class AddPlaceComponent implements OnInit {
 
   CurrentTrip$ = this.triptrapService.CurrentTrip$;
+  placeAdded$ = this.triptrapService.placeAdded$;
   @ViewChild("placeName") placeName!: ElementRef;
   @ViewChild("placeLocation") placeLocation!: ElementRef;
   @ViewChild("placeDate") placeDate!: ElementRef;
@@ -39,7 +40,7 @@ export class AddPlaceComponent implements OnInit {
     const dialogRef = this.dialog.open(LocationPickerComponent, {
       minWidth: '300px',
       data: {
-
+        zoom: 3
       }
     });
     dialogRef.afterClosed().subscribe((result: Location) => {
@@ -69,7 +70,6 @@ export class AddPlaceComponent implements OnInit {
   }
 
   savePlace() {
-    console.log(this.placeTime);
     const updatedCurrentTrip = this.CurrentTrip$.value;
     updatedCurrentTrip.tripPlaces.unshift({
       name: this.placeName.nativeElement.value,
@@ -80,7 +80,7 @@ export class AddPlaceComponent implements OnInit {
       photos: this.photos
     })
     this.CurrentTrip$.next(updatedCurrentTrip);
+    this.placeAdded$.next(true);
     this._bottomSheetRef.dismiss();
   }
-
 }

@@ -13,7 +13,10 @@ import 'leaflet-routing-machine';
 export class MapComponent implements AfterViewInit {
 
   Trips$ = this.TriptrapService.Trips$;
+  isHomeMapRedrawNeeded$ = this.TriptrapService.isHomeMapRedrawNeeded$;
   private map: any;
+  private mapMarkers: L.Marker[] = [];
+
 
   constructor(
     private _bottomSheet: MatBottomSheet,
@@ -39,13 +42,14 @@ export class MapComponent implements AfterViewInit {
     const triptrapMarker = this.TriptrapService.triptrapMarker;
 
     for (let trip of this.Trips$.value){
-      L.marker(
+      const marker = L.marker(
         [
           trip.tripPlaces[0].location.lat,
           trip.tripPlaces[0].location.lng
         ],
         {icon: triptrapMarker}
         ).addTo(this.map)
+        this.mapMarkers.push(marker);
     }
   }
 
@@ -56,6 +60,17 @@ export class MapComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.initMap();
     this.drawMarkers();
+
+    this.isHomeMapRedrawNeeded$.subscribe(() => {
+      if (this.isHomeMapRedrawNeeded$.value) {
+        for (let marker of this.mapMarkers) {
+          this.map.removeLayer(marker);
+        }
+        this.mapMarkers = [];
+        this.drawMarkers();
+        this.TriptrapService.placeAdded$.next(false)
+      }
+    });
   }
 }
 

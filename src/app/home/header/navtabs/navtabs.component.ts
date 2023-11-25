@@ -17,10 +17,16 @@ export class NavtabsComponent {
   @ViewChild("tabRef") TabGroup!: MatTabGroup;
   TabGroup$ = new BehaviorSubject<MatTabGroup>(this.TabGroup);
   TabIndex$ = this.triptrapService.TabIndex$;
+  placeAdded$ = this.triptrapService.placeAdded$;
+  isHomeMapRedrawNeeded$ = this.triptrapService.isHomeMapRedrawNeeded$;
 
   logChange(index: number | null) {
     if(index == 0) {
       this.triptrapService.TabIndex$.next(0);
+
+      if(this.placeAdded$.value) {
+        this.isHomeMapRedrawNeeded$.next(true);
+      }
     }
 
     if (index == 2 && !this.triptrapService.IsPlanningMapRedrawNeeded$.value) {
