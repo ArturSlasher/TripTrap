@@ -21,6 +21,7 @@ export class PlanningComponent implements AfterViewInit {
   IsPlanningMapRedrawNeeded$ = this.TriptrapService.IsPlanningMapRedrawNeeded$;
   Planning$ = this.TriptrapService.Planning$;
   private routingControl: any;
+  private triptrapMarker = this.TriptrapService.triptrapMarker;
 
   private redrawMap = this.IsPlanningMapRedrawNeeded$.subscribe(() => {
     if (this.IsPlanningMapRedrawNeeded$.value) {
@@ -46,8 +47,6 @@ export class PlanningComponent implements AfterViewInit {
         L.latLng(planning.endPoint.lat, planning.endPoint.lng)
       ];
 
-      const triptrapMarker = this.TriptrapService.triptrapMarker;
-
       if (this.routingControl) {
         this.planningMap.removeControl(this.routingControl);
       }
@@ -55,9 +54,9 @@ export class PlanningComponent implements AfterViewInit {
       this.routingControl = L.Routing.control({
         waypoints: waypoints,
         plan: L.Routing.plan(waypoints, {
-          createMarker: function(i, wp) {
+          createMarker: (i, wp) => {
             return L.marker(wp.latLng, {
-              icon: triptrapMarker
+              icon: this.triptrapMarker
             });
           }
         })

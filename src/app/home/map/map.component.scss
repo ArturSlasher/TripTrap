@@ -21,10 +21,19 @@
   height: 100vh;
 }
 
-button {
+.add-trip-button {
   position: fixed !important;
   z-index: 3;
   top: 80vh;
+  right: 5vw;
+}
+
+.close-button {
+  // display: inline-flex;
+  display: none;
+  position: fixed !important;
+  z-index: 4;
+  top: 70vh;
   right: 5vw;
 }
 
