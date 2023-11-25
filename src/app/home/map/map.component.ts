@@ -1,9 +1,10 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { AddTripComponent } from './add-trip/add-trip.component';
 import { TriptrapService } from 'src/app/services/triptrap.service';
 import * as L from 'leaflet';
 import 'leaflet-routing-machine';
+import { Trip } from 'src/app/interfaces/trip.interface';
 
 @Component({
   selector: 'app-map',
@@ -16,7 +17,10 @@ export class MapComponent implements AfterViewInit {
   isHomeMapRedrawNeeded$ = this.TriptrapService.isHomeMapRedrawNeeded$;
   private map: any;
   private mapMarkers: L.Marker[] = [];
-
+  private triptrapMarker = this.TriptrapService.triptrapMarker;
+  private waypoints: L.LatLng[] = [];
+  private routingControl: any;
+  @ViewChild("closeButton") closeButton!: ElementRef;
 
   constructor(
     private _bottomSheet: MatBottomSheet,
@@ -39,17 +43,75 @@ export class MapComponent implements AfterViewInit {
   }
 
   private drawMarkers(): void {
-    const triptrapMarker = this.TriptrapService.triptrapMarker;
-
     for (let trip of this.Trips$.value){
       const marker = L.marker(
         [
           trip.tripPlaces[0].location.lat,
           trip.tripPlaces[0].location.lng
         ],
-        {icon: triptrapMarker}
-        ).addTo(this.map)
+        {icon: this.triptrapMarker}
+        ).addTo(this.map);
         this.mapMarkers.push(marker);
+
+        marker.on('click', () => {
+          this.removeAllMarkers();
+          this.drawTripMarkers(trip);
+        });
+    }
+  }
+
+  private removeAllMarkers(): void {
+    for (let marker of this.mapMarkers) {
+      this.map.removeLayer(marker);
+      if (this.routingControl) {
+        this.map.removeControl(this.routingControl);
+      }
+    }
+    this.mapMarkers = [];
+    this.waypoints = [];
+  }
+
+  private drawTripMarkers(trip: Trip): void {
+    this.mapMarkers = [];
+    for (let place of trip.tripPlaces){
+      this.waypoints.push(L.latLng(place.location.lat, place.location.lng))
+      const marker = L.marker(
+        [
+          place.location.lat,
+          place.location.lng
+        ],
+        {icon: this.triptrapMarker}
+        ).addTo(this.map);
+      this.mapMarkers.push(marker);
+    }
+    if (this.routingControl) {
+      this.map.removeControl(this.routingControl);
+    }
+
+    this.routingControl = L.Routing.control({
+      waypoints: this.waypoints,
+      plan: L.Routing.plan(this.waypoints, {
+        createMarker: (i, wp) => {
+          return L.marker(wp.latLng, {
+            icon: this.triptrapMarker
+          });
+        }
+      })
+    }).addTo(this.map);
+
+    const closeButton = document.getElementById('close-button-home');
+    if (closeButton) {
+      closeButton.style.display = 'inline-flex';
+    }
+  }
+
+  goToTrips() {
+    this.removeAllMarkers();
+    this.drawMarkers();
+
+    const closeButton = document.getElementById('close-button-home');
+    if (closeButton) {
+      closeButton.style.display = 'none';
     }
   }
 
@@ -63,10 +125,7 @@ export class MapComponent implements AfterViewInit {
 
     this.isHomeMapRedrawNeeded$.subscribe(() => {
       if (this.isHomeMapRedrawNeeded$.value) {
-        for (let marker of this.mapMarkers) {
-          this.map.removeLayer(marker);
-        }
-        this.mapMarkers = [];
+        this.removeAllMarkers();
         this.drawMarkers();
         this.TriptrapService.placeAdded$.next(false)
       }

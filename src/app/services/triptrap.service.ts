@@ -43,7 +43,7 @@ export class TriptrapService {
           },
           {
             name: "Dusseldorf",
-            location: { lat: 51.2277, lng: 51.2277},
+            location: { lat: 51.2277, lng: 6.7735},
             date: "14/01/2022",
             time: "11:00",
             description: "The stunning architecture along the Rhine River took my breath away, and I found myself wandering through the streets, mesmerized by the beauty of the city. Overall, my trip to Düsseldorf was an unforgettable experience that left me with a deep appreciation for the city's unique blend of modernity and tradition.",
@@ -159,7 +159,7 @@ export class TriptrapService {
           },
           {
             name: "Chitwan National Park",
-            location: { lat: 27.5193, lng: 27.5193 },
+            location: { lat: 27.5193, lng: 84.3135 },
             date: "10/10/2019",
             time: "21:00",
             description: "he dense foliage, vibrant colors, and diverse wildlife were unlike anything I had ever experienced before. Trekking through the jungle, I felt as though I was uncovering a hidden world full of mysteries waiting to be discovered. From the haunting calls of monkeys swinging in the treetops to the playful antics of brightly colored parrots, the jungle was filled with incredible sights and sounds.",

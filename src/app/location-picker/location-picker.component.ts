@@ -69,7 +69,10 @@ export class LocationPickerComponent implements AfterViewInit {
 
           if (mapContainer) {
             // Clear the inner HTML of the map container
-            mapContainer.innerHTML = '';
+            mapContainer.innerHTML = `<div id="location-map" class="map"></div>
+                                      <button mat-fab color="primary" aria-label="save location button" class="save-location-button" id="save-location-button" (click)="saveLocation()">
+                                        <mat-icon>done</mat-icon>
+                                      </button>`
 
             // Re-initialize the map
             this.locationMap = L.map('location-map', {

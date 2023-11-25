@@ -3,6 +3,9 @@
   <button mat-fab color="accent" aria-label="add trip button" class="add-trip-button" id="add-trip-button-home" (click)="openBottomSheet()">
     <mat-icon>add</mat-icon>
   </button>
+  <button mat-fab color="warn" aria-label="add trip button" class="close-button" id="close-button-home" (click)="goToTrips()">
+    <mat-icon>close</mat-icon>
+  </button>
   <ng-container *ngIf="Trips$.value.length">
     <app-home-cards></app-home-cards>
   </ng-container>
