@@ -28,7 +28,7 @@ export class AddTripComponent {
     height: '20vw'
   };
 
-  imageSrc: string = '';
+  imageSrc: string = 'assets/not-found-illustration.png';
   onImageChange(dataUri: any){
     this.imageSrc = dataUri;
   }
@@ -41,7 +41,7 @@ export class AddTripComponent {
       tripPlaces: []
     }
     const updatedTrips: Trip[] = this.Trips$.value;
-    updatedTrips.unshift(newTrip)
+    updatedTrips.unshift(newTrip);
     this.Trips$.next(updatedTrips);
     this.triptrapService.CurrentTrip$.next(newTrip);
     this._bottomSheetRef.dismiss();

@@ -32,7 +32,7 @@ export class AddPlanningComponent {
     const dialogRef = this.dialog.open(LocationPickerComponent, {
       minWidth: '300px',
       data: {
-
+        zoom: 12
       }
     });
     dialogRef.afterClosed().subscribe((result: Location) => {
@@ -45,11 +45,10 @@ export class AddPlanningComponent {
   }
 
   pickEndPoint() {
-    console.log("test")
     const dialogRef = this.dialog.open(LocationPickerComponent, {
       minWidth: '300px',
       data: {
-
+        zoom: 12
       }
     });
     dialogRef.afterClosed().subscribe((result: Location) => {
@@ -61,7 +60,6 @@ export class AddPlanningComponent {
   }
 
   savePlanning() {
-    console.log(this.startPoint.nativeElement.value, this.endPoint.nativeElement.value)
     this.triptrapService.drawPlanning(
       this.startPointLocation,
       this.endPointLocation

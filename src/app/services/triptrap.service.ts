@@ -340,4 +340,7 @@ export class TriptrapService {
       endPoint: endPoint
     });
   }
+
+  placeAdded$ = new BehaviorSubject<boolean>(false);
+  isHomeMapRedrawNeeded$ = new BehaviorSubject<boolean>(false);
 }
